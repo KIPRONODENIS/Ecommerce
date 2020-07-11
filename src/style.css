@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
+
+
+.nav {
+	@apply bg-primary text-white  flex w-full z-10 flex-row box-border;
+	height:56px;
+}
+
+@responsive {
+  @variants hover, focus {
+    .d-desktop {
+     width:100px;
+     height: 180px;
+    }
+
+    .d-mobile {
+     width:120px;
+     height: 120px;
+    }
+
+    .box-shadow {
+    	box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+    }
+
+ 
+  }
+}
 @tailwind utilities;
