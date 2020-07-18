@@ -1,0 +1,1150 @@
+<html data-vue-meta="%7B%22lang%22:%7B%221%22:%22en%22%7D%7D" lang="en">
+
+<head>
+    <!-- index for default theme -->
+    <title>Home | Wonect.com</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <style type="text/css">
+        .VueCarousel-navigation-button[data-v-453ad8cd] {
+            position: absolute;
+            top: 50%;
+            box-sizing: border-box;
+            color: #000;
+            text-decoration: none;
+            appearance: none;
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .VueCarousel-navigation-button[data-v-453ad8cd]:focus {
+            outline: 1px solid lightblue;
+        }
+
+        .VueCarousel-navigation-next[data-v-453ad8cd] {
+            right: 0;
+            transform: translateY(-50%) translateX(100%);
+            font-family: "system";
+        }
+
+        .VueCarousel-navigation-prev[data-v-453ad8cd] {
+            left: 0;
+            transform: translateY(-50%) translateX(-100%);
+            font-family: "system";
+        }
+
+        .VueCarousel-navigation--disabled[data-v-453ad8cd] {
+            opacity: 0.5;
+            cursor: default;
+        }
+
+        /* Define the "system" font family */
+
+        @font-face {
+            font-family: system;
+            font-style: normal;
+            font-weight: 300;
+            src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Symbol"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+        }
+    </style>
+    <style type="text/css">
+        .VueCarousel-pagination[data-v-438fd353] {
+            width: 100%;
+            text-align: center;
+        }
+
+        .VueCarousel-pagination--top-overlay[data-v-438fd353] {
+            position: absolute;
+            top: 0;
+        }
+
+        .VueCarousel-pagination--bottom-overlay[data-v-438fd353] {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .VueCarousel-dot-container[data-v-438fd353] {
+            display: inline-block;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .VueCarousel-dot[data-v-438fd353] {
+            display: inline-block;
+            cursor: pointer;
+            appearance: none;
+            border: none;
+            background-clip: content-box;
+            box-sizing: content-box;
+            padding: 0;
+            border-radius: 100%;
+            outline: none;
+        }
+
+        .VueCarousel-dot[data-v-438fd353]:focus {
+            outline: 1px solid lightblue;
+        }
+    </style>
+    <style type="text/css">
+        .VueCarousel-slide {
+            flex-basis: inherit;
+            flex-grow: 0;
+            flex-shrink: 0;
+            user-select: none;
+            backface-visibility: hidden;
+            -webkit-touch-callout: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            outline: none;
+        }
+
+        .VueCarousel-slide-adjustableHeight {
+            display: table;
+            flex-basis: auto;
+            width: 100%;
+        }
+    </style>
+    <style type="text/css">
+        .VueCarousel {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .VueCarousel--reverse {
+            flex-direction: column-reverse;
+        }
+
+        .VueCarousel-wrapper {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .VueCarousel-inner {
+            display: flex;
+            flex-direction: row;
+            backface-visibility: hidden;
+        }
+
+        .VueCarousel-inner--center {
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+
+<body style="">
+    <div id="app" class="w-full bg-white text-main">
+        <!---->
+        <div class="sticky top-0 z-systemnotice">
+            <div class="bg-status text-white text-center">
+                <!---->
+                <!---->
+            </div>
+        </div>
+        <div id="viewport" class="container">
+            <header class="flex flex-col mt-1">
+                <div class="flex flex-wrap items-center">
+                    <nav class="relative flex flex-initial xl:order-last xl:w-full xl:border-t xl:mt-2 wrapper-xl">
+                        <div class="flex items-center w-full xl:hidden"><button type="button" data-testid="" id="header_hamburger_menu" class="group flex flex-0 items-center group cursor-pointer px-2 py-2 mr-2"><svg class="w-8 h-8"><use xlink:href="/dist/sprite-icons.svg#bars"></use></svg></button></div>
+                        <div class="items-center w-full hidden xl:flex"><button type="button" data-testid="" id="header_category_menu" class="group flex flex-0 items-center group cursor-pointer m-0 px-10 py-3 w-56 bg-menu hover:bg-menu-hover"><svg class="w-6 h-6"><use xlink:href="/dist/sprite-icons.svg#bars"></use></svg> <span class="ml-2 inline">Categories</span></button>
+                            <ul class="items-center w-full flex flex-1">
+                                <li class="flex flex-auto"><a href="/sg/time-sale" data-testid="" id="header_menu_time_sale" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#stopwatch"></use></svg>
+      Time Sale
+    </a></li>
+                                <li class="flex flex-auto"><a href="/sg/on-sale-now" data-testid="" id="header_menu_on_sale_now" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#tags"></use></svg>
+      On Sale Now
+    </a></li>
+                                <li class="flex flex-auto"><a href="/sg/most-wanted" data-testid="" id="header_menu_most_wanted_sale" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#fire"></use></svg>
+      Most Wanted
+    </a></li>
+                                <li class="flex flex-auto"><a href="/sg/wishlist" data-testid="" id="header_menu_wishlist" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg>
+      Wish List
+    </a></li>
+                                <li class="flex flex-auto"><a href="/sg/special-offers" data-testid="" id="header_menu_offers" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#money-bill"></use></svg>
+      Special Offers
+    </a></li>
+                                <li class="flex flex-auto"><a href="/sg/brands" data-testid="" id="header_menu_brand" exact="" class="group flex items-center w-full button-nav p-3 router-link-exact-active router-link-active"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#label"></use></svg>
+      Brands
+    </a></li>
+                                <li class="flex flex-auto"><a href="/sg/buyers-guide" data-testid="" id="header_menu_special" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#certificate-solid"></use></svg>
+      Buyer's Guide
+    </a></li>
+                            </ul>
+                        </div>
+                        <!---->
+                    </nav>
+                    <div class="flex-1 xl:order-1 xl:flex-initial flex wrapper-xl"><a href="/sg/" data-testid="" title="Home Page" id="header_item_logo" class="group flex items-center h-10 xl:h-20 router-link-active"><img src="https://assets.wonect.com/assets/img/logo/logo.png" alt="Wonect logo" class="mx-auto object-contain h-10 xl:h-16"> <span class="hidden">
+    Wonect
+  </span></a></div>
+                    <div class="flex-initial xl:order-3 flex wrapper-xl"><button type="button" data-testid="accountButton" id="header_menu_login" aria-label="Open my account" class="group flex items-center xl:px-2 xl:h-12 rounded text-right flex-initial button-nav rounded xl:mr-2"><svg class="mr-1 w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#user"></use></svg> <span class="hidden xl:inline">My Account</span></button>                        <button type="button" data-testid="openMicrocart" aria-label="Open microcart" id="header_item_cart" class="group flex justify-center items-center group rounded h-12 w-16 xl:w-20 button-nav"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#shopping-cart"></use></svg> <span data-testid="minicartCount" class="flex items-center justify-center h-6 w-6 -ml-4 mb-5 text-xs rounded-full bg-button border border-white group-hover:border-light-hover">
+    0
+  </span></button></div>
+                    <div itemscope="itemscope" itemtype="" class="w-full p-3 mt-1 bg-header-search xl:bg-transparent xl:order-2 xl:flex-1 xl:mt-0">
+                        <!---->
+                        <!---->
+                        <form itemprop="" itemscope="itemscope" itemtype="" class="flex">
+                            <!---->
+                            <div class="flex flex-1 items-center border-l xl:border-t xl:border-b xl:border-input-strong rounded-l bg-white"><input itemprop="" type="text" id="search" name="search" placeholder="Search Catalog..." value="" class="flex-1 placeholder-default rounded-l py-2 px-2 xl:py-3 xl:pl-4 xl:pr-2"> <label for="search" class="hidden">
+        Search Products
+      </label> <span class="hidden md:block border-r pl-1 py-3"></span>
+                                <div class="relative hidden h-10 flex-initial md:inline-block xl:h-12"><select name="category" autocomplete="" class="h-full w-full appearance-none cursor-pointer bg-transparent pl-2 pr-8 button-nav focus:bg-light rounded-none"><!----> <option value="0">
+      All Categories
+    </option><option value="1548">
+      Home &amp; Life
+    </option><option value="1558">
+      Cosmetics
+    </option><option value="1559">
+      Skin Care
+    </option><option value="1560">
+      Hair Care
+    </option><option value="1561">
+      Body Care
+    </option><option value="1562">
+      Health Care
+    </option><option value="1563">
+      Beauty Tools
+    </option></select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"><svg class="w-4 h-4"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg></div> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-500 ease-in-out transform -translate-y-5 text-xs text-primary">
+    
+  </label> <span class="text-accent text-xs"></span></div>
+                            </div> <button type="button" data-testid="" class="group bg-button hover:bg-button-hover font-bold p-2 rounded-r"><svg><use xlink:href="/dist/sprite-icons.svg#search"></use></svg> <span class="hidden md:inline">Search</span></button></form>
+                    </div>
+                </div>
+                <div class="wrapper flex items-center justify-between text-sm bg-header-switcher text-white xl:order-first xl:pt-1 xl:py-0 xl:mb-4 xl:bg-transparent xl:text-primary"><button type="button" data-testid="" id="header_item_switcher" class="group flex xl:rounded xl:hover:bg-button-nav-hover group xl:px-4 py-2"><span class="flex items-center text-left hover:underline xl:hover:no-underline pr-2"><svg class="mr-1 xl:group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#store"></use></svg> <span class="xl:hidden">
+      SGD S$
+    </span> <span class="hidden xl:inline">
+      Singapore Store (SGD $)
+    </span></span> <span class="flex items-center text-left hover:underline xl:hover:no-underline border-l pl-2"><svg class="mr-1 xl:group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#map-marker"></use></svg>
+    Deliver to: Singapore
+    <span class="ml-2 hidden xl:inline"><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#au"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#ca"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#hk"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#id"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-all.svg#kr"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#my"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#nz"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#ph"></use></svg><svg><use xlink:href="/dist/sprite-flags-top.svg#sg"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#th"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#tw"></use></svg></span></span></button>
+                    <div class="hidden xl:flex items-center"><button type="button" data-testid="" id="header_shipping" title="Order Tracking" class="group flex items-center px-4 py-2 rounded button-nav"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#plane"></use></svg>
+  Order Tracking
+</button> <a href="/sg/help" data-testid="" id="header_item_help" title="Help and Contact" class="group flex items-center px-4 py-2 rounded button-nav"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#headset"></use></svg>
+  Help &amp; Contact
+</a></div>
+                </div>
+            </header>
+            <div id="breadcrumbs" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList" class="wrapper border-t bg-light py-4 text-secondary"><span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/sg/" itemprop="item" class="link router-link-active"><meta itemprop="position" content="1"> <meta itemprop="name" content="Singapore Store Home">
+      Home
+    </a>
+    /
+  </span> <span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><meta itemprop="position" content="2"> <meta itemprop="name" content="Brands">
+    Brands
+  </span></div>
+            <main class="wrapper my-10">
+                <h3 class="mb-6">
+                    Favourite Brands
+                </h3>
+                <ul class="grid gap-4 grid-cols-2 lg:grid-cols-4">
+                    <li class="border p-3 text-center hover:border-hover"><a href="/sg/c/mucota-622" class="group" data-testid="" id="brandpage_favourite_brand_mucota"><img src="https://assets.wonect.com/assets/img/pages/brand/1-mucota.jpg" alt="MUCOTA" class="mx-auto object-contain mb-3">
+        MUCOTA
+      </a></li>
+                    <li class="border p-3 text-center hover:border-hover"><a href="/sg/c/suntory-630" class="group" data-testid="" id="brandpage_favourite_brand_suntory"><img src="https://assets.wonect.com/assets/img/pages/brand/2-suntory.jpg" alt="SUNTORY" class="mx-auto object-contain mb-3">
+        SUNTORY
+      </a></li>
+                    <li class="border p-3 text-center hover:border-hover"><a href="/sg/c/chocola-bb-855" class="group" data-testid="" id="brandpage_favourite_brand_chocola bb"><img src="https://assets.wonect.com/assets/img/pages/brand/3-chocolabb.jpg" alt="Chocola BB" class="mx-auto object-contain mb-3">
+        Chocola BB
+      </a></li>
+                    <li class="border p-3 text-center hover:border-hover"><a href="/sg/c/fancl-605" class="group" data-testid="" id="brandpage_favourite_brand_fancl"><img src="https://assets.wonect.com/assets/img/pages/brand/4-fancl.jpg" alt="FANCL" class="mx-auto object-contain mb-3">
+        FANCL
+      </a></li>
+                    <li class="border p-3 text-center hover:border-hover"><a href="/sg/c/asahi-596" class="group" data-testid="" id="brandpage_favourite_brand_asahi"><img src="https://assets.wonect.com/assets/img/pages/brand/5-asahi.jpg" alt="ASAHI" class="mx-auto object-contain mb-3">
+        ASAHI
+      </a></li>
+                    <li class="border p-3 text-center hover:border-hover"><a href="/sg/c/hoyu-1020" class="group" data-testid="" id="brandpage_favourite_brand_hoyu"><img src="https://assets.wonect.com/assets/img/pages/brand/6-hoyu.jpg" alt="HOYU" class="mx-auto object-contain mb-3">
+        HOYU
+      </a></li>
+                    <li class="border p-3 text-center hover:border-hover"><a href="/sg/c/shiseido-628" class="group" data-testid="" id="brandpage_favourite_brand_shiseido"><img src="https://assets.wonect.com/assets/img/pages/brand/7-shiseido.jpg" alt="SHISEIDO" class="mx-auto object-contain mb-3">
+        SHISEIDO
+      </a></li>
+                    <li class="border p-3 text-center hover:border-hover"><a href="/sg/c/beniukon-sama-1805" class="group" data-testid="" id="brandpage_favourite_brand_beniukon sama"><img src="https://assets.wonect.com/assets/img/pages/brand/8-beniukon.jpg" alt="Beniukon sama" class="mx-auto object-contain mb-3">
+        Beniukon sama
+      </a></li>
+                </ul>
+                <h3 class="mt-10 mb-6">
+                    Alphabetical Order
+                </h3>
+                <div>
+                    <h4 id="a" class="mt-10">
+                        A
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/anello-595" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_anello-595">
+          Anello
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/asahi-596" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_asahi-596">
+          ASAHI
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/arimino-948" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_arimino-948">
+          ARIMINO
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/albion-1055" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_albion-1055">
+          Albion
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/angfa-1133" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_angfa-1133">
+          ANGFA
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/attenir-1141" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_attenir-1141">
+          Attenir
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/atorrege-1353" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_atorrege-1353">
+          Atorrege
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/ayura-1795" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_ayura-1795">
+          Ayura
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/adjuvant-2112" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_adjuvant-2112">
+          ADJUVANT
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="b" class="mt-10">
+                        B
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/bandai-597" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_bandai-597">
+          BANDAI
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/botanist-870" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_botanist-870">
+          BOTANIST
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/beniukon-sama-1805" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_beniukon-sama-1805">
+          Beniukon Sama
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="c" class="mt-10">
+                        C
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/calbee-598" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_calbee-598">
+          Calbee
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/chezmoi-599" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_chezmoi-599">
+          Chezmoi
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/cleansui-water-filter-621" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_cleansui-water-filter-621">
+          Cleansui Water Filter
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/citeeth-839" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_citeeth-839">
+          CITEETH
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/canmake-865" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_canmake-865">
+          CANMAKE
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="d" class="mt-10">
+                        D
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/dhc-600" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_dhc-600">
+          DHC
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/disney-601" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_disney-601">
+          DISNEY
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/drscholl-602" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_drscholl-602">
+          Dr.Scholl
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/drcilabo-918" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_drcilabo-918">
+          Dr.Ci:Labo
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="e" class="mt-10">
+                        E
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/eisai-603" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_eisai-603">
+          Eisai
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/ettusais-604" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_ettusais-604">
+          ettusais
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/excel-1172" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_excel-1172">
+          excel
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/elixir-1796" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_elixir-1796">
+          ELIXIR
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="f" class="mt-10">
+                        F
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/fancl-605" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_fancl-605">
+          FANCL
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/fine-japan-607" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_fine-japan-607">
+          FINE JAPAN
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/flowfushi-1065" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_flowfushi-1065">
+          FLOWFUSHI
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="g" class="mt-10">
+                        G
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/graphico-608" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_graphico-608">
+          GRAPHICO
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="h" class="mt-10">
+                        H
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/hario-609" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_hario-609">
+          HARIO
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/hoyu-1020" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_hoyu-1020">
+          HOYU
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/haba-1323" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_haba-1323">
+          HABA
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/hadalabo-1797" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_hadalabo-1797">
+          Hadalabo
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="i" class="mt-10">
+                        I
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/isdg-847" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_isdg-847">
+          ISDG
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/ippudo-1806" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_ippudo-1806">
+          IPPUDO
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="k" class="mt-10">
+                        K
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/kewpie-610" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_kewpie-610">
+          Kewpie
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/kanebo-611" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_kanebo-611">
+          KANEBO
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/kao-612" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_kao-612">
+          Kao
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/kobayashi-613" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_kobayashi-613">
+          Kobayashi
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/kose-614" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_kose-614">
+          Kose
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/kyocera-615" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_kyocera-615">
+          Kyocera
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/kracie-1287" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_kracie-1287">
+          Kracie
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/kissme-2125" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_kissme-2125">
+          KISSME
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="l" class="mt-10">
+                        L
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/loretta-693" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_loretta-693">
+          Loretta
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/lipton-768" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_lipton-768">
+          Lipton
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/lululun-876" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_lululun-876">
+          Lululun
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/lion-971" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_lion-971">
+          LION
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/lebel-1147" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_lebel-1147">
+          LebeL
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/lits-1801" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_lits-1801">
+          LITS
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="m" class="mt-10">
+                        M
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/meiji-618" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_meiji-618">
+          Meiji
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/metabolic-619" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_metabolic-619">
+          Metabolic
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/mucota-622" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_mucota-622">
+          MUCOTA
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/moltobene-915" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_moltobene-915">
+          MoltoBene
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/maro-930" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_maro-930">
+          MARO
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/milbon-973" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_milbon-973">
+          MILBON
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/muji-1042" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_muji-1042">
+          MUJI
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/minon-1109" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_minon-1109">
+          MINON
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/muriem-1798" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_muriem-1798">
+          MurieM
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="n" class="mt-10">
+                        N
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/number-three-1932" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_number-three-1932">
+          Number Three
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="o" class="mt-10">
+                        O
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/orbis-623" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_orbis-623">
+          ORBIS
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/orihiro-624" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_orihiro-624">
+          ORIHIRO
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/obagi-841" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_obagi-841">
+          OBAGI
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/omron-1260" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_omron-1260">
+          OMRON
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/opera-1322" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_opera-1322">
+          OPERA
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="p" class="mt-10">
+                        P
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/panasonic-625" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_panasonic-625">
+          Panasonic
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/pigeon-626" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_pigeon-626">
+          Pigeon
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/phiten-627" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_phiten-627">
+          Phiten
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/pieras-1167" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_pieras-1167">
+          PIERAS
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/pantene-1307" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_pantene-1307">
+          PANTENE
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/perfect-one-2126" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_perfect-one-2126">
+          PERFECT ONE
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="r" class="mt-10">
+                        R
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/rohto-695" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_rohto-695">
+          ROHTO
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="s" class="mt-10">
+                        S
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/shiseido-628" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_shiseido-628">
+          SHISEIDO
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/shu-uemura-629" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_shu-uemura-629">
+          SHU UEMURA
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/suntory-630" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_suntory-630">
+          SUNTORY
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/sana-943" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_sana-943">
+          SANA
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/santen-1112" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_santen-1112">
+          SANTEN
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/sos-1807" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_sos-1807">
+          SOS
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/svelty-2102" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_svelty-2102">
+          SVELTY
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="t" class="mt-10">
+                        T
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/takara-tomy-631" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_takara-tomy-631">
+          TAKARA TOMY
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/toray-632" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_toray-632">
+          TORAY
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/tempur-1057" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_tempur-1057">
+          TEMPUR
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/transino-1111" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_transino-1111">
+          Transino
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="w" class="mt-10">
+                        W
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/wakamoto-1359" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_wakamoto-1359">
+          Wakamoto
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/wakodo-1528" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_wakodo-1528">
+          WAKODO
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 id="y" class="mt-10">
+                        Y
+                    </h4>
+                    <div class="grid gap-4 mt-2 md:pl-10 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col border"><a href="/sg/c/yakult-633" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_yakult-633">
+          Yakult
+        </a>
+                            <!---->
+                        </div>
+                        <div class="flex flex-col border"><a href="/sg/c/yanagiya-634" class="group flex items-start p-4 bg-light hover:bg-bright" data-testid="" id="brandpage_yanagiya-634">
+          YANAGIYA
+        </a>
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="wrapper">
+                <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/sg/about-us" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
+        Quality
+      </h3> <span class="text-sm text-secondary">
+        Bringing you authentic products
+      </span></div></a><a href="/sg/shipping-delivery" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_delivery" exact=""><img alt="Delivery" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" lazy="loaded"> <div class="ml-4"><h3>
+        Delivery
+      </h3> <span class="text-sm text-secondary">
+        Fast international delivery
+      </span></div></a><a href="/sg/returns-replacement" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_refund" exact=""><img alt="Refund" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-refund.png" src="https://assets.wonect.com/assets/img/icon/icon-refund.png" lazy="loaded"> <div class="ml-4"><h3>
+        Refund
+      </h3> <span class="text-sm text-secondary">
+        7-day return guarantee for defective products
+      </span></div></a></div>
+                <div class="flex flex-wrap justify-center items-center border-t py-6 pxl:x-8"><svg class="w-12 h-12 flex-0"><use xlink:href="/dist/sprite-icons.svg#paper-plane"></use></svg>
+                    <div class="text-sm pl-4 flex-1 lg:mr-8">
+                        <h3>
+                            Sign up to our newsletter
+                        </h3> <span class="text-secondary">
+      Subscribe to the Wonect newsletter and receive limited time sale information.
+    </span></div>
+                    <form novalidate="novalidate" class="flex w-full mt-10 lg:w-1/2 lg:m-0">
+                        <div class="relative flex flex-1 items-center border-l border-t border-b rounded-l border-input"><input type="email" name="email" autocomplete="email" value="" class="w-full p-2 rounded-l"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    E-mail address *
+    <span class="text-accent text-xs"><!----><!----></span></label></div> <button type="submit" data-testid="" id="footer_newsletter_subscribe_button" class="group bg-button hover:bg-button-hover font-bold p-2 rounded-r">
+      Sign up
+    </button></form>
+                </div>
+                <div class="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 border-t py-6 xl:px-32">
+                    <div>
+                        <h5 class="mb-2">
+                            Skin Care
+                        </h5>
+                        <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/skin-care-1559" data-testid="" id="footer_category_menu_1559" class="group hover:underline p-1">
+      All Skin Care
+    </a> <a href="/sg/c/cleansers-1617" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1617">
+      Cleansers
+    </a><a href="/sg/c/makeup-remover-1618" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1618">
+      Makeup Remover
+    </a><a href="/sg/c/toner-1619" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1619">
+      Toner
+    </a><a href="/sg/c/moisturizers-and-creams-1620" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1620">
+      Moisturizers &amp; Creams
+    </a><a href="/sg/c/masks-1621" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1621">
+      Masks
+    </a><a href="/sg/c/serum-and-essence-1622" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1622">
+      Serum and Essence
+    </a><a href="/sg/c/eyelash-care-1623" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1623">
+      Eyelash care
+    </a><a href="/sg/c/sunscreen-1624" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1624">
+      Sunscreen
+    </a><a href="/sg/c/mini-size-kit-1625" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1625">
+      Mini Size Kit
+    </a><a href="/sg/c/mens-skin-care-1626" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1626">
+      Men's skin care
+    </a></div>
+                    </div>
+                    <div>
+                        <h5 class="mb-2">
+                            Hair Care
+                        </h5>
+                        <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/hair-care-1560" data-testid="" id="footer_category_menu_1560" class="group hover:underline p-1">
+      All Hair Care
+    </a> <a href="/sg/c/shampoo-1627" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1627">
+      Shampoo
+    </a><a href="/sg/c/conditioner-and-treatment-1628" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1628">
+      Conditioner &amp; Treatment
+    </a><a href="/sg/c/mask-1629" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1629">
+      Mask
+    </a><a href="/sg/c/styling-1630" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1630">
+      Styling
+    </a><a href="/sg/c/hair-loss-1631" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1631">
+      Hair Loss
+    </a><a href="/sg/c/hair-tools-1632" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1632">
+      Hair Tools
+    </a><a href="/sg/c/hair-colors-1633" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1633">
+      Hair Colors
+    </a><a href="/sg/c/mens-hair-care-1634" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1634">
+      Men's Hair Care
+    </a><a href="/sg/c/shampoo-and-conditioner-2131" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2131">
+      Shampoo &amp; Conditioner
+    </a><a href="/sg/c/special-care-2132" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2132">
+      Special Care
+    </a><a href="/sg/c/others-2133" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2133">
+      Others
+    </a></div>
+                    </div>
+                    <div>
+                        <h5 class="mb-2">
+                            Body Care
+                        </h5>
+                        <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/body-care-1561" data-testid="" id="footer_category_menu_1561" class="group hover:underline p-1">
+      All Body Care
+    </a> <a href="/sg/c/soap-1635" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1635">
+      Soap
+    </a><a href="/sg/c/lotion-1636" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1636">
+      Lotion
+    </a><a href="/sg/c/cream-1637" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1637">
+      Cream
+    </a><a href="/sg/c/hand-and-foot-care-1638" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1638">
+      Hand and Foot care
+    </a><a href="/sg/c/deodorant-1640" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1640">
+      Deodorant
+    </a><a href="/sg/c/oral-care-1642" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1642">
+      Oral Care
+    </a><a href="/sg/c/bath-1643" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1643">
+      Bath
+    </a><a href="/sg/c/tights-1644" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1644">
+      Tights
+    </a><a href="/sg/c/eye-care-1656" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1656">
+      Eye Care
+    </a><a href="/sg/c/others-2134" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2134">
+      Others
+    </a></div>
+                    </div>
+                    <div>
+                        <h5 class="mb-2">
+                            Cosmetics
+                        </h5>
+                        <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/cosmetics-1558" data-testid="" id="footer_category_menu_1558" class="group hover:underline p-1">
+      All Cosmetics
+    </a> <a href="/sg/c/base-makeup-1645" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1645">
+      Base Makeup
+    </a><a href="/sg/c/foundation-1646" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1646">
+      Foundation
+    </a><a href="/sg/c/cheek-1647" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1647">
+      Cheek
+    </a><a href="/sg/c/eye-makeup-1648" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1648">
+      Eye Makeup
+    </a><a href="/sg/c/lip-makeup-1649" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1649">
+      Lip Makeup
+    </a><a href="/sg/c/mens-grooming-and-cosmetics-1652" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1652">
+      Men’s Grooming &amp; Cosmetics
+    </a></div>
+                    </div>
+                    <div>
+                        <h5 class="mb-2">
+                            Health Care
+                        </h5>
+                        <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/health-care-1562" data-testid="" id="footer_category_menu_1562" class="group hover:underline p-1">
+      All Health Care
+    </a> <a href="/sg/c/vitamins-1653" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1653">
+      Vitamins
+    </a><a href="/sg/c/collagen-1654" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1654">
+      Collagen
+    </a><a href="/sg/c/health-supplements-1655" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1655">
+      Health Supplements
+    </a><a href="/sg/c/medicine-1658" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1658">
+      Medicine
+    </a><a href="/sg/c/others-2135" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2135">
+      Others
+    </a><a href="/sg/c/weight-loss-2136" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2136">
+      Weight Loss
+    </a><a href="/sg/c/beauty-supplements-2138" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2138">
+      Beauty Supplements
+    </a><a href="/sg/c/whitening-supplements-2139" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2139">
+      Whitening Supplements
+    </a></div>
+                    </div>
+                    <div>
+                        <h5 class="mb-2">
+                            Beauty Tools
+                        </h5>
+                        <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/beauty-tools-1563" data-testid="" id="footer_category_menu_1563" class="group hover:underline p-1">
+      All Beauty Tools
+    </a> <a href="/sg/c/iron-1661" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1661">
+      Iron
+    </a><a href="/sg/c/hairdryer-1662" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1662">
+      Hairdryer
+    </a><a href="/sg/c/massager-1663" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1663">
+      Massager
+    </a><a href="/sg/c/cotton-1920" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1920">
+      Cotton
+    </a><a href="/sg/c/others-1922" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1922">
+      Others
+    </a></div>
+                    </div>
+                    <div>
+                        <h5 class="mb-2">
+                            Home &amp; Life
+                        </h5>
+                        <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/home-and-life-1548" data-testid="" id="footer_category_menu_1548" class="group hover:underline p-1">
+      All Home &amp; Life
+    </a> <a href="/sg/c/food-and-drink-1550" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1550">
+      Food &amp; Drink
+    </a><a href="/sg/c/sports-1551" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1551">
+      Sports
+    </a><a href="/sg/c/others-1572" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1572">
+      Others
+    </a><a href="/sg/c/stationery-1573" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1573">
+      Stationery
+    </a><a href="/sg/c/baby-1591" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1591">
+      Baby
+    </a><a href="/sg/c/toys-1599" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1599">
+      Toys
+    </a><a href="/sg/c/water-filter-1666" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1666">
+      Water Filter
+    </a><a href="/sg/c/kitchen-1667" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1667">
+      Kitchen
+    </a><a href="/sg/c/bedding-1673" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1673">
+      Bedding
+    </a><a href="/sg/c/laundry-1675" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1675">
+      Laundry
+    </a><a href="/sg/c/adult-2137" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2137">
+      Adult
+    </a></div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-between text-sm border-t py-6">
+                    <div class="w-full grid gap-4 pb-6 grid-cols-2 md:grid-cols-3 md:border-b xl:border-0 xl:w-1/2">
+                        <div class="md:row-span-2">
+                            <h6 class="uppercase">
+                                Company
+                            </h6>
+                            <div class="flex flex-col text-secondary"><a href="/sg/corporate-profile" data-testid="" id="footer_footer_company_corporate_profile" exact="" class="group p-1 hover:underline">
+          Corporate Profile
+        </a> <a href="/sg/privacy-policy" data-testid="" id="footer_footer_company_privary_policy" exact="" class="group p-1 hover:underline">
+          Privacy Policy
+        </a> <a href="/sg/about-us" data-testid="" id="footer_footer_company_about_us" exact="" class="group p-1 hover:underline">
+          About us
+        </a></div>
+                        </div>
+                        <div class="md:row-span-2">
+                            <h6 class="uppercase">
+                                Customer Service
+                            </h6>
+                            <div class="flex flex-col text-secondary"><a href="/sg/shipping-delivery" data-testid="" id="footer_footer_customer_service_shipping_delivery" exact="" class="group p-1 hover:underline">
+          Shipping &amp; Delivery
+        </a> <a href="/sg/returns-replacement" data-testid="" id="footer_footer_customer_service_returns_replacement" exact="" class="group p-1 hover:underline">
+          Returns &amp; Replacement
+        </a> <a href="/sg/user-agreement" data-testid="" id="footer_footer_customer_service_user_agreement" exact="" class="group p-1 hover:underline">
+          User Agreement
+        </a> <a href="/sg/faq" data-testid="" id="footer_footer_customer_service_faq" exact="" class="group p-1 hover:underline">
+          FAQ
+        </a></div>
+                        </div>
+                        <div>
+                            <h6 class="uppercase">
+                                Welcome to Wonect
+                            </h6>
+                            <div class="flex flex-col text-secondary"><a href="/sg/help" data-testid="" id="footer_footer_new_to_wonect_click_here" exact="" class="group p-1 hover:underline">
+          Help and Contact
+        </a></div>
+                        </div>
+                        <div>
+                            <h6 class="uppercase">
+                                Bulk Purchase
+                            </h6>
+                            <div class="flex flex-col text-secondary"><a href="https://app.chatplus.jp/chat/visitor/b3f0387a_1?t=btn" target="_blank" class="p-1 hover:underline">
+          Contact us for a quote
+        </a></div>
+                        </div>
+                    </div>
+                    <a href="/sg/faq#purchase" data-testid="" id="footer_payment_secure" exact="" class="group group w-full py-4 border-t border-b md:w-1/2 md:border-0 xl:w-1/3 xl:px-16 xl:py-0">
+                        <div class="flex items-center"><svg class="w-16 h-16 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#credit-card"></use></svg>
+                            <h3 class="ml-4">
+                                Secure Payment
+                            </h3>
+                        </div>
+                        <div class="text-sm text-secondary">
+                            We accept a variety of secure payment methods. The options depend on the currency.
+                        </div>
+                    </a>
+                    <div class="flex items-center justify-center w-full pt-6 md:w-1/2 xl:w-1/6 xl:p-0"><a id="footer_footer_icon_facebook" href="https://www.facebook.com/wonect.com.jp" aria-label="Go to Facebook" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#facebook"></use></svg></a>                        <a id="footer_footer_icon_instagram" href="https://www.instagram.com/wonectjp/" aria-label="Go to Instagram" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#instagram"></use></svg></a>                        <a id="footer_footer_icon_pinterest" href="https://www.pinterest.jp/wonect/" aria-label="Go to Pinterest" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#pinterest-p"></use></svg></a>                        <a id="footer_footer_icon_youtube" href="https://www.youtube.com/channel/UCaLZf1iW60K0ho5kncLblPQ" aria-label="Go to Youtube" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#youtube"></use></svg></a></div>
+                </div>
+                <div class="border-t text-center pt-6 h-20 text-sm text-secondary bg-no-repeat bg-bottom" style="background-image:url(/assets/img/background/footer_kyoto.jpg)">
+                    © Copyright 2020 <span class="font-bold">wonect.com</span>. All Rights Reserved
+                </div>
+            </footer>
+        </div>
+        <!---->
+        <!---->
+        <div data-testid="sidebar" tabindex="0" class="transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none left-0 md:w-sidebar-left" style="display: none;">
+            <!---->
+        </div>
+        <div data-testid="sidebar" tabindex="0" class="transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none right-0 md:w-sidebar-right" style="display: none;">
+            <!---->
+        </div>
+        <!---->
+        <div class="fixed z-notification bottom-0 left-0 right-0 md:top-0 md:bottom-auto md:left-auto md:w-84 md:mr-12"><span></span></div>
+        <!---->
+        <div class="bg-status text-white fixed bottom-0 w-full z-systemnotice" style="display: none;">
+            <div class="container text-center p-2">
+                You are offline. Some features might not be available.
+            </div>
+        </div>
+        <!---->
+        <!---->
+        <div class="__cov-progress" style="background-color: rgb(115, 204, 236); opacity: 0; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s; position: fixed;"></div>
+    </div>
+
+    <script src="/dist/manifest.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
+    <script src="/dist/wonect-layout-default.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
+    <script src="/dist/wonect-modal.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
+    <script src="/dist/wonect-header.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
+    <script src="/dist/wonect-icons.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
+    <script src="/dist/wonect-common.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
+    <script src="/dist/wonect-page-on-sale-now.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
+    <script src="/dist/wonect-footer.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
+    <script src="/dist/vendor.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
+    <script src="/dist/app.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
+
+
+    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MZSJDL"></script>
+</body>
+
+</html>
