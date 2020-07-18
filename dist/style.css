@@ -380,7 +380,7 @@ td {
 
 *,
 button:focus {
-    outline-color: #ff9800
+    outline-color: #f46753
 }
 
 svg {
@@ -555,9 +555,9 @@ svg {
 }
 
 .featured-product {
-    background-image: -webkit-linear-gradient(30deg, #f65158, #ffd200 80%);
-    background-image: -o-linear-gradient(30deg, #f65158, #ffd200 80%);
-    background-image: linear-gradient(60deg, #f65158, #ffd200 80%);
+    background-image: -webkit-linear-gradient(30deg, #f65158, #f46753 80%);
+    background-image: -o-linear-gradient(30deg, #f65158, #f46753 80%);
+    background-image: linear-gradient(60deg, #f65158, #f46753 80%);
     --text-opacity: 1;
     color: #fff;
     color: rgba(255, 255, 255, var(--text-opacity));
@@ -625,7 +625,7 @@ svg {
 }
 
 .button {
-    background-color: #ffd200;
+    background-color: #f46753;
     font-weight: 700;
     padding: .75rem;
     text-align: center;
@@ -684,7 +684,7 @@ svg {
 }
 
 .button-nav.active {
-    background-color: #ffd200
+    background-color: #f46753
 }
 
 .button-nav.active:hover svg {
@@ -698,7 +698,7 @@ svg {
 }
 
 .outline-default {
-    outline-color: #ff9800
+    outline-color: #f46753
 }
 
 .appearance-none {
@@ -749,20 +749,20 @@ svg {
 
 .bg-menu {
     --bg-opacity: 1;
-    background-color: #ffd200;
-    background-color: rgba(255, 210, 0, var(--bg-opacity))
+    background-color: #f46753;
+    background-color: rgba(234, 124, 89, var(--bg-opacity))
 }
 
 .bg-menu-open {
     --bg-opacity: 1;
-    background-color: #ffd200;
-    background-color: rgba(255, 210, 0, var(--bg-opacity))
+    background-color: #f46753;
+    background-color: rgba(234, 124, 89, var(--bg-opacity))
 }
 
 .bg-button {
     --bg-opacity: 1;
-    background-color: #ffd200;
-    background-color: rgba(255, 210, 0, var(--bg-opacity))
+    background-color: #f46753;
+    background-color: rgba(234, 124, 89, var(--bg-opacity))
 }
 
 .bg-button-light {
@@ -773,8 +773,8 @@ svg {
 
 .bg-active {
     --bg-opacity: 1;
-    background-color: #ffd200;
-    background-color: rgba(255, 210, 0, var(--bg-opacity))
+    background-color: #f46753;
+    background-color: rgba(234, 124, 89, var(--bg-opacity))
 }
 
 .bg-inactive {
@@ -1954,8 +1954,8 @@ svg {
 
 .text-button {
     --text-opacity: 1;
-    color: #ffd200;
-    color: rgba(255, 210, 0, var(--text-opacity))
+    color: #f46753;
+    color: rgba(234, 124, 89, var(--text-opacity))
 }
 
 .text-button-light {

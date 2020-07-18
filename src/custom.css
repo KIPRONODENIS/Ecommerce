@@ -619,7 +619,62 @@ video {
   }
 }
 
-@import "custom.css";
+.nav {
+  --bg-opacity: 1;
+  background-color: #5856d6;
+  background-color: rgba(88, 86, 214, var(--bg-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  display: flex;
+  width: 100%;
+  z-index: 10;
+  flex-direction: row;
+  box-sizing: border-box;
+  height:56px;
+}
+
+.d-desktop {
+  width:100px;
+  height: 180px;
+}
+
+.d-mobile {
+  width:120px;
+  height: 120px;
+}
+
+.box-shadow {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+}
+
+.hover\:d-desktop:hover {
+  width:100px;
+  height: 180px;
+}
+
+.hover\:d-mobile:hover {
+  width:120px;
+  height: 120px;
+}
+
+.hover\:box-shadow:hover {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+}
+
+.focus\:d-desktop:focus {
+  width:100px;
+  height: 180px;
+}
+
+.focus\:d-mobile:focus {
+  width:120px;
+  height: 120px;
+}
+
+.focus\:box-shadow:focus {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+}
 
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
@@ -18205,6 +18260,48 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:d-desktop {
+    width:100px;
+    height: 180px;
+  }
+
+  .sm\:d-mobile {
+    width:120px;
+    height: 120px;
+  }
+
+  .sm\:box-shadow {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+  }
+
+  .sm\:hover\:d-desktop:hover {
+    width:100px;
+    height: 180px;
+  }
+
+  .sm\:hover\:d-mobile:hover {
+    width:120px;
+    height: 120px;
+  }
+
+  .sm\:hover\:box-shadow:hover {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+  }
+
+  .sm\:focus\:d-desktop:focus {
+    width:100px;
+    height: 180px;
+  }
+
+  .sm\:focus\:d-mobile:focus {
+    width:120px;
+    height: 120px;
+  }
+
+  .sm\:focus\:box-shadow:focus {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+  }
+
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
@@ -35790,6 +35887,48 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:d-desktop {
+    width:100px;
+    height: 180px;
+  }
+
+  .md\:d-mobile {
+    width:120px;
+    height: 120px;
+  }
+
+  .md\:box-shadow {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+  }
+
+  .md\:hover\:d-desktop:hover {
+    width:100px;
+    height: 180px;
+  }
+
+  .md\:hover\:d-mobile:hover {
+    width:120px;
+    height: 120px;
+  }
+
+  .md\:hover\:box-shadow:hover {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+  }
+
+  .md\:focus\:d-desktop:focus {
+    width:100px;
+    height: 180px;
+  }
+
+  .md\:focus\:d-mobile:focus {
+    width:120px;
+    height: 120px;
+  }
+
+  .md\:focus\:box-shadow:focus {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+  }
+
   .md\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
@@ -53375,6 +53514,48 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:d-desktop {
+    width:100px;
+    height: 180px;
+  }
+
+  .lg\:d-mobile {
+    width:120px;
+    height: 120px;
+  }
+
+  .lg\:box-shadow {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+  }
+
+  .lg\:hover\:d-desktop:hover {
+    width:100px;
+    height: 180px;
+  }
+
+  .lg\:hover\:d-mobile:hover {
+    width:120px;
+    height: 120px;
+  }
+
+  .lg\:hover\:box-shadow:hover {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+  }
+
+  .lg\:focus\:d-desktop:focus {
+    width:100px;
+    height: 180px;
+  }
+
+  .lg\:focus\:d-mobile:focus {
+    width:120px;
+    height: 120px;
+  }
+
+  .lg\:focus\:box-shadow:focus {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+  }
+
   .lg\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
@@ -70960,6 +71141,48 @@ video {
 }
 
 @media (min-width: 1280px) {
+  .xl\:d-desktop {
+    width:100px;
+    height: 180px;
+  }
+
+  .xl\:d-mobile {
+    width:120px;
+    height: 120px;
+  }
+
+  .xl\:box-shadow {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+  }
+
+  .xl\:hover\:d-desktop:hover {
+    width:100px;
+    height: 180px;
+  }
+
+  .xl\:hover\:d-mobile:hover {
+    width:120px;
+    height: 120px;
+  }
+
+  .xl\:hover\:box-shadow:hover {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+  }
+
+  .xl\:focus\:d-desktop:focus {
+    width:100px;
+    height: 180px;
+  }
+
+  .xl\:focus\:d-mobile:focus {
+    width:120px;
+    height: 120px;
+  }
+
+  .xl\:focus\:box-shadow:focus {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+  }
+
   .xl\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
