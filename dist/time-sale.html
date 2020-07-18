@@ -2,141 +2,20 @@
 
 <head>
     <!-- index for default theme -->
-    <title>Home | Wonect.com</title>
+    <title>Home | Ecommerce.com</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="carousel.css">
+   <script src="https://kit.fontawesome.com/5d4a91f360.js" crossorigin="anonymous"></script>
 
 
-    <style type="text/css">
-        .VueCarousel-navigation-button[data-v-453ad8cd] {
-            position: absolute;
-            top: 50%;
-            box-sizing: border-box;
-            color: #000;
-            text-decoration: none;
-            appearance: none;
-            border: none;
-            background-color: transparent;
-            padding: 0;
-            cursor: pointer;
-            outline: none;
-        }
-
-        .VueCarousel-navigation-button[data-v-453ad8cd]:focus {
-            outline: 1px solid lightblue;
-        }
-
-        .VueCarousel-navigation-next[data-v-453ad8cd] {
-            right: 0;
-            transform: translateY(-50%) translateX(100%);
-            font-family: "system";
-        }
-
-        .VueCarousel-navigation-prev[data-v-453ad8cd] {
-            left: 0;
-            transform: translateY(-50%) translateX(-100%);
-            font-family: "system";
-        }
-
-        .VueCarousel-navigation--disabled[data-v-453ad8cd] {
-            opacity: 0.5;
-            cursor: default;
-        }
-
-        /* Define the "system" font family */
-
-        @font-face {
-            font-family: system;
-            font-style: normal;
-            font-weight: 300;
-            src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Symbol"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
-        }
-    </style>
-    <style type="text/css">
-        .VueCarousel-pagination[data-v-438fd353] {
-            width: 100%;
-            text-align: center;
-        }
-
-        .VueCarousel-pagination--top-overlay[data-v-438fd353] {
-            position: absolute;
-            top: 0;
-        }
-
-        .VueCarousel-pagination--bottom-overlay[data-v-438fd353] {
-            position: absolute;
-            bottom: 0;
-        }
-
-        .VueCarousel-dot-container[data-v-438fd353] {
-            display: inline-block;
-            margin: 0 auto;
-            padding: 0;
-        }
-
-        .VueCarousel-dot[data-v-438fd353] {
-            display: inline-block;
-            cursor: pointer;
-            appearance: none;
-            border: none;
-            background-clip: content-box;
-            box-sizing: content-box;
-            padding: 0;
-            border-radius: 100%;
-            outline: none;
-        }
-
-        .VueCarousel-dot[data-v-438fd353]:focus {
-            outline: 1px solid lightblue;
-        }
-    </style>
-    <style type="text/css">
-        .VueCarousel-slide {
-            flex-basis: inherit;
-            flex-grow: 0;
-            flex-shrink: 0;
-            user-select: none;
-            backface-visibility: hidden;
-            -webkit-touch-callout: none;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-            outline: none;
-        }
-
-        .VueCarousel-slide-adjustableHeight {
-            display: table;
-            flex-basis: auto;
-            width: 100%;
-        }
-    </style>
-    <style type="text/css">
-        .VueCarousel {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-
-        .VueCarousel--reverse {
-            flex-direction: column-reverse;
-        }
-
-        .VueCarousel-wrapper {
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .VueCarousel-inner {
-            display: flex;
-            flex-direction: row;
-            backface-visibility: hidden;
-        }
-
-        .VueCarousel-inner--center {
-            justify-content: center;
-        }
-    </style>
 
 </head>
-  <body style="">
+
+
+
+<body class="overflow-x-hidden">
     <div id="app" class="w-full bg-white text-main">
         <!---->
         <div class="sticky top-0 z-systemnotice">
@@ -149,46 +28,69 @@
             <header class="flex flex-col mt-1">
                 <div class="flex flex-wrap items-center">
                     <nav class="relative flex flex-initial xl:order-last xl:w-full xl:border-t xl:mt-2 wrapper-xl">
-                        <div class="flex items-center w-full xl:hidden"><button type="button" data-testid="" id="header_hamburger_menu" class="group flex flex-0 items-center group cursor-pointer px-2 py-2 mr-2"><svg class="w-8 h-8"><use xlink:href="/dist/sprite-icons.svg#bars"></use></svg></button></div>
-                        <div class="items-center w-full hidden xl:flex"><button type="button" data-testid="" id="header_category_menu" class="group flex flex-0 items-center group cursor-pointer m-0 px-10 py-3 w-56 bg-menu hover:bg-menu-hover"><svg class="w-6 h-6"><use xlink:href="/dist/sprite-icons.svg#bars"></use></svg> <span class="ml-2 inline">Categories</span></button>
+                        <div class="flex items-center w-full xl:hidden"><button type="button" data-testid="" id="header_hamburger_menu" class="group flex flex-0 items-center group cursor-pointer px-2 py-2 mr-2 text-black">
+
+                          <i class="fas fa-bars text-2xl"></i>
+
+                        </button></div>
+
+
+                        <div class="items-center w-full hidden xl:flex"><button type="button" data-testid="" id="header_category_menu" class="group flex flex-0 items-center group cursor-pointer m-0 px-10 py-3 w-56 bg-menu hover:bg-menu-hover">
+                      <i class="fas fa-bars"></i>
+                             <span class="ml-2 inline">Categories</span></button>
                             <ul class="items-center w-full flex flex-1">
-                                <li class="flex flex-auto"><a href="/sg/time-sale" data-testid="" id="header_menu_time_sale" exact="" class="group flex items-center w-full button-nav p-3 router-link-exact-active router-link-active"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#stopwatch"></use></svg>
+                                <li class="flex flex-auto"><a href="/time-sale" data-testid="" id="header_menu_time_sale" exact="" class=" flex items-center w-full button-nav p-3">
+
+                  <i class="far fa-clock mr-1"></i>
       Time Sale
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/on-sale-now" data-testid="" id="header_menu_on_sale_now" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#tags"></use></svg>
+                                <li class="flex flex-auto"><a href="/onsale-now" data-testid="" id="header_menu_on_sale_now" exact="" class=" flex items-center w-full button-nav p-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="#1f1f1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
       On Sale Now
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/most-wanted" data-testid="" id="header_menu_most_wanted_sale" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#fire"></use></svg>
+                                <li class="flex "><a href="/most-wanted" data-testid="" id="header_menu_most_wanted_sale" exact="" class="group flex items-center w-full button-nav p-2">
+                               <i class="fas fa-fire pr-1"></i>
       Most Wanted
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/wishlist" data-testid="" id="header_menu_wishlist" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg>
+                                <li class="flex "><a href="/wishlist" data-testid="" id="header_menu_wishlist" exact="" class="group flex items-center w-full button-nav p-2">
+                                   <i class="far fa-heart pr-1"></i>
       Wish List
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/special-offers" data-testid="" id="header_menu_offers" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#money-bill"></use></svg>
+                                <li class="flex "><a href="/special-offers" data-testid="" id="header_menu_offers" exact="" class="group flex items-center w-full button-nav p-2">
+                                    <i class="fas fa-money-check-alt pr-1"></i>
       Special Offers
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/brands" data-testid="" id="header_menu_brand" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#label"></use></svg>
+                                <li class="flex "><a href="/brands" data-testid="" id="header_menu_brand" exact="" class="group flex items-center w-full button-nav p-3">
+                                    <i class="fas fa-tags fa-rotate-45 pr-1"></i>
       Brands
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/buyers-guide" data-testid="" id="header_menu_special" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#certificate-solid"></use></svg>
+                                <li class="flex "><a href="/buyers-guide" data-testid="" id="header_menu_special" exact="" class="group flex items-center w-full button-nav p-2"><i class="fas fa-certificate pr-1"></i>
       Buyer's Guide
     </a></li>
                             </ul>
                         </div>
                         <!---->
                     </nav>
-                    <div class="flex-1 xl:order-1 xl:flex-initial flex wrapper-xl"><a href="/sg/" data-testid="" title="Home Page" id="header_item_logo" class="group flex items-center h-10 xl:h-20 router-link-active"><img src="https://assets.wonect.com/assets/img/logo/logo.png" alt="Wonect logo" class="mx-auto object-contain h-10 xl:h-16"> <span class="hidden">
+
+
+                    <div class="flex-1 xl:order-1 xl:flex-initial flex wrapper-xl"><a href="/sg/" data-testid="" title="Home Page" id="header_item_logo" class="group flex items-center h-10 xl:h-20 router-link-exact-active router-link-active"><img src="https://assets.wonect.com/assets/img/logo/logo.png" alt="Wonect logo" class="mx-auto object-contain h-10 xl:h-16"> <span class="hidden">
     Wonect
   </span></a></div>
-                    <div class="flex-initial xl:order-3 flex wrapper-xl"><button type="button" data-testid="accountButton" id="header_menu_login" aria-label="Open my account" class="group flex items-center xl:px-2 xl:h-12 rounded text-right flex-initial button-nav rounded xl:mr-2"><svg class="mr-1 w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#user"></use></svg> <span class="hidden xl:inline">My Account</span></button>                        <button type="button" data-testid="openMicrocart" aria-label="Open microcart" id="header_item_cart" class="group flex justify-center items-center group rounded h-12 w-16 xl:w-20 button-nav"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#shopping-cart"></use></svg> <span data-testid="minicartCount" class="flex items-center justify-center h-6 w-6 -ml-4 mb-5 text-xs rounded-full bg-button border border-white group-hover:border-light-hover">
+                    <div class="flex-initial xl:order-3 flex wrapper-xl"><button type="button" data-testid="accountButton" id="header_menu_login" aria-label="Open my account" class="group flex items-center xl:px-2 xl:h-12 rounded text-right flex-initial button-nav rounded xl:mr-2">
+
+                         <i class="far fa-user text-2xl m-2"></i>
+                         <span class="hidden xl:inline">My Account</span></button>                        <button type="button" data-testid="openMicrocart" aria-label="Open microcart" id="header_item_cart" class="group flex justify-center items-center group rounded h-12 w-16 xl:w-20 button-nav">
+                   <i class="fas fa-shopping-cart fa-2x mx-1"></i>
+
+                         <span data-testid="minicartCount" class="flex items-center justify-center h-6 w-6 -ml-4 mb-5 text-xs rounded-full bg-button border border-white group-hover:border-light-hover">
     0
   </span></button></div>
-                    <div itemscope="itemscope" itemtype="" class="w-full p-3 mt-1 bg-header-search xl:bg-transparent xl:order-2 xl:flex-1 xl:mt-0">
-                        <!---->
-                        <!---->
-                        <form itemprop="" itemscope="itemscope" itemtype="" class="flex">
-                            <!---->
-                            <div class="flex flex-1 items-center border-l xl:border-t xl:border-b xl:border-input-strong rounded-l bg-white"><input itemprop="" type="text" id="search" name="search" placeholder="Search Catalog..." value="" class="flex-1 placeholder-default rounded-l py-2 px-2 xl:py-3 xl:pl-4 xl:pr-2"> <label for="search" class="hidden">
+                    <div itemscope="itemscope" itemtype="http://schema.org/Website" class="w-full p-3 mt-1 bg-header-search xl:bg-transparent xl:order-2 xl:flex-1 xl:mt-0">
+                        <meta itemprop="name" content="Wonect.com Singapore Store">
+                        <meta itemprop="url" content="https://wonect.com/sg/">
+                        <form itemprop="potentialAction" itemscope="itemscope" itemtype="http://schema.org/SearchAction" class="flex">
+                            <meta itemprop="target" content="https://wonect.com/sg/search?q={search}">
+                            <div class="flex flex-1 items-center border-l xl:border-t xl:border-b xl:border-input-strong rounded-l bg-white"><input itemprop="query-input" type="text" id="search" name="search" placeholder="Search Catalog..." value="" class="flex-1 placeholder-default rounded-l py-2 px-2 xl:py-3 xl:pl-4 xl:pr-2"> <label for="search" class="hidden">
         Search Products
       </label> <span class="hidden md:block border-r pl-1 py-3"></span>
                                 <div class="relative hidden h-10 flex-initial md:inline-block xl:h-12"><select name="category" autocomplete="" class="h-full w-full appearance-none cursor-pointer bg-transparent pl-2 pr-8 button-nav focus:bg-light rounded-none"><!----> <option value="0">
@@ -208,26 +110,20 @@
     </option><option value="1563">
       Beauty Tools
     </option></select>
-                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"><svg class="w-4 h-4"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg></div> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-500 ease-in-out transform -translate-y-5 text-xs text-primary">
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                 <i class="fas fa-angle-down"></i>
+                                    </div> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-500 ease-in-out transform -translate-y-5 text-xs text-primary">
     
   </label> <span class="text-accent text-xs"></span></div>
-                            </div> <button type="button" data-testid="" class="group bg-button hover:bg-button-hover font-bold p-2 rounded-r"><svg><use xlink:href="/dist/sprite-icons.svg#search"></use></svg> <span class="hidden md:inline">Search</span></button></form>
+                            </div> <button type="button" data-testid="" class="group bg-button hover:bg-button-hover font-bold p-2 rounded-r">
+                            <i class="fas fa-search"></i>
+                                 <span class="hidden md:inline">Search</span></button></form>
                     </div>
                 </div>
-                <div class="wrapper flex items-center justify-between text-sm bg-header-switcher text-white xl:order-first xl:pt-1 xl:py-0 xl:mb-4 xl:bg-transparent xl:text-primary"><button type="button" data-testid="" id="header_item_switcher" class="group flex xl:rounded xl:hover:bg-button-nav-hover group xl:px-4 py-2"><span class="flex items-center text-left hover:underline xl:hover:no-underline pr-2"><svg class="mr-1 xl:group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#store"></use></svg> <span class="xl:hidden">
-      SGD $
-    </span> <span class="hidden xl:inline">
-      Singapore Store (SGD $)
-    </span></span> <span class="flex items-center text-left hover:underline xl:hover:no-underline border-l pl-2"><svg class="mr-1 xl:group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#map-marker"></use></svg>
-    Deliver to: Singapore
-    <span class="ml-2 hidden xl:inline"><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#au"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#ca"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#hk"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#id"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-all.svg#kr"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#my"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#nz"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#ph"></use></svg><svg><use xlink:href="/dist/sprite-flags-top.svg#sg"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#th"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#tw"></use></svg></span></span></button>
-                    <div class="hidden xl:flex items-center"><button type="button" data-testid="" id="header_shipping" title="Order Tracking" class="group flex items-center px-4 py-2 rounded button-nav"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#plane"></use></svg>
-  Order Tracking
-</button> <a href="/sg/help" data-testid="" id="header_item_help" title="Help and Contact" class="group flex items-center px-4 py-2 rounded button-nav"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#headset"></use></svg>
-  Help &amp; Contact
-</a></div>
-                </div>
+
             </header>
+
+
             <div id="breadcrumbs" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList" class="wrapper border-t bg-light py-4 text-secondary"><span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/sg/" class="link router-link-active" itemprop="item"><meta itemprop="position" content="1"> <meta itemprop="name" content="Singapore Store Home">
       Home
     </a>
@@ -1705,8 +1601,9 @@
                     </div>
                 </div>
             </main>
-            <footer class="wrapper">
-                <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/sg/about-us" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
+
+            <footer class=" hidden lg:block wrapper">
+    <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/sg/about-us" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
         Quality
       </h3> <span class="text-sm text-secondary">
         Bringing you authentic products
@@ -1719,26 +1616,26 @@
       </h3> <span class="text-sm text-secondary">
         7-day return guarantee for defective products
       </span></div></a></div>
-                <div class="flex flex-wrap justify-center items-center border-t py-6 pxl:x-8"><svg class="w-12 h-12 flex-0"><use xlink:href="/dist/sprite-icons.svg#paper-plane"></use></svg>
-                    <div class="text-sm pl-4 flex-1 lg:mr-8">
-                        <h3>
-                            Sign up to our newsletter
-                        </h3> <span class="text-secondary">
+    <div class="flex flex-wrap justify-center items-center border-t py-6 pxl:x-8"><svg class="w-12 h-12 flex-0"><use xlink:href="/dist/sprite-icons.svg#paper-plane"></use></svg>
+        <div class="text-sm pl-4 flex-1 lg:mr-8">
+            <h3>
+                Sign up to our newsletter
+            </h3> <span class="text-secondary">
       Subscribe to the Wonect newsletter and receive limited time sale information.
     </span></div>
-                    <form novalidate="novalidate" class="flex w-full mt-10 lg:w-1/2 lg:m-0">
-                        <div class="relative flex flex-1 items-center border-l border-t border-b rounded-l border-input"><input type="email" name="email" autocomplete="email" value="" class="w-full p-2 rounded-l"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+        <form novalidate="novalidate" class="flex w-full mt-10 lg:w-1/2 lg:m-0">
+            <div class="relative flex flex-1 items-center border-l border-t border-b rounded-l border-input"><input type="email" name="email" autocomplete="email" value="" class="w-full p-2 rounded-l"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
     E-mail address *
     <span class="text-accent text-xs"><!----><!----></span></label></div> <button type="submit" data-testid="" id="footer_newsletter_subscribe_button" class="group bg-button hover:bg-button-hover font-bold p-2 rounded-r">
       Sign up
     </button></form>
-                </div>
-                <div class="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 border-t py-6 xl:px-32">
-                    <div>
-                        <h5 class="mb-2">
-                            Skin Care
-                        </h5>
-                        <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/skin-care-1559" data-testid="" id="footer_category_menu_1559" class="group hover:underline p-1">
+    </div>
+    <div class="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 border-t py-6 xl:px-32">
+        <div>
+            <h5 class="mb-2">
+                Skin Care
+            </h5>
+            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/skin-care-1559" data-testid="" id="footer_category_menu_1559" class="group hover:underline p-1">
       All Skin Care
     </a> <a href="/sg/c/cleansers-1617" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1617">
       Cleansers
@@ -1761,12 +1658,12 @@
     </a><a href="/sg/c/mens-skin-care-1626" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1626">
       Men's skin care
     </a></div>
-                    </div>
-                    <div>
-                        <h5 class="mb-2">
-                            Hair Care
-                        </h5>
-                        <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/hair-care-1560" data-testid="" id="footer_category_menu_1560" class="group hover:underline p-1">
+        </div>
+        <div>
+            <h5 class="mb-2">
+                Hair Care
+            </h5>
+            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/hair-care-1560" data-testid="" id="footer_category_menu_1560" class="group hover:underline p-1">
       All Hair Care
     </a> <a href="/sg/c/shampoo-1627" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1627">
       Shampoo
@@ -1791,12 +1688,12 @@
     </a><a href="/sg/c/others-2133" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2133">
       Others
     </a></div>
-                    </div>
-                    <div>
-                        <h5 class="mb-2">
-                            Body Care
-                        </h5>
-                        <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/body-care-1561" data-testid="" id="footer_category_menu_1561" class="group hover:underline p-1">
+        </div>
+        <div>
+            <h5 class="mb-2">
+                Body Care
+            </h5>
+            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/body-care-1561" data-testid="" id="footer_category_menu_1561" class="group hover:underline p-1">
       All Body Care
     </a> <a href="/sg/c/soap-1635" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1635">
       Soap
@@ -1819,12 +1716,12 @@
     </a><a href="/sg/c/others-2134" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2134">
       Others
     </a></div>
-                    </div>
-                    <div>
-                        <h5 class="mb-2">
-                            Cosmetics
-                        </h5>
-                        <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/cosmetics-1558" data-testid="" id="footer_category_menu_1558" class="group hover:underline p-1">
+        </div>
+        <div>
+            <h5 class="mb-2">
+                Cosmetics
+            </h5>
+            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/cosmetics-1558" data-testid="" id="footer_category_menu_1558" class="group hover:underline p-1">
       All Cosmetics
     </a> <a href="/sg/c/base-makeup-1645" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1645">
       Base Makeup
@@ -1839,12 +1736,12 @@
     </a><a href="/sg/c/mens-grooming-and-cosmetics-1652" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1652">
       Men’s Grooming &amp; Cosmetics
     </a></div>
-                    </div>
-                    <div>
-                        <h5 class="mb-2">
-                            Health Care
-                        </h5>
-                        <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/health-care-1562" data-testid="" id="footer_category_menu_1562" class="group hover:underline p-1">
+        </div>
+        <div>
+            <h5 class="mb-2">
+                Health Care
+            </h5>
+            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/health-care-1562" data-testid="" id="footer_category_menu_1562" class="group hover:underline p-1">
       All Health Care
     </a> <a href="/sg/c/vitamins-1653" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1653">
       Vitamins
@@ -1863,12 +1760,12 @@
     </a><a href="/sg/c/whitening-supplements-2139" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2139">
       Whitening Supplements
     </a></div>
-                    </div>
-                    <div>
-                        <h5 class="mb-2">
-                            Beauty Tools
-                        </h5>
-                        <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/beauty-tools-1563" data-testid="" id="footer_category_menu_1563" class="group hover:underline p-1">
+        </div>
+        <div>
+            <h5 class="mb-2">
+                Beauty Tools
+            </h5>
+            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/beauty-tools-1563" data-testid="" id="footer_category_menu_1563" class="group hover:underline p-1">
       All Beauty Tools
     </a> <a href="/sg/c/iron-1661" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1661">
       Iron
@@ -1881,12 +1778,12 @@
     </a><a href="/sg/c/others-1922" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1922">
       Others
     </a></div>
-                    </div>
-                    <div>
-                        <h5 class="mb-2">
-                            Home &amp; Life
-                        </h5>
-                        <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/home-and-life-1548" data-testid="" id="footer_category_menu_1548" class="group hover:underline p-1">
+        </div>
+        <div>
+            <h5 class="mb-2">
+                Home &amp; Life
+            </h5>
+            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/home-and-life-1548" data-testid="" id="footer_category_menu_1548" class="group hover:underline p-1">
       All Home &amp; Life
     </a> <a href="/sg/c/food-and-drink-1550" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1550">
       Food &amp; Drink
@@ -1911,27 +1808,27 @@
     </a><a href="/sg/c/adult-2137" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2137">
       Adult
     </a></div>
-                    </div>
-                </div>
-                <div class="flex flex-wrap justify-between text-sm border-t py-6">
-                    <div class="w-full grid gap-4 pb-6 grid-cols-2 md:grid-cols-3 md:border-b xl:border-0 xl:w-1/2">
-                        <div class="md:row-span-2">
-                            <h6 class="uppercase">
-                                Company
-                            </h6>
-                            <div class="flex flex-col text-secondary"><a href="/sg/corporate-profile" data-testid="" id="footer_footer_company_corporate_profile" exact="" class="group p-1 hover:underline">
+        </div>
+    </div>
+    <div class="flex flex-wrap justify-between text-sm border-t py-6">
+        <div class="w-full grid gap-4 pb-6 grid-cols-2 md:grid-cols-3 md:border-b xl:border-0 xl:w-1/2">
+            <div class="md:row-span-2">
+                <h6 class="uppercase">
+                    Company
+                </h6>
+                <div class="flex flex-col text-secondary"><a href="/sg/corporate-profile" data-testid="" id="footer_footer_company_corporate_profile" exact="" class="group p-1 hover:underline">
           Corporate Profile
         </a> <a href="/sg/privacy-policy" data-testid="" id="footer_footer_company_privary_policy" exact="" class="group p-1 hover:underline">
           Privacy Policy
         </a> <a href="/sg/about-us" data-testid="" id="footer_footer_company_about_us" exact="" class="group p-1 hover:underline">
           About us
         </a></div>
-                        </div>
-                        <div class="md:row-span-2">
-                            <h6 class="uppercase">
-                                Customer Service
-                            </h6>
-                            <div class="flex flex-col text-secondary"><a href="/sg/shipping-delivery" data-testid="" id="footer_footer_customer_service_shipping_delivery" exact="" class="group p-1 hover:underline">
+            </div>
+            <div class="md:row-span-2">
+                <h6 class="uppercase">
+                    Customer Service
+                </h6>
+                <div class="flex flex-col text-secondary"><a href="/sg/shipping-delivery" data-testid="" id="footer_footer_customer_service_shipping_delivery" exact="" class="group p-1 hover:underline">
           Shipping &amp; Delivery
         </a> <a href="/sg/returns-replacement" data-testid="" id="footer_footer_customer_service_returns_replacement" exact="" class="group p-1 hover:underline">
           Returns &amp; Replacement
@@ -1940,72 +1837,94 @@
         </a> <a href="/sg/faq" data-testid="" id="footer_footer_customer_service_faq" exact="" class="group p-1 hover:underline">
           FAQ
         </a></div>
-                        </div>
-                        <div>
-                            <h6 class="uppercase">
-                                Welcome to Wonect
-                            </h6>
-                            <div class="flex flex-col text-secondary"><a href="/sg/help" data-testid="" id="footer_footer_new_to_wonect_click_here" exact="" class="group p-1 hover:underline">
+            </div>
+            <div>
+                <h6 class="uppercase">
+                    Welcome to Wonect
+                </h6>
+                <div class="flex flex-col text-secondary"><a href="/sg/help" data-testid="" id="footer_footer_new_to_wonect_click_here" exact="" class="group p-1 hover:underline">
           Help and Contact
         </a></div>
-                        </div>
-                        <div>
-                            <h6 class="uppercase">
-                                Bulk Purchase
-                            </h6>
-                            <div class="flex flex-col text-secondary"><a href="https://app.chatplus.jp/chat/visitor/b3f0387a_1?t=btn" target="_blank" class="p-1 hover:underline">
+            </div>
+            <div>
+                <h6 class="uppercase">
+                    Bulk Purchase
+                </h6>
+                <div class="flex flex-col text-secondary"><a href="https://app.chatplus.jp/chat/visitor/b3f0387a_1?t=btn" target="_blank" class="p-1 hover:underline">
           Contact us for a quote
         </a></div>
-                        </div>
-                    </div>
-                    <a href="/sg/faq#purchase" data-testid="" id="footer_payment_secure" exact="" class="group group w-full py-4 border-t border-b md:w-1/2 md:border-0 xl:w-1/3 xl:px-16 xl:py-0">
-                        <div class="flex items-center"><svg class="w-16 h-16 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#credit-card"></use></svg>
-                            <h3 class="ml-4">
-                                Secure Payment
-                            </h3>
-                        </div>
-                        <div class="text-sm text-secondary">
-                            We accept a variety of secure payment methods. The options depend on the currency.
-                        </div>
-                    </a>
-                    <div class="flex items-center justify-center w-full pt-6 md:w-1/2 xl:w-1/6 xl:p-0"><a id="footer_footer_icon_facebook" href="https://www.facebook.com/wonect.com.jp" aria-label="Go to Facebook" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#facebook"></use></svg></a>                        <a id="footer_footer_icon_instagram" href="https://www.instagram.com/wonectjp/" aria-label="Go to Instagram" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#instagram"></use></svg></a>                        <a id="footer_footer_icon_pinterest" href="https://www.pinterest.jp/wonect/" aria-label="Go to Pinterest" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#pinterest-p"></use></svg></a>                        <a id="footer_footer_icon_youtube" href="https://www.youtube.com/channel/UCaLZf1iW60K0ho5kncLblPQ" aria-label="Go to Youtube" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#youtube"></use></svg></a></div>
-                </div>
-                <div class="border-t text-center pt-6 h-20 text-sm text-secondary bg-no-repeat bg-bottom" style="background-image:url(/assets/img/background/footer_kyoto.jpg)">
-                    © Copyright 2020 <span class="font-bold">wonect.com</span>. All Rights Reserved
-                </div>
-            </footer>
-        </div>
-        <!---->
-        <!---->
-        <div data-testid="sidebar" tabindex="0" class="transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none left-0 md:w-sidebar-left" style="display: none;">
-            <!---->
-        </div>
-        <div data-testid="sidebar" tabindex="0" class="transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none right-0 md:w-sidebar-right" style="display: none;">
-            <!---->
-        </div>
-        <!---->
-        <div class="fixed z-notification bottom-0 left-0 right-0 md:top-0 md:bottom-auto md:left-auto md:w-84 md:mr-12"><span></span></div>
-        <!---->
-        <div class="bg-status text-white fixed bottom-0 w-full z-systemnotice" style="display: none;">
-            <div class="container text-center p-2">
-                You are offline. Some features might not be available.
             </div>
         </div>
+        <a href="/sg/faq#purchase" data-testid="" id="footer_payment_secure" exact="" class="group group w-full py-4 border-t border-b md:w-1/2 md:border-0 xl:w-1/3 xl:px-16 xl:py-0">
+            <div class="flex items-center"><svg class="w-16 h-16 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#credit-card"></use></svg>
+                <h3 class="ml-4">
+                    Secure Payment
+                </h3>
+            </div>
+            <div class="text-sm text-secondary">
+                We accept a variety of secure payment methods. The options depend on the currency.
+            </div>
+        </a>
+        <div class="flex items-center justify-center w-full pt-6 md:w-1/2 xl:w-1/6 xl:p-0"><a id="footer_footer_icon_facebook" href="https://www.facebook.com/wonect.com.jp" aria-label="Go to Facebook" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#facebook"></use></svg></a>            <a id="footer_footer_icon_instagram" href="https://www.instagram.com/wonectjp/" aria-label="Go to Instagram" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#instagram"></use></svg></a>            <a id="footer_footer_icon_pinterest" href="https://www.pinterest.jp/wonect/" aria-label="Go to Pinterest" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#pinterest-p"></use></svg></a>            <a id="footer_footer_icon_youtube" href="https://www.youtube.com/channel/UCaLZf1iW60K0ho5kncLblPQ" aria-label="Go to Youtube" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#youtube"></use></svg></a></div>
+    </div>
+    <div class="border-t text-center pt-6 h-20 text-sm text-secondary bg-no-repeat bg-bottom" style="background-image:url(/assets/img/background/footer_kyoto.jpg)">
+        © Copyright 2020 <span class="font-bold">wonect.com</span>. All Rights Reserved
+    </div>
+</footer>
+
+
+
+<!-- MOBILE FOOTER -->
+
+<footer class="fixed lg:hidden bottom-0 w-full px-4 flex justify-between bg-white z-100 shadow overflow-x-hidden">
+<div class="flex flex-col text-gray-600 justify-center items-center">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e0dddd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+  <p class="my-1">Home</p>
+</div>
+
+<div class="flex flex-col text-gray-600 justify-center items-center relative">
+  <span class="absolute bg-secondary text-white top-0 right-0 h-6 flex justify-center items-center w-6 -mt-3 text-xs rounded-full">0</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e0dddd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+  <p class="my-1">WishList</p>
+</div>
+
+<div class="flex flex-col text-gray-600 justify-center items-center relative">
+    <span class="absolute bg-secondary text-white top-0 right-0 h-6 flex justify-center items-center w-6 -mt-3 text-xs rounded-full">0</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e0dddd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="20.5" r="1"/><circle cx="18" cy="20.5" r="1"/><path d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"/></svg>
+  <p class="my-1">Cart</p>
+</div>
+<div class="flex flex-col text-gray-600 justify-center items-center">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e0dddd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+  <p class="my-1">Account</p>
+</div>
+
+</footer>
+
+    </div>
+    <!---->
+    <!---->
+    <div data-testid="sidebar" tabindex="0" class="transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none left-0 md:w-sidebar-left" style="display: none;">
         <!---->
+    </div>
+    <div data-testid="sidebar" tabindex="0" class="transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none right-0 md:w-sidebar-right" style="display: none;">
         <!---->
-        <div class="__cov-progress" style="background-color: rgb(115, 204, 236); opacity: 0; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s; position: fixed;"></div>
+    </div>
+    <!---->
+    <div class="fixed z-notification bottom-0 left-0 right-0 md:top-0 md:bottom-auto md:left-auto md:w-84 md:mr-12"><span></span></div>
+    <!---->
+    <div class="bg-status text-white fixed bottom-0 w-full z-systemnotice" style="display: none;">
+        <div class="container text-center p-2">
+            You are offline. Some features might not be available.
+        </div>
+    </div>
+    <!---->
+    <!---->
+    <div class="__cov-progress" style="background-color: rgb(115, 204, 236); opacity: 0; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s; position: fixed;"></div>
     </div>
 
-    <script src="/dist/manifest.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-layout-default.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-modal.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-header.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-icons.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-common.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-page-home.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-home.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-footer.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/vendor.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/app.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
 
-<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MZSJDL"></script></body></html>
+
+
+</body>
+
+</html>

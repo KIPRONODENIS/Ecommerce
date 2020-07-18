@@ -2,146 +2,20 @@
 
 <head>
     <!-- index for default theme -->
-    <title>Home | Wonect.com</title>
+    <title>Home | Ecommerce.com</title>
 
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="carousel.css">
    <script src="https://kit.fontawesome.com/5d4a91f360.js" crossorigin="anonymous"></script>
 
-    <style type="text/css">
-        .VueCarousel-navigation-button[data-v-453ad8cd] {
-            position: absolute;
-            top: 50%;
-            box-sizing: border-box;
-            color: #000;
-            text-decoration: none;
-            appearance: none;
-            border: none;
-            background-color: transparent;
-            padding: 0;
-            cursor: pointer;
-            outline: none;
-        }
 
-        .VueCarousel-navigation-button[data-v-453ad8cd]:focus {
-            outline: 1px solid lightblue;
-        }
-
-        .VueCarousel-navigation-next[data-v-453ad8cd] {
-            right: 0;
-            transform: translateY(-50%) translateX(100%);
-            font-family: "system";
-        }
-
-        .VueCarousel-navigation-prev[data-v-453ad8cd] {
-            left: 0;
-            transform: translateY(-50%) translateX(-100%);
-            font-family: "system";
-        }
-
-        .VueCarousel-navigation--disabled[data-v-453ad8cd] {
-            opacity: 0.5;
-            cursor: default;
-        }
-
-        /* Define the "system" font family */
-
-        @font-face {
-            font-family: system;
-            font-style: normal;
-            font-weight: 300;
-            src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Symbol"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
-        }
-    </style>
-    <style type="text/css">
-        .VueCarousel-pagination[data-v-438fd353] {
-            width: 100%;
-            text-align: center;
-        }
-
-        .VueCarousel-pagination--top-overlay[data-v-438fd353] {
-            position: absolute;
-            top: 0;
-        }
-
-        .VueCarousel-pagination--bottom-overlay[data-v-438fd353] {
-            position: absolute;
-            bottom: 0;
-        }
-
-        .VueCarousel-dot-container[data-v-438fd353] {
-            display: inline-block;
-            margin: 0 auto;
-            padding: 0;
-        }
-
-        .VueCarousel-dot[data-v-438fd353] {
-            display: inline-block;
-            cursor: pointer;
-            appearance: none;
-            border: none;
-            background-clip: content-box;
-            box-sizing: content-box;
-            padding: 0;
-            border-radius: 100%;
-            outline: none;
-        }
-
-        .VueCarousel-dot[data-v-438fd353]:focus {
-            outline: 1px solid lightblue;
-        }
-    </style>
-    <style type="text/css">
-        .VueCarousel-slide {
-            flex-basis: inherit;
-            flex-grow: 0;
-            flex-shrink: 0;
-            user-select: none;
-            backface-visibility: hidden;
-            -webkit-touch-callout: none;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-            outline: none;
-        }
-
-        .VueCarousel-slide-adjustableHeight {
-            display: table;
-            flex-basis: auto;
-            width: 100%;
-        }
-    </style>
-    <style type="text/css">
-        .VueCarousel {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-
-        .VueCarousel--reverse {
-            flex-direction: column-reverse;
-        }
-
-        .VueCarousel-wrapper {
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .VueCarousel-inner {
-            display: flex;
-            flex-direction: row;
-            backface-visibility: hidden;
-        }
-
-        .VueCarousel-inner--center {
-            justify-content: center;
-        }
-    </style>
 
 </head>
 
 
 
-<body style="">
+<body class="overflow-x-hidden">
     <div id="app" class="w-full bg-white text-main">
         <!---->
         <div class="sticky top-0 z-systemnotice">
@@ -154,42 +28,51 @@
             <header class="flex flex-col mt-1">
                 <div class="flex flex-wrap items-center">
                     <nav class="relative flex flex-initial xl:order-last xl:w-full xl:border-t xl:mt-2 wrapper-xl">
-                        <div class="flex items-center w-full xl:hidden"><button type="button" data-testid="" id="header_hamburger_menu" class="group flex flex-0 items-center group cursor-pointer px-2 py-2 mr-2"><svg class="w-8 h-8"><use xlink:href="/dist/sprite-icons.svg#bars"></use></svg></button></div>
+                        <div class="flex items-center w-full xl:hidden"><button type="button" data-testid="" id="header_hamburger_menu" class="group flex flex-0 items-center group cursor-pointer px-2 py-2 mr-2 text-black">
+
+                          <i class="fas fa-bars text-2xl"></i>
+
+                        </button></div>
+
+
                         <div class="items-center w-full hidden xl:flex"><button type="button" data-testid="" id="header_category_menu" class="group flex flex-0 items-center group cursor-pointer m-0 px-10 py-3 w-56 bg-menu hover:bg-menu-hover">
                       <i class="fas fa-bars"></i>
                              <span class="ml-2 inline">Categories</span></button>
                             <ul class="items-center w-full flex flex-1">
-                                <li class="flex flex-auto"><a href="/sg/time-sale" data-testid="" id="header_menu_time_sale" exact="" class=" flex items-center w-full button-nav p-3">
+                                <li class="flex flex-auto"><a href="/time-sale" data-testid="" id="header_menu_time_sale" exact="" class=" flex items-center w-full button-nav p-3">
 
-                  <i class="far fa-clock"></i>
+                  <i class="far fa-clock mr-1"></i>
       Time Sale
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/on-sale-now" data-testid="" id="header_menu_on_sale_now" exact="" class=" flex items-center w-full button-nav p-3"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="#1f1f1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                                <li class="flex flex-auto"><a href="/onsale-now" data-testid="" id="header_menu_on_sale_now" exact="" class=" flex items-center w-full button-nav p-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="#1f1f1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
       On Sale Now
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/most-wanted" data-testid="" id="header_menu_most_wanted_sale" exact="" class="group flex items-center w-full button-nav p-3">
-                               <i class="fas fa-fire"></i>
+                                <li class="flex "><a href="/most-wanted" data-testid="" id="header_menu_most_wanted_sale" exact="" class="group flex items-center w-full button-nav p-2">
+                               <i class="fas fa-fire pr-1"></i>
       Most Wanted
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/wishlist" data-testid="" id="header_menu_wishlist" exact="" class="group flex items-center w-full button-nav p-3">
-                                   <i class="far fa-heart"></i>
+                                <li class="flex "><a href="/wishlist" data-testid="" id="header_menu_wishlist" exact="" class="group flex items-center w-full button-nav p-2">
+                                   <i class="far fa-heart pr-1"></i>
       Wish List
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/special-offers" data-testid="" id="header_menu_offers" exact="" class="group flex items-center w-full button-nav p-3">
-                                    <i class="fas fa-money-check-alt"></i>
+                                <li class="flex "><a href="/special-offers" data-testid="" id="header_menu_offers" exact="" class="group flex items-center w-full button-nav p-2">
+                                    <i class="fas fa-money-check-alt pr-1"></i>
       Special Offers
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/brands" data-testid="" id="header_menu_brand" exact="" class="group flex items-center w-full button-nav p-3">
-                                    <i class="fas fa-tags fa-rotate-45"></i>
+                                <li class="flex "><a href="/brands" data-testid="" id="header_menu_brand" exact="" class="group flex items-center w-full button-nav p-3">
+                                    <i class="fas fa-tags fa-rotate-45 pr-1"></i>
       Brands
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/buyers-guide" data-testid="" id="header_menu_special" exact="" class="group flex items-center w-full button-nav p-3"><i class="fas fa-certificate"></i>
+                                <li class="flex "><a href="/buyers-guide" data-testid="" id="header_menu_special" exact="" class="group flex items-center w-full button-nav p-2"><i class="fas fa-certificate pr-1"></i>
       Buyer's Guide
     </a></li>
                             </ul>
                         </div>
                         <!---->
                     </nav>
+
+
                     <div class="flex-1 xl:order-1 xl:flex-initial flex wrapper-xl"><a href="/sg/" data-testid="" title="Home Page" id="header_item_logo" class="group flex items-center h-10 xl:h-20 router-link-exact-active router-link-active"><img src="https://assets.wonect.com/assets/img/logo/logo.png" alt="Wonect logo" class="mx-auto object-contain h-10 xl:h-16"> <span class="hidden">
     Wonect
   </span></a></div>
@@ -237,19 +120,7 @@
                                  <span class="hidden md:inline">Search</span></button></form>
                     </div>
                 </div>
-                <div class="wrapper flex items-center justify-between text-sm bg-header-switcher text-white xl:order-first xl:pt-1 xl:py-0 xl:mb-4 xl:bg-transparent xl:text-primary"><button type="button" data-testid="" id="header_item_switcher" class="group flex xl:rounded xl:hover:bg-button-nav-hover group xl:px-4 py-2"><span class="flex items-center text-left hover:underline xl:hover:no-underline pr-2"><svg class="mr-1 xl:group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#store"></use></svg> <span class="xl:hidden">
-      SGD S$
-    </span> <span class="hidden xl:inline">
-      Singapore Store (SGD $)
-    </span></span> <span class="flex items-center text-left hover:underline xl:hover:no-underline border-l pl-2"><svg class="mr-1 xl:group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#map-marker"></use></svg>
-    Deliver to: Singapore
-    <span class="ml-2 hidden xl:inline"><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#au"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#ca"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#hk"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#id"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-all.svg#kr"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#my"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#nz"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#ph"></use></svg><svg><use xlink:href="/dist/sprite-flags-top.svg#sg"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#th"></use></svg><svg style="display:none"><use xlink:href="/dist/sprite-flags-top.svg#tw"></use></svg></span></span></button>
-                    <div class="hidden xl:flex items-center"><button type="button" data-testid="" id="header_shipping" title="Order Tracking" class="group flex items-center px-4 py-2 rounded button-nav"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#plane"></use></svg>
-  Order Tracking
-</button> <a href="/sg/help" data-testid="" id="header_item_help" title="Help and Contact" class="group flex items-center px-4 py-2 rounded button-nav"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#headset"></use></svg>
-  Help &amp; Contact
-</a></div>
-                </div>
+
             </header>
             <!---->
             <div id="home" itemscope="itemscope" itemtype="http://schema.org/Organization">
@@ -828,7 +699,7 @@
     </div>
 
 
-<footer class="wrapper">
+<footer class=" hidden lg:block wrapper">
     <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/sg/about-us" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
         Quality
       </h3> <span class="text-sm text-secondary">
@@ -1102,7 +973,7 @@
 
 <!-- MOBILE FOOTER -->
 
-<footer class="fixed lg:hidden bottom-0 w-full px-4 flex justify-between bg-white z-100 shadow ">
+<footer class="fixed lg:hidden bottom-0 w-full px-4 flex justify-between bg-white z-100 shadow overflow-x-hidden">
 <div class="flex flex-col text-gray-600 justify-center items-center">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e0dddd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
   <p class="my-1">Home</p>
@@ -1129,7 +1000,242 @@
     </div>
     <!---->
     <!---->
-    <div data-testid="sidebar" tabindex="0" class="transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none left-0 md:w-sidebar-left" style="display: none;">
+<div data-testid="sidebar" tabindex="0" class="hidden transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none left-0 md:w-sidebar-left" style=""><div><div class="flex items-center w-full border-b xl:hidden"><button type="button" data-testid="" class="group cursor-pointer p-2">
+<i class="fas fa-times w-8 h-8"></i>
+
+</button></div> <p class="flex items-center px-4 py-2 bg-light font-bold xl:hidden">
+    Categories
+  </p> <div class="bg-white flex pointer-events-auto w-full relative xl:shadow-2xl xl:w-auto"><div class="flex-none font-bold border-r cursor-pointer w-full xl:w-56">
+    <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="skin-care-1559">
+        Skin Care
+        <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i>
+
+        </button><button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="hair-care-1560">
+        Hair Care
+        <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i>
+    </button>
+    <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="body-care-1561">
+        Body Care
+          <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i>
+  </button>
+  <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="cosmetics-1558">
+        Cosmetics
+            <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i>
+
+        </button><button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="health-care-1562">
+        Health Care
+       
+        <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i>
+       </button><button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="beauty-tools-1563">
+        Beauty Tools
+        <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i>
+       </button><button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="home-and-life-1548">
+        Home &amp; Life
+               <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i></button></div>
+                <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;">
+
+                <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+                    <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i>
+    Main Menu
+  </button> <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1559">
+        All Skin Care
+      </a></li> <li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1617">
+        Cleansers
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1618">
+        Makeup Remover
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1619">
+        Toner
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1620">
+        Moisturizers &amp; Creams
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1621">
+        Masks
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1622">
+        Serum and Essence
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1623">
+        Eyelash care
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1624">
+        Sunscreen
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1625">
+        Mini Size Kit
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1626">
+        Men's skin care
+      </a></li></ul></div><div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+        <i class="fas fa-arrow-left mr-2 group-hover:text-highlight"></i>
+    
+    Main Menu
+  </button> <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1560">
+        All Hair Care
+      </a></li> <li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1627">
+        Shampoo
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1628">
+        Conditioner &amp; Treatment
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1629">
+        Mask
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1630">
+        Styling
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1631">
+        Hair Loss
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1632">
+        Hair Tools
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1633">
+        Hair Colors
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1634">
+        Men's Hair Care
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2131">
+        Shampoo &amp; Conditioner
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2132">
+        Special Care
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2133">
+        Others
+      </a></li></ul></div><div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+
+      <i class="fas fa-arrow-left mr-2 group-hover:text-highlight"></i>
+
+    Main Menu
+  </button> <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1561">
+        All Body Care
+      </a></li> <li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1635">
+        Soap
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1636">
+        Lotion
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1637">
+        Cream
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1638">
+        Hand and Foot care
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1640">
+        Deodorant
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1642">
+        Oral Care
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1643">
+        Bath
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1644">
+        Tights
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1656">
+        Eye Care
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2134">
+        Others
+      </a></li></ul></div><div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+           <i class="fas fa-arrow-left mr-2 group-hover:text-highlight"></i>
+    Main Menu
+  </button> <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1558">
+        All Cosmetics
+      </a></li> <li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1645">
+        Base Makeup
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1646">
+        Foundation
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1647">
+        Cheek
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1648">
+        Eye Makeup
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1649">
+        Lip Makeup
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1652">
+        Men’s Grooming &amp; Cosmetics
+      </a></li></ul></div><div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+            <i class="fas fa-arrow-left mr-2 group-hover:text-highlight"></i>
+    Main Menu
+  </button> <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1562">
+        All Health Care
+      </a></li> <li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1653">
+        Vitamins
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1654">
+        Collagen
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1655">
+        Health Supplements
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1658">
+        Medicine
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2135">
+        Others
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2136">
+        Weight Loss
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2138">
+        Beauty Supplements
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2139">
+        Whitening Supplements
+      </a></li></ul></div><div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+          <i class="fas fa-arrow-left mr-2 group-hover:text-highlight"></i>
+    Main Menu
+  </button> <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1563">
+        All Beauty Tools
+      </a></li> <li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1661">
+        Iron
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1662">
+        Hairdryer
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1663">
+        Massager
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1920">
+        Cotton
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1922">
+        Others
+      </a></li></ul></div><div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+             <i class="fas fa-arrow-left mr-2 group-hover:text-highlight"></i>
+    Main Menu
+  </button> <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1548">
+        All Home &amp; Life
+      </a></li> <li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1550">
+        Food &amp; Drink
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1551">
+        Sports
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1572">
+        Others
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1573">
+        Stationery
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1591">
+        Baby
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1599">
+        Toys
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1666">
+        Water Filter
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1667">
+        Kitchen
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1673">
+        Bedding
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1675">
+        Laundry
+      </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2137">
+        Adult
+      </a></li></ul></div></div> <div class="w-full flex flex-col font-bold bg-menu-open pb-6 xl:hidden"><ul class="items-center w-full bg-light border-t border-b"><li class="flex flex-auto"><a href="/time-sale" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_time_sale" exact="">
+      <i class="far fa-clock mr-1"></i>
+      Time Sale
+    </a></li><li class="flex flex-auto"><a href="/onsale-now" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_on_sale_now" exact="">
+       <i class="fas fa-tags mr-1"></i>
+      On Sale Now
+    </a></li><li class="flex flex-auto"><a href="/most-wanted" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_most_wanted_sale" exact="">
+    <i class="fas fa-fire mr-1"></i>
+
+      Most Wanted
+    </a></li><li class="flex flex-auto"><a href="/wishlist" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_wishlist" exact="">
+       <i class="fas fa-heart mr-1"></i>
+      Wish List
+    </a></li><li class="flex flex-auto"><a href="/special-offers" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_offers" exact="">
+        <i class="fas fa-money-bill"></i>
+      Special Offers
+    </a></li><li class="flex flex-auto"><a href="/brands" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_brand" exact="">
+   <i class="fas fa-tags mr-1"></i>
+      Brands
+    </a></li><li class="flex flex-auto"><a href="/buyers-guide" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_special" exact="">
+<i class="fas fa-certificate mr-1"></i>
+      Buyer's Guide
+    </a></li></ul> 
+
+<!--     <button type="button" data-testid="" class="group flex items-center w-full flex items-center p-3 button-link" id="header_shipping" title="Order Tracking"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#plane"></use></svg>
+  Order Tracking
+</button> 
+ -->
+<button type="button" data-testid="accountButton" class="group flex items-center xl:px-2 xl:h-12 rounded p-3 button-link w-full" id="header_menu_login" aria-label="Open my account">
+<i class="far fa-user mr-1"></i>
+     <span class="">My Account</span></button>
+
+
+
+     <a href="/sg/help" class="group flex items-center p-3 button-link" data-testid="" id="header_help" title="Help and Contact">
+<i class="fas fa-headset mr-1"></i>
+  Help &amp; Contact
+</a> <a href="/sg/about-us" class="group p-3 flex items-center button-link" data-testid="" id="header_about" title="About Us">
+<i class="fas fa-info-circle mr-1"></i>
+      About Us
+    </a></div></div></div>
+
         <!---->
     </div>
     <div data-testid="sidebar" tabindex="0" class="transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none right-0 md:w-sidebar-right" style="display: none;">
@@ -1147,22 +1253,6 @@
     <!---->
     <div class="__cov-progress" style="background-color: rgb(115, 204, 236); opacity: 0; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s; position: fixed;"></div>
     </div>
-
-    <script src="/dist/manifest.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-layout-default.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-modal.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-header.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-icons.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-common.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-page-home.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-home.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/wonect-footer.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/vendor.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-    <script src="/dist/app.9cdbf128ea6bdf6f7130.js" defer="defer"></script>
-
-
-    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-MZSJDL"></script>
-
 
 </body>
 
