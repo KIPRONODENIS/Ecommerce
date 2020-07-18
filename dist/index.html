@@ -3,10 +3,10 @@
 <head>
     <!-- index for default theme -->
     <title>Home | Wonect.com</title>
-    
+
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
-
+   <script src="https://kit.fontawesome.com/5d4a91f360.js" crossorigin="anonymous"></script>
 
     <style type="text/css">
         .VueCarousel-navigation-button[data-v-453ad8cd] {
@@ -155,27 +155,35 @@
                 <div class="flex flex-wrap items-center">
                     <nav class="relative flex flex-initial xl:order-last xl:w-full xl:border-t xl:mt-2 wrapper-xl">
                         <div class="flex items-center w-full xl:hidden"><button type="button" data-testid="" id="header_hamburger_menu" class="group flex flex-0 items-center group cursor-pointer px-2 py-2 mr-2"><svg class="w-8 h-8"><use xlink:href="/dist/sprite-icons.svg#bars"></use></svg></button></div>
-                        <div class="items-center w-full hidden xl:flex"><button type="button" data-testid="" id="header_category_menu" class="group flex flex-0 items-center group cursor-pointer m-0 px-10 py-3 w-56 bg-menu hover:bg-menu-hover"><svg class="w-6 h-6"><use xlink:href="/dist/sprite-icons.svg#bars"></use></svg> <span class="ml-2 inline">Categories</span></button>
+                        <div class="items-center w-full hidden xl:flex"><button type="button" data-testid="" id="header_category_menu" class="group flex flex-0 items-center group cursor-pointer m-0 px-10 py-3 w-56 bg-menu hover:bg-menu-hover">
+                      <i class="fas fa-bars"></i>
+                             <span class="ml-2 inline">Categories</span></button>
                             <ul class="items-center w-full flex flex-1">
-                                <li class="flex flex-auto"><a href="/sg/time-sale" data-testid="" id="header_menu_time_sale" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#stopwatch"></use></svg>
+                                <li class="flex flex-auto"><a href="/sg/time-sale" data-testid="" id="header_menu_time_sale" exact="" class=" flex items-center w-full button-nav p-3">
+
+                  <i class="far fa-clock"></i>
       Time Sale
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/on-sale-now" data-testid="" id="header_menu_on_sale_now" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#tags"></use></svg>
+                                <li class="flex flex-auto"><a href="/sg/on-sale-now" data-testid="" id="header_menu_on_sale_now" exact="" class=" flex items-center w-full button-nav p-3"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 24 24" fill="none" stroke="#1f1f1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
       On Sale Now
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/most-wanted" data-testid="" id="header_menu_most_wanted_sale" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#fire"></use></svg>
+                                <li class="flex flex-auto"><a href="/sg/most-wanted" data-testid="" id="header_menu_most_wanted_sale" exact="" class="group flex items-center w-full button-nav p-3">
+                               <i class="fas fa-fire"></i>
       Most Wanted
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/wishlist" data-testid="" id="header_menu_wishlist" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg>
+                                <li class="flex flex-auto"><a href="/sg/wishlist" data-testid="" id="header_menu_wishlist" exact="" class="group flex items-center w-full button-nav p-3">
+                                   <i class="far fa-heart"></i>
       Wish List
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/special-offers" data-testid="" id="header_menu_offers" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#money-bill"></use></svg>
+                                <li class="flex flex-auto"><a href="/sg/special-offers" data-testid="" id="header_menu_offers" exact="" class="group flex items-center w-full button-nav p-3">
+                                    <i class="fas fa-money-check-alt"></i>
       Special Offers
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/brands" data-testid="" id="header_menu_brand" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#label"></use></svg>
+                                <li class="flex flex-auto"><a href="/sg/brands" data-testid="" id="header_menu_brand" exact="" class="group flex items-center w-full button-nav p-3">
+                                    <i class="fas fa-tags fa-rotate-45"></i>
       Brands
     </a></li>
-                                <li class="flex flex-auto"><a href="/sg/buyers-guide" data-testid="" id="header_menu_special" exact="" class="group flex items-center w-full button-nav p-3"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#certificate-solid"></use></svg>
+                                <li class="flex flex-auto"><a href="/sg/buyers-guide" data-testid="" id="header_menu_special" exact="" class="group flex items-center w-full button-nav p-3"><i class="fas fa-certificate"></i>
       Buyer's Guide
     </a></li>
                             </ul>
@@ -185,7 +193,13 @@
                     <div class="flex-1 xl:order-1 xl:flex-initial flex wrapper-xl"><a href="/sg/" data-testid="" title="Home Page" id="header_item_logo" class="group flex items-center h-10 xl:h-20 router-link-exact-active router-link-active"><img src="https://assets.wonect.com/assets/img/logo/logo.png" alt="Wonect logo" class="mx-auto object-contain h-10 xl:h-16"> <span class="hidden">
     Wonect
   </span></a></div>
-                    <div class="flex-initial xl:order-3 flex wrapper-xl"><button type="button" data-testid="accountButton" id="header_menu_login" aria-label="Open my account" class="group flex items-center xl:px-2 xl:h-12 rounded text-right flex-initial button-nav rounded xl:mr-2"><svg class="mr-1 w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#user"></use></svg> <span class="hidden xl:inline">My Account</span></button>                        <button type="button" data-testid="openMicrocart" aria-label="Open microcart" id="header_item_cart" class="group flex justify-center items-center group rounded h-12 w-16 xl:w-20 button-nav"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#shopping-cart"></use></svg> <span data-testid="minicartCount" class="flex items-center justify-center h-6 w-6 -ml-4 mb-5 text-xs rounded-full bg-button border border-white group-hover:border-light-hover">
+                    <div class="flex-initial xl:order-3 flex wrapper-xl"><button type="button" data-testid="accountButton" id="header_menu_login" aria-label="Open my account" class="group flex items-center xl:px-2 xl:h-12 rounded text-right flex-initial button-nav rounded xl:mr-2">
+
+                         <i class="far fa-user text-2xl m-2"></i>
+                         <span class="hidden xl:inline">My Account</span></button>                        <button type="button" data-testid="openMicrocart" aria-label="Open microcart" id="header_item_cart" class="group flex justify-center items-center group rounded h-12 w-16 xl:w-20 button-nav">
+                   <i class="fas fa-shopping-cart fa-2x mx-1"></i>
+
+                         <span data-testid="minicartCount" class="flex items-center justify-center h-6 w-6 -ml-4 mb-5 text-xs rounded-full bg-button border border-white group-hover:border-light-hover">
     0
   </span></button></div>
                     <div itemscope="itemscope" itemtype="http://schema.org/Website" class="w-full p-3 mt-1 bg-header-search xl:bg-transparent xl:order-2 xl:flex-1 xl:mt-0">
@@ -213,10 +227,14 @@
     </option><option value="1563">
       Beauty Tools
     </option></select>
-                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"><svg class="w-4 h-4"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg></div> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-500 ease-in-out transform -translate-y-5 text-xs text-primary">
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                 <i class="fas fa-angle-down"></i>
+                                    </div> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-500 ease-in-out transform -translate-y-5 text-xs text-primary">
     
   </label> <span class="text-accent text-xs"></span></div>
-                            </div> <button type="button" data-testid="" class="group bg-button hover:bg-button-hover font-bold p-2 rounded-r"><svg><use xlink:href="/dist/sprite-icons.svg#search"></use></svg> <span class="hidden md:inline">Search</span></button></form>
+                            </div> <button type="button" data-testid="" class="group bg-button hover:bg-button-hover font-bold p-2 rounded-r">
+                            <i class="fas fa-search"></i>
+                                 <span class="hidden md:inline">Search</span></button></form>
                     </div>
                 </div>
                 <div class="wrapper flex items-center justify-between text-sm bg-header-switcher text-white xl:order-first xl:pt-1 xl:py-0 xl:mb-4 xl:bg-transparent xl:text-primary"><button type="button" data-testid="" id="header_item_switcher" class="group flex xl:rounded xl:hover:bg-button-nav-hover group xl:px-4 py-2"><span class="flex items-center text-left hover:underline xl:hover:no-underline pr-2"><svg class="mr-1 xl:group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#store"></use></svg> <span class="xl:hidden">

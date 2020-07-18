@@ -750,19 +750,19 @@ svg {
 .bg-menu {
     --bg-opacity: 1;
     background-color: #f46753;
-    background-color: rgba(234, 124, 89, var(--bg-opacity))
+    background-color: rgba(244, 103, 83, var(--bg-opacity))
 }
 
 .bg-menu-open {
     --bg-opacity: 1;
     background-color: #f46753;
-    background-color: rgba(234, 124, 89, var(--bg-opacity))
+    background-color: rgba(244, 103, 83, var(--bg-opacity))
 }
 
 .bg-button {
     --bg-opacity: 1;
     background-color: #f46753;
-    background-color: rgba(234, 124, 89, var(--bg-opacity))
+    background-color: rgba(244, 103, 83, var(--bg-opacity))
 }
 
 .bg-button-light {
@@ -774,7 +774,7 @@ svg {
 .bg-active {
     --bg-opacity: 1;
     background-color: #f46753;
-    background-color: rgba(234, 124, 89, var(--bg-opacity))
+    background-color: rgba(244, 103, 83, var(--bg-opacity))
 }
 
 .bg-inactive {
@@ -876,13 +876,13 @@ svg {
 .hover\:bg-menu-hover:hover {
     --bg-opacity: 1;
     background-color: #fabf13;
-    background-color: rgba(250, 191, 19, var(--bg-opacity))
+    background-color: rgba(244, 103, 83, var(--bg-opacity))
 }
 
 .hover\:bg-button-hover:hover {
     --bg-opacity: 1;
     background-color: #fabf13;
-    background-color: rgba(250, 191, 19, var(--bg-opacity))
+    background-color: rgba(244, 103, 83, var(--bg-opacity))
 }
 
 .focus\:bg-light:focus {
@@ -894,7 +894,7 @@ svg {
 .group:hover .group-hover\:bg-button-hover {
     --bg-opacity: 1;
     background-color: #fabf13;
-    background-color: rgba(250, 191, 19, var(--bg-opacity))
+    background-color: rgba(244, 103, 83, var(--bg-opacity))
 }
 
 .group:hover .group-hover\:bg-button-light-hover {
@@ -1955,7 +1955,7 @@ svg {
 .text-button {
     --text-opacity: 1;
     color: #f46753;
-    color: rgba(234, 124, 89, var(--text-opacity))
+    color: rgba(244, 103, 83, var(--text-opacity))
 }
 
 .text-button-light {
