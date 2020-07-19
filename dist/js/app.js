@@ -1,0 +1,22 @@
+document.querySelector('#header_hamburger_menu').addEventListener('click', function(){
+	document.querySelector('#sidebar').classList.toggle('hidden');
+});
+
+document.querySelector('#times').addEventListener('click', function(){
+	document.querySelector('#sidebar').classList.toggle('hidden');
+});
+
+document.querySelectorAll('.skin-care-1559').forEach(function(item){
+
+item.addEventListener('click', function(){
+document.querySelector('#skin-care-menu').style.display="block";
+});
+})
+
+
+
+
+document.querySelector('#close-submenu').addEventListener('click', function(){
+document.querySelector('#skin-care-menu').style.display="none";
+});
+

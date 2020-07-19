@@ -10,7 +10,6 @@
    <script src="https://kit.fontawesome.com/5d4a91f360.js" crossorigin="anonymous"></script>
 
 
-
 </head>
 
 
@@ -1000,44 +999,60 @@
     </div>
     <!---->
     <!---->
-<div data-testid="sidebar" tabindex="0" class="hidden transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none left-0 md:w-sidebar-left" style=""><div><div class="flex items-center w-full border-b xl:hidden"><button type="button" data-testid="" class="group cursor-pointer p-2">
-<i class="fas fa-times w-8 h-8"></i>
+<div id="sidebar" tabindex="0" class="hidden transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none left-0 md:w-sidebar-left" style="">
+  <div>
+    <div class="flex items-center w-full border-b xl:hidden">
+      <button type="button" id="times" class="group cursor-pointer p-2">
+<i class="fas fa-times w-8 h-8"></i></button></div>
 
-</button></div> <p class="flex items-center px-4 py-2 bg-light font-bold xl:hidden">
+ <p class="flex items-center px-4 py-2 bg-light font-bold xl:hidden">
     Categories
-  </p> <div class="bg-white flex pointer-events-auto w-full relative xl:shadow-2xl xl:w-auto"><div class="flex-none font-bold border-r cursor-pointer w-full xl:w-56">
-    <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="skin-care-1559">
+  </p>
+
+   <div class="bg-white flex pointer-events-auto w-full relative xl:shadow-2xl xl:w-auto">
+
+    <div class="flex-none font-bold border-r cursor-pointer w-full xl:w-56">
+    <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3 skin-care-1559" id="skin-care-1559">
         Skin Care
         <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i>
 
-        </button><button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="hair-care-1560">
+        </button>
+
+        <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3 skin-care-1559" id="hair-care-1560">
         Hair Care
         <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i>
     </button>
-    <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="body-care-1561">
+    <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3 skin-care-1559" id="body-care-1561">
         Body Care
           <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i>
   </button>
-  <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="cosmetics-1558">
+  <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3 skin-care-1559" id="cosmetics-1558">
         Cosmetics
             <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i>
 
-        </button><button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="health-care-1562">
+        </button><button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3 skin-care-1559" id="health-care-1562 ">
         Health Care
        
         <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i>
-       </button><button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="beauty-tools-1563">
+       </button><button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3 skin-care-1559" id="beauty-tools-1563 ">
         Beauty Tools
         <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i>
-       </button><button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="home-and-life-1548">
+       </button><button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3 skin-care-1559" id="home-and-life-1548">
         Home &amp; Life
                <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i></button></div>
-                <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;">
 
-                <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
-                    <i class="fas fa-angle-right w-4 h-4 group-hover:text-icon-hover"></i>
+
+                <div class="absolute left-0 top-0 bg-white w-full h-screen xl:h-auto flex-1 xl:relative" style="display:none;" id="skin-care-menu">
+
+                <button type="button" id="close-submenu" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+               
+                    <i class="fas fa-long-arrow-alt-left w-4 h-4 group-hover:text-icon-hover mr-2"></i>
     Main Menu
-  </button> <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1559">
+  </button> 
+
+  <ul>
+
+    <li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1559">
         All Skin Care
       </a></li> <li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1617">
         Cleansers
@@ -1059,7 +1074,12 @@
         Mini Size Kit
       </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1626">
         Men's skin care
-      </a></li></ul></div><div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+      </a></li></ul>
+
+    </div>
+
+
+    <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
         <i class="fas fa-arrow-left mr-2 group-hover:text-highlight"></i>
     
     Main Menu
@@ -1087,12 +1107,17 @@
         Special Care
       </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2133">
         Others
-      </a></li></ul></div><div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+      </a></li></ul>
+    </div>
+
+    <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
 
       <i class="fas fa-arrow-left mr-2 group-hover:text-highlight"></i>
 
     Main Menu
-  </button> <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1561">
+  </button>
+
+   <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1561">
         All Body Care
       </a></li> <li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1635">
         Soap
@@ -1114,10 +1139,15 @@
         Eye Care
       </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2134">
         Others
-      </a></li></ul></div><div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+      </a></li></ul>
+
+
+    </div><div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
            <i class="fas fa-arrow-left mr-2 group-hover:text-highlight"></i>
     Main Menu
-  </button> <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1558">
+  </button>
+
+   <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1558">
         All Cosmetics
       </a></li> <li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1645">
         Base Makeup
@@ -1131,10 +1161,15 @@
         Lip Makeup
       </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1652">
         Men’s Grooming &amp; Cosmetics
-      </a></li></ul></div><div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+      </a></li></ul>
+    </div>
+
+    <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
             <i class="fas fa-arrow-left mr-2 group-hover:text-highlight"></i>
     Main Menu
-  </button> <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1562">
+  </button>
+
+   <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1562">
         All Health Care
       </a></li> <li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1653">
         Vitamins
@@ -1152,10 +1187,15 @@
         Beauty Supplements
       </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2139">
         Whitening Supplements
-      </a></li></ul></div><div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+      </a></li></ul>
+    </div>
+
+    <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
           <i class="fas fa-arrow-left mr-2 group-hover:text-highlight"></i>
     Main Menu
-  </button> <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1563">
+  </button>
+
+   <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1563">
         All Beauty Tools
       </a></li> <li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1661">
         Iron
@@ -1167,10 +1207,15 @@
         Cotton
       </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1922">
         Others
-      </a></li></ul></div><div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+      </a></li></ul>
+    </div>
+
+    <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative" style="display: none;"><button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
              <i class="fas fa-arrow-left mr-2 group-hover:text-highlight"></i>
     Main Menu
-  </button> <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1548">
+  </button> 
+
+  <ul><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1548">
         All Home &amp; Life
       </a></li> <li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1550">
         Food &amp; Drink
@@ -1194,7 +1239,12 @@
         Laundry
       </a></li><li><a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2137">
         Adult
-      </a></li></ul></div></div> <div class="w-full flex flex-col font-bold bg-menu-open pb-6 xl:hidden"><ul class="items-center w-full bg-light border-t border-b"><li class="flex flex-auto"><a href="/time-sale" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_time_sale" exact="">
+      </a></li></ul>
+</div>
+</div> 
+<div class="w-full flex flex-col font-bold bg-menu-open pb-6 xl:hidden">
+
+  <ul class="items-center w-full bg-light border-t border-b"><li class="flex flex-auto"><a href="/time-sale" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_time_sale" exact="">
       <i class="far fa-clock mr-1"></i>
       Time Sale
     </a></li><li class="flex flex-auto"><a href="/onsale-now" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_on_sale_now" exact="">
@@ -1217,6 +1267,8 @@
 <i class="fas fa-certificate mr-1"></i>
       Buyer's Guide
     </a></li></ul> 
+
+
 
 <!--     <button type="button" data-testid="" class="group flex items-center w-full flex items-center p-3 button-link" id="header_shipping" title="Order Tracking"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#plane"></use></svg>
   Order Tracking
@@ -1254,6 +1306,7 @@
     <div class="__cov-progress" style="background-color: rgb(115, 204, 236); opacity: 0; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s; position: fixed;"></div>
     </div>
 
+<script type="text/javascript" src="js/app.js"></script>
 </body>
 
 </html>
