@@ -20,3 +20,12 @@ document.querySelector('#close-submenu').addEventListener('click', function(){
 document.querySelector('#skin-care-menu').style.display="none";
 });
 
+
+  document.addEventListener( 'DOMContentLoaded', function () {
+    new Splide( '.splide' , {
+      speed:1000,
+      type   : 'loop',
+      autoplay:true
+
+    }).mount();
+  } );
