@@ -29,3 +29,11 @@ document.querySelector('#skin-care-menu').style.display="none";
 
     }).mount();
   } );
+
+
+
+//function to toggle cart
+  function toggleCart(){
+  	console.log('click');
+  	document.querySelector('#microcart').classList.toggle('hidden');
+  }

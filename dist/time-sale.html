@@ -5,10 +5,13 @@
     <title>Home | Ecommerce.com</title>
 
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="carousel.css">
    <script src="https://kit.fontawesome.com/5d4a91f360.js" crossorigin="anonymous"></script>
-
 
 
 </head>
@@ -79,12 +82,19 @@
                     <div class="flex-initial xl:order-3 flex wrapper-xl"><button type="button" data-testid="accountButton" id="header_menu_login" aria-label="Open my account" class="group flex items-center xl:px-2 xl:h-12 rounded text-right flex-initial button-nav rounded xl:mr-2">
 
                          <i class="far fa-user text-2xl m-2"></i>
-                         <span class="hidden xl:inline">My Account</span></button>                        <button type="button" data-testid="openMicrocart" aria-label="Open microcart" id="header_item_cart" class="group flex justify-center items-center group rounded h-12 w-16 xl:w-20 button-nav">
+                         <span class="hidden xl:inline">My Account</span></button>
+
+
+                        <button type="button" data-testid="openMicrocart" aria-label="Open microcart" id="header_item_cart" class="group flex justify-center items-center group rounded h-12 w-16 xl:w-20 button-nav" onclick="toggleCart()">
                    <i class="fas fa-shopping-cart fa-2x mx-1"></i>
 
                          <span data-testid="minicartCount" class="flex items-center justify-center h-6 w-6 -ml-4 mb-5 text-xs rounded-full bg-button border border-white group-hover:border-light-hover">
     0
-  </span></button></div>
+  </span></button>
+
+</div>
+
+
                     <div itemscope="itemscope" itemtype="http://schema.org/Website" class="w-full p-3 mt-1 bg-header-search xl:bg-transparent xl:order-2 xl:flex-1 xl:mt-0">
                         <meta itemprop="name" content="Wonect.com Singapore Store">
                         <meta itemprop="url" content="https://wonect.com/sg/">
@@ -121,7 +131,6 @@
                     </div>
                 </div>
 
-            </header>
 
 
             <div id="breadcrumbs" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList" class="wrapper border-t bg-light py-4 text-secondary"><span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/sg/" class="link router-link-active" itemprop="item"><meta itemprop="position" content="1"> <meta itemprop="name" content="Singapore Store Home">
@@ -2208,6 +2217,305 @@
     <!---->
     <div class="__cov-progress" style="background-color: rgb(115, 204, 236); opacity: 0; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s; position: fixed;"></div>
     </div>
+
+<!--  START OF CART -->
+   <div data-testid="sidebar" id="microcart" tabindex="0" class="transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none right-0 md:w-sidebar-right hidden" style="">
+    <div data-testid="microcart" class="relative py-2 md:py-6">
+        <div class="flex justify-between items-start border-b pb-2 px-4 md:px-8">
+            <h2>
+                Shopping cart
+            </h2>
+            <div class="flex flex-col items-end">
+                <button type="button" data-testid="closeMicrocart" class="group uppercase" onclick="toggleCart()">
+                   <i class="fas fa-times text-2xl"></i>
+                </button>
+                <button type="button" data-testid="" class="group text-sm text-secondary hover:text-primary hover:underline flex items-center mt-4" onclick="toggeCart()">
+                    Remove all items
+             <i class="fas fa-trash mx-2 text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <div class="px-4 md:px-8">
+            <!---->
+            <!---->
+            <ul>
+                <li class="grid grid-cols-6 gap-1 border-b py-4">
+                    <div class="col-span-2 md:col-span-1">
+                        <a href="/sg/p/4901872093601/shiseido-elixir-reflet-balancing-oshiroi-milk-35g-8592" class="flex h-24 p-1" data-testid="productLink">
+                            <div class="w-full h-full">
+                                <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
+                                <img src="https://api.wonect.com/img/150/150/resize/o/s/oshiroi1.jpg" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
+                                <img src="https://api.wonect.com/img/150/150/resize/o/s/oshiroi1.jpg" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-span-4 md:col-span-5">
+                        <div>
+                            <a href="/sg/p/4901872093601/shiseido-elixir-reflet-balancing-oshiroi-milk-35g-8592" class="" data-testid="productLink">
+                                SHISEIDO Elixir Reflet Balancing Oshiroi Milk 35g
+                            </a>
+                        </div>
+                        <div></div>
+                        <!---->
+                        <div class="text-secondary">
+                            <span class="text-green">
+                                Usually ships in 7 to 10 days
+                            </span>
+                        </div>
+                    </div>
+                    <div data-testid="productPrice" class="col-span-2 text-secondary text-center mt-3">
+                        <span class="text-sm hidden md:inline">Price:</span>
+                        S$28.59
+                    </div>
+                    <div class="col-span-2 flex flex-col items-center justify-center">
+                        <div class="flex border rounded items-center mb-2">
+                            <button type="button" data-testid="" class="group p-2 text-faint">
+                                <svg><use xlink:href="/dist/sprite-icons.svg#minus-circle"></use></svg>
+                            </button>
+                            <div class="relative">
+                                <!---->
+                                <input id="input_494" type="number" min="1" class="w-8 text-center" /> <span class="text-accent text-xs absolute mt-10 -ml-6 w-64 left-0 top-0 pointer-events-none select-none"><!----></span>
+                            </div>
+                            <button type="button" data-testid="" class="group p-2 cursor-pointer text-secondary hover:text-icon-hover">
+                                <svg><use xlink:href="/dist/sprite-icons.svg#plus-circle"></use></svg>
+                            </button>
+                        </div>
+                        <button type="button" data-testid="" class="group text-sm text-secondary hover:text-primary hover:underline flex items-center">
+                            Remove
+                            <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#trash"></use></svg>
+                        </button>
+                    </div>
+                    <div class="col-span-2 text-right mt-3">
+                        <span class="text-sm hidden md:inline">Item Total:</span>
+                        <!---->
+                        <span class="text-accent font-bold">
+                            S$28.59
+                        </span>
+                    </div>
+                </li>
+                <li class="grid grid-cols-6 gap-1 border-b py-4">
+                    <div class="col-span-2 md:col-span-1">
+                        <a href="/sg/p/4515061186953/saborino-good-night-sheet-mask-28-sheets-8705" class="flex h-24 p-1" data-testid="productLink">
+                            <div class="w-full h-full">
+                                <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
+                                <img src="https://api.wonect.com/img/150/150/resize/2/0/2018-11-20_saborino.jpg" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
+                                <img src="https://api.wonect.com/img/150/150/resize/2/0/2018-11-20_saborino.jpg" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-span-4 md:col-span-5">
+                        <div>
+                            <a href="/sg/p/4515061186953/saborino-good-night-sheet-mask-28-sheets-8705" class="" data-testid="productLink">
+                                SABORINO Good Night Sheet Mask 28 sheets
+                            </a>
+                        </div>
+                        <div></div>
+                        <!---->
+                        <div class="text-secondary">
+                            <span class="text-green">
+                                Usually ships in 7 to 10 days
+                            </span>
+                        </div>
+                    </div>
+                    <div data-testid="productPrice" class="col-span-2 text-secondary text-center mt-3">
+                        <span class="text-sm hidden md:inline">Price:</span>
+                        S$35.33
+                    </div>
+                    <div class="col-span-2 flex flex-col items-center justify-center">
+                        <div class="flex border rounded items-center mb-2">
+                            <button type="button" data-testid="" class="group p-2 text-faint">
+                                <svg><use xlink:href="/dist/sprite-icons.svg#minus-circle"></use></svg>
+                            </button>
+                            <div class="relative">
+                                <!---->
+                                <input id="input_500" type="number" min="1" class="w-8 text-center" /> <span class="text-accent text-xs absolute mt-10 -ml-6 w-64 left-0 top-0 pointer-events-none select-none"><!----></span>
+                            </div>
+                            <button type="button" data-testid="" class="group p-2 cursor-pointer text-secondary hover:text-icon-hover">
+                                <svg><use xlink:href="/dist/sprite-icons.svg#plus-circle"></use></svg>
+                            </button>
+                        </div>
+                        <button type="button" data-testid="" class="group text-sm text-secondary hover:text-primary hover:underline flex items-center">
+                            Remove
+                            <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#trash"></use></svg>
+                        </button>
+                    </div>
+                    <div class="col-span-2 text-right mt-3">
+                        <span class="text-sm hidden md:inline">Item Total:</span>
+                        <!---->
+                        <span class="text-accent font-bold">
+                            S$35.33
+                        </span>
+                    </div>
+                </li>
+                <li class="grid grid-cols-6 gap-1 border-b py-4">
+                    <div class="col-span-2 md:col-span-1">
+                        <a href="/sg/p/4901872333776/shiseido-mg5-skin-conditioner-150ml-9011" class="flex h-24 p-1" data-testid="productLink">
+                            <div class="w-full h-full">
+                                <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
+                                <img src="https://api.wonect.com/img/150/150/resize/2/0/2018-08-06_mg5-skin-conditioner.jpg" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
+                                <img src="https://api.wonect.com/img/150/150/resize/2/0/2018-08-06_mg5-skin-conditioner.jpg" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-span-4 md:col-span-5">
+                        <div>
+                            <a href="/sg/p/4901872333776/shiseido-mg5-skin-conditioner-150ml-9011" class="" data-testid="productLink">
+                                SHISEIDO MG5 Skin Conditioner 150ml
+                            </a>
+                        </div>
+                        <div></div>
+                        <!---->
+                        <div class="text-secondary">
+                            <span class="text-green">
+                                Usually ships in 7 to 10 days
+                            </span>
+                        </div>
+                    </div>
+                    <div data-testid="productPrice" class="col-span-2 text-secondary text-center mt-3">
+                        <span class="text-sm hidden md:inline">Price:</span>
+                        S$12.90
+                    </div>
+                    <div class="col-span-2 flex flex-col items-center justify-center">
+                        <div class="flex border rounded items-center mb-2">
+                            <button type="button" data-testid="" class="group p-2 text-faint">
+                                <svg><use xlink:href="/dist/sprite-icons.svg#minus-circle"></use></svg>
+                            </button>
+                            <div class="relative">
+                                <!---->
+                                <input id="input_506" type="number" min="1" class="w-8 text-center" /> <span class="text-accent text-xs absolute mt-10 -ml-6 w-64 left-0 top-0 pointer-events-none select-none"><!----></span>
+                            </div>
+                            <button type="button" data-testid="" class="group p-2 cursor-pointer text-secondary hover:text-icon-hover">
+                                <svg><use xlink:href="/dist/sprite-icons.svg#plus-circle"></use></svg>
+                            </button>
+                        </div>
+                        <button type="button" data-testid="" class="group text-sm text-secondary hover:text-primary hover:underline flex items-center">
+                            Remove
+                            <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#trash"></use></svg>
+                        </button>
+                    </div>
+                    <div class="col-span-2 text-right mt-3">
+                        <span class="text-sm hidden md:inline">Item Total:</span>
+                        <!---->
+                        <span class="text-accent font-bold">
+                            S$12.90
+                        </span>
+                    </div>
+                </li>
+                <li class="grid grid-cols-6 gap-1 border-b py-4">
+                    <div class="col-span-2 md:col-span-1">
+                        <a href="/sg/p/4901872449637/shiseido-uno-gel-cleans-cool-cleanser-130g-4272" class="flex h-24 p-1" data-testid="productLink">
+                            <div class="w-full h-full">
+                                <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
+                                <img src="https://api.wonect.com/img/150/150/resize/s/h/shiseido_uno_gel_cleans_-cool-_130g.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
+                                <img src="https://api.wonect.com/img/150/150/resize/s/h/shiseido_uno_gel_cleans_-cool-_130g.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-span-4 md:col-span-5">
+                        <div>
+                            <a href="/sg/p/4901872449637/shiseido-uno-gel-cleans-cool-cleanser-130g-4272" class="" data-testid="productLink">
+                                SHISEIDO Uno Gel Cleans Cool Cleanser 130g
+                            </a>
+                        </div>
+                        <div></div>
+                        <!---->
+                        <div class="text-secondary">
+                            <span class="text-green">
+                                Usually ships in 7 to 10 days
+                            </span>
+                        </div>
+                    </div>
+                    <div data-testid="productPrice" class="col-span-2 text-secondary text-center mt-3">
+                        <span class="text-sm hidden md:inline">Price:</span>
+                        S$13.90
+                    </div>
+                    <div class="col-span-2 flex flex-col items-center justify-center">
+                        <div class="flex border rounded items-center mb-2">
+                            <button type="button" data-testid="" class="group p-2 text-faint">
+                                <svg><use xlink:href="/dist/sprite-icons.svg#minus-circle"></use></svg>
+                            </button>
+                            <div class="relative">
+                                <!---->
+                                <input id="input_512" type="number" min="1" class="w-8 text-center" /> <span class="text-accent text-xs absolute mt-10 -ml-6 w-64 left-0 top-0 pointer-events-none select-none"><!----></span>
+                            </div>
+                            <button type="button" data-testid="" class="group p-2 cursor-pointer text-secondary hover:text-icon-hover">
+                                <svg><use xlink:href="/dist/sprite-icons.svg#plus-circle"></use></svg>
+                            </button>
+                        </div>
+                        <button type="button" data-testid="" class="group text-sm text-secondary hover:text-primary hover:underline flex items-center">
+                            Remove
+                            <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#trash"></use></svg>
+                        </button>
+                    </div>
+                    <div class="col-span-2 text-right mt-3">
+                        <span class="text-sm hidden md:inline">Item Total:</span>
+                        <!---->
+                        <span class="text-accent font-bold">
+                            S$13.90
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <div class="pt-4">
+                <div>
+                    <div class="grid gap-3 grid-cols-2 items-baseline">
+                        <h3 class="mb-4">
+                            Order Summary
+                        </h3>
+                        <div class="text-secondary flex justify-end items-center"><!----></div>
+                        <div>
+                            Items Subtotal
+                        </div>
+                        <div class="text-right text-accent">
+                            S$90.72
+                        </div>
+                        <div>
+                            Shipping
+                        </div>
+                        <div class="text-right">
+                            <span class="text-green">
+                                Free
+                            </span>
+                        </div>
+                        <div class="col-span-2 border-t"></div>
+                        <!---->
+                        <div class="relative mt-4" id="couponinput">
+                            <input type="text" name="" autocomplete="" class="w-full p-2 border border-input hover:border-input-hover rounded" />
+                            <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+                                Coupon Code
+                                <span class="text-accent text-xs"></span>
+                            </label>
+                        </div>
+                        <button type="button" data-testid="" disabled="disabled" class="group button-light mt-4 button-disabled">
+                            Apply Coupon
+                        </button>
+                        <!---->
+                        <!---->
+                    </div>
+                    <div class="flex justify-between my-4 py-4 border-t border-b border-dashed">
+                        <div class="text-lg font-bold">
+                            Grand Total
+                        </div>
+                        <div class="text-right text-accent font-bold">
+                            S$90.72
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between items-center mb-6">
+                <button type="button" data-testid="" class="group button-link text-sm font-bold text-secondary">
+                    Return to shopping
+                </button>
+                <span class="w-1/2">
+                    <a href="/sg/checkout" class="group button flex justify-center" data-testid="">
+                        Go to checkout
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script type="text/javascript" src="js/app.js"></script>
 </body>
