@@ -27,6 +27,83 @@
                 <!---->
             </div>
         </div>
+
+<!-- start of account modal -->
+<div class="hidden z-modal fixed top-0 left-0 bottom-0 right-0 flex items-center justify-center xl:overflow-auto transform duration-300 account-modal  bg-black bg-opacity-25">
+  <div class="absolute top-0 left-0 w-full h-full"></div> <div class="z-modal-content bg-white border-t-4 border-bold w-full h-full overflow-auto xl:w-modal xl:h-auto">
+
+<!--   Start of SignUp -->
+<div class="p-4 md:px-10 register mt-4 hidden">
+  <div class="flex justify-between pb-8"><h3>
+      Register
+    </h3> 
+  <button type="button" data-testid="" class="group" onclick="toggleAccountModal()">
+      <i class="h-8 w-8 fas fa-times"></i>
+     </button>
+
+  </div> <div>
+
+    <form novalidate="novalidate"><div class="relative mt-4"><input type="email" name="email" autocomplete="email" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    E-mail address *
+    <span class="text-accent text-xs"><span data-testid="errorMessage" class="ml-1">
+    E-mail address is required.
+  </span><!----></span></label></div> <div class="relative mt-10"><input type="text" name="first-name" autocomplete="given-name" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    First name *
+    <span class="text-accent text-xs"><!----><!----><!----></span></label></div> <div class="relative mt-10"><input type="text" name="last-name" autocomplete="last-name" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    Last name *
+    <span class="text-accent text-xs"><!----><!----></span></label></div> <div class="relative mt-10"><input type="password" name="password" autocomplete="new-password" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    Password *
+    <span class="text-accent text-xs"><!----><!----></span></label></div> <div class="relative mt-10"><input type="password" name="password-confirm" autocomplete="new-password" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    Repeat password *
+    <span class="text-accent text-xs"><!----><!----></span></label></div> <div tabindex="0" class="mt-6"><div class="flex items-center group relative"><input type="checkbox" id="terms" class="invisible absolute top-0 left-0"> <label for="terms" class="pl-1 cursor-pointer">
+<i class="far fa-square w-8 h-8"></i>
+
+
+
+        I accept terms and conditions *
+      </label></div> <span class="text-accent text-xs"><!----></span></div> <button type="submit" data-testid="" disabled="disabled" class="group button mt-6 w-full button-disabled" id="popup_register_an_account_button">
+        Register an account
+      </button> <div class="py-8 text-center text-secondary">
+        Or
+        <button type="button" data-testid="" class="group button-link" onclick="openLogin()" >
+          login to your account
+        </button></div>
+      </form>
+    </div>
+  </div>
+
+
+<!-- start of Login -->
+
+    <div class="p-4 md:px-10 login ">
+      <div class="flex justify-between pb-8">
+        <h3>
+      Log in
+    </h3>
+
+     <button type="button" data-testid="" class="group" onclick="toggleAccountModal()">
+      <i class="h-8 w-8 fas fa-times"></i>
+     </button>
+   </div> 
+    <div>
+
+    <form novalidate="novalidate"><div class="relative mt-6"><input type="email" name="email" autocomplete="" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    E-mail address *
+    <span class="text-accent text-xs"><span data-testid="errorMessage" class="ml-1">
+    E-mail address is required.
+  </span><!----></span></label></div> <div class="relative mt-8"><input type="password" name="password" autocomplete="" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    Password *
+    <span class="text-accent text-xs"><!----></span></label></div> <div class="mt-6 text-right text-secondary"><button type="button" data-testid="" class="group button-link">
+          Forgot your password?
+        </button></div> <button type="submit" data-testid="loginSubmit" disabled="disabled" class="group button mt-6 w-full button-disabled" id="popup_login_in_account_button">
+        Log in to your account
+      </button> <div class="py-8 text-center text-secondary">
+        Or
+        <button type="button" data-testid="registerLink" class="group button-link" onclick="openRegister()">
+          register an account
+        </button></div></form></div></div> <!----> <!----></div></div>
+
+       <!--  End of account modal -->
         <div id="viewport" class="container">
             <header class="flex flex-col mt-1">
                 <div class="flex flex-wrap items-center">
@@ -38,9 +115,18 @@
                         </button></div>
 
 
-                        <div class="items-center w-full hidden xl:flex"><button type="button" data-testid="" id="header_category_menu" class="group flex flex-0 items-center group cursor-pointer m-0 px-10 py-3 w-56 bg-menu hover:bg-menu-hover">
-                      <i class="fas fa-bars"></i>
-                             <span class="ml-2 inline">Categories</span></button>
+                        <div class="items-center w-full hidden xl:flex z-categorymenu">
+                          <button type="button" data-testid="" id="header_category_menu" class="group flex flex-0 items-center group cursor-pointer m-0 px-10 py-3 w-56 bg-menu hover:bg-menu-hover" onclick="openMenu()">
+                            <span id="menu-bar" >
+                          <i class="fas fa-bars" ></i>
+                             </span>
+                             <span id="menu-close" class="hidden">
+                          <i class="fas fa-times" id="menu-times"></i>
+                            </span>
+                             <span class="ml-2 inline">Categories</span>
+
+
+                           </button>
                             <ul class="items-center w-full flex flex-1">
                                 <li class="flex flex-auto"><a href="/time-sale" data-testid="" id="header_menu_time_sale" exact="" class=" flex items-center w-full button-nav p-3">
 
@@ -72,14 +158,601 @@
     </a></li>
                             </ul>
                         </div>
+
+
+                       <!--  START OF CATEGORIES DESKTOP MENU -->
+                       <div class="hidden xl:flex z-categorymenu overflow-y-auto absolute w-1/2 h-auto left-0 top-full wrapper-xl" >
+
+    <div class="bg-white flex pointer-events-auto w-full relative xl:shadow-2xl xl:w-auto">
+        <div class="hidden flex-none font-bold border-r cursor-pointer w-full xl:w-56" id="desktop-menu"> 
+            <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3 bg-bright" id="skin-care-1559">
+                Skin Care
+                <span class="w-4 h-4 group-hover:text-icon-hover">
+                  <i class="fas fa-angle-right"></i>
+                </span>
+             
+            </button>
+            <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="hair-care-1560">
+                Hair Care
+                          
+                <span class="w-4 h-4 group-hover:text-icon-hover">
+                  <i class="fas fa-angle-right"></i>
+                </span>
+            </button>
+            <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="body-care-1561">
+                Body Care
+                
+                <span class="w-4 h-4 group-hover:text-icon-hover">
+                  <i class="fas fa-angle-right"></i>
+                </span>
+            </button>
+            <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="cosmetics-1558">
+                Cosmetics
+                  <span class="w-4 h-4 group-hover:text-icon-hover">
+                  <i class="fas fa-angle-right"></i>
+                </span>
+            </button>
+            <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="health-care-1562">
+                Health Care
+                  <span class="w-4 h-4 group-hover:text-icon-hover">
+                  <i class="fas fa-angle-right"></i>
+                </span>
+            </button>
+            <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="beauty-tools-1563">
+                Beauty Tools
+                  <span class="w-4 h-4 group-hover:text-icon-hover">
+                  <i class="fas fa-angle-right"></i>
+                </span>
+            </button>
+            <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="home-and-life-1548">
+                Home &amp; Life
+                  <span class="w-4 h-4 group-hover:text-icon-hover">
+                  <i class="fas fa-angle-right"></i>
+                </span>
+            </button>
+        </div>
+
+     <div class="hidden absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative  submenu" style="display: none;">
+
+     </div>
+        <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative skin-care-1559 " style="display: none;">
+            <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+
+                  <span class="mr-2 group-hover:text-highlight">
+                <i class="fas fa-long-arrow-alt-left"></i>
+                </span>
+     
+                Main Menu
+            </button>
+            <ul>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1559">
+                        All Skin Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2 router-link-exact-active router-link-active bg-bright" data-testid="" id="category_menu_1617">
+                        Cleansers
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1618">
+                        Makeup Remover
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1619">
+                        Toner
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1620">
+                        Moisturizers &amp; Creams
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1621">
+                        Masks
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1622">
+                        Serum and Essence
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1623">
+                        Eyelash care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1624">
+                        Sunscreen
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1625">
+                        Mini Size Kit
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1626">
+                        Men's skin care
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative hair-care-1560" style="display: none;">
+
+            <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+                  <span class="mr-2 group-hover:text-highlight">
+                 <i class="fas fa-long-arrow-alt-left"></i>
+                </span>
+                Main Menu
+            </button>
+            <ul>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1560">
+                        All Hair Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1627">
+                        Shampoo
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1628">
+                        Conditioner &amp; Treatment
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1629">
+                        Mask
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1630">
+                        Styling
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1631">
+                        Hair Loss
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1632">
+                        Hair Tools
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1633">
+                        Hair Colors
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1634">
+                        Men's Hair Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2131">
+                        Shampoo &amp; Conditioner
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2132">
+                        Special Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2133">
+                        Others
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative body-care-1561" style="display: none;">
+            <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+                  <span class="mr-2 group-hover:text-highlight">
+                 <i class="fas fa-long-arrow-alt-left"></i>
+                </span>
+                Main Menu
+            </button>
+            <ul>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1561">
+                        All Body Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1635">
+                        Soap
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1636">
+                        Lotion
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1637">
+                        Cream
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1638">
+                        Hand and Foot care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1640">
+                        Deodorant
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1642">
+                        Oral Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1643">
+                        Bath
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1644">
+                        Tights
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1656">
+                        Eye Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2134">
+                        Others
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative cosmetics-1558" style="display: none;">
+            <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+                  <span class="mr-2 group-hover:text-highlight">
+                 <i class="fas fa-long-arrow-alt-left"></i>
+                </span>
+                Main Menu
+            </button>
+            <ul>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2 " data-testid="" id="category_menu_1558">
+                        All Cosmetics
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1645">
+                        Base Makeup
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1646">
+                        Foundation
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1647">
+                        Cheek
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1648">
+                        Eye Makeup
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1649">
+                        Lip Makeup
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1652">
+                        Men’s Grooming &amp; Cosmetics
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative health-care-1562" style="display: none;">
+            <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+                  <span class="mr-2 group-hover:text-highlight">
+                 <i class="fas fa-long-arrow-alt-left"></i>
+                </span>
+                Main Menu
+            </button>
+            <ul>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2 " data-testid="" id="category_menu_1562">
+                        All Health Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1653">
+                        Vitamins
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1654">
+                        Collagen
+                    </a>
+                </li>
+                <li>
+                    <a href="/category
+                    " class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1655">
+                        Health Supplements
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1658">
+                        Medicine
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2135">
+                        Others
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2136">
+                        Weight Loss
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2138">
+                        Beauty Supplements
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2139">
+                        Whitening Supplements
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative beauty-tools-1563" style="display: none;">
+            <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+                  <span class="mr-2 group-hover:text-highlight">
+                 <i class="fas fa-long-arrow-alt-left"></i>
+                </span>
+                Main Menu
+            </button>
+            <ul>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2 " data-testid="" id="category_menu_1563">
+                        All Beauty Tools
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1661">
+                        Iron
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1662">
+                        Hairdryer
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1663">
+                        Massager
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1920">
+                        Cotton
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1922">
+                        Others
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative home-and-life-1548" style="display: none;">
+            <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+                  <span class="mr-2 group-hover:text-highlight">
+                 <i class="fas fa-long-arrow-alt-left"></i>
+                </span>
+                Main Menu
+            </button>
+            <ul>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1548">
+                        All Home &amp; Life
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1550">
+                        Food &amp; Drink
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1551">
+                        Sports
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1572">
+                        Others
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1573">
+                        Stationery
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1591">
+                        Baby
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1599">
+                        Toys
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1666">
+                        Water Filter
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1667">
+                        Kitchen
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1673">
+                        Bedding
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1675">
+                        Laundry
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2137">
+                        Adult
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="w-full flex flex-col font-bold bg-menu-open pb-6 xl:hidden">
+        <ul class="items-center w-full bg-light border-t border-b">
+            <li class="flex flex-auto">
+                <a href="/time-sale" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_time_sale" exact="">
+                  <span class="mr-1">
+                    <i class="fas fa-stopwatch"></i>
+                  </span>
+                  
+                    Time Sale
+                </a>
+            </li>
+            <li class="flex flex-auto">
+                <a href="/onsale-now" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_on_sale_now" exact="">
+                    <span class="mr-1">
+                    <i class="fas fa-tags"></i>
+                  </span>
+                    On Sale Now
+                </a>
+            </li>
+            <li class="flex flex-auto">
+                <a href="/most-wanted" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_most_wanted_sale" exact="">
+                                    <span class="mr-1">
+                    <i class="fas fa-fire"></i>
+                  </span>
+                    Most Wanted
+                </a>
+            </li>
+            <li class="flex flex-auto">
+                <a href="/wishlist" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_wishlist" exact="">
+                                  <span class="mr-1">
+                    <i class="fas fa-heart"></i>
+                  </span>
+                    Wish List
+                </a>
+            </li>
+            <li class="flex flex-auto">
+                <a href="/special-offers" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_offers" exact="">
+                    <span class="mr-1">
+                    <i class="fas fa-money-bill"></i>
+                  </span>
+                    Special Offers
+                </a>
+            </li>
+            <li class="flex flex-auto">
+                <a href="/brands" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_brand" exact="">
+                                     <span class="mr-1">
+                    <i class="fas fa-tag"></i>
+                  </span>
+                    Brands
+                </a>
+            </li>
+            <li class="flex flex-auto">
+                <a href="/buyers-guide" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_special" exact="">
+                      <span class="mr-1">
+                    <i class="fas fa-certificate"></i>
+                  </span>
+                    Buyer's Guide
+                </a>
+            </li>
+        </ul>
+        <button type="button" data-testid="" class="group flex items-center w-full flex items-center p-3 button-link" id="header_shipping" title="Order Tracking">
+            <span class="mr-1">
+                    <i class="fas fa-plane"></i>
+                  </span>
+            Order Tracking
+        </button>
+        <button type="button" data-testid="accountButton" class="group flex items-center xl:px-2 xl:h-12 rounded p-3 button-link w-full" id="header_menu_login" aria-label="Open my account">
+                <span class="mr-1">
+                    <i class="fas fa-user"></i>
+                  </span> <span class="">My Account</span>
+        </button>
+        <!---->
+<!--         <button type="button" data-testid="" class="group flex xl:rounded xl:hover:bg-button-nav-hover group flex-col" id="header_item_switcher">
+            <span class="flex items-center text-left hover:underline xl:hover:no-underline p-3">
+                <svg class="mr-1 xl:group-hover:text-icon-hover"><use xlink:href="https://wonect.com/sg/dist/sprite-icons.svg#store"></use></svg>
+                <span class="hidden">
+                    SGD S$
+                </span>
+                <span class="">
+                    Singapore Store (SGD $)
+                </span>
+            </span>
+            <span class="flex items-center text-left hover:underline xl:hover:no-underline p-3">
+                <svg class="mr-1 xl:group-hover:text-icon-hover"><use xlink:href="https://wonect.com/sg/dist/sprite-icons.svg#map-marker"></use></svg>
+                Deliver to: Singapore
+                <span class="ml-2 hidden">
+                    <svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#au"></use></svg><svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#ca"></use></svg>
+                    <svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#hk"></use></svg><svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#id"></use></svg>
+                    <svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-all.svg#kr"></use></svg><svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#my"></use></svg>
+                    <svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#nz"></use></svg><svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#ph"></use></svg>
+                    <svg><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#sg"></use></svg><svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#th"></use></svg>
+                    <svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#tw"></use></svg>
+                </span>
+            </span>
+        </button> -->
+
+        <a href="/help" class="group flex items-center p-3 button-link" data-testid="" id="header_help" title="Help and Contact">
+          <span class="mr-1">
+                <i class="fas fa-headset"></i>
+          </span>
+      
+            Help &amp; Contact
+        </a>
+        <a href="/about-us" class="group p-3 flex items-center button-link" data-testid="" id="header_about" title="About Us">
+          <span class="mr-1">
+                <i class="fas fa-info-circle"></i>
+          </span>
+            About Us
+        </a>
+    </div>
+</div>
+
+                       <!--  END OF CATEGORIES DESKTOP MENU -->
                         <!---->
                     </nav>
 
 
-                    <div class="flex-1 xl:order-1 xl:flex-initial flex wrapper-xl"><a href="/sg/" data-testid="" title="Home Page" id="header_item_logo" class="group flex items-center h-10 xl:h-20 router-link-exact-active router-link-active"><img src="https://assets.wonect.com/assets/img/logo/logo.png" alt="Wonect logo" class="mx-auto object-contain h-10 xl:h-16"> <span class="hidden">
-    Wonect
+                    <div class="flex-1 xl:order-1 xl:flex-initial flex wrapper-xl"><a href="/" data-testid="" title="Home Page" id="header_item_logo" class="group flex items-center h-10 xl:h-20 router-link-exact-active router-link-active"><img src="https://assets.wonect.com/assets/img/logo/logo.png" alt="Wonect logo" class="mx-auto object-contain h-10 xl:h-16"> <span class="hidden">
+
   </span></a></div>
-                    <div class="flex-initial xl:order-3 flex wrapper-xl"><button type="button" data-testid="accountButton" id="header_menu_login" aria-label="Open my account" class="group flex items-center xl:px-2 xl:h-12 rounded text-right flex-initial button-nav rounded xl:mr-2">
+                    <div class="flex-initial xl:order-3 flex wrapper-xl"><button type="button" data-testid="accountButton" id="header_menu_login" aria-label="Open my account" class="group flex items-center xl:px-2 xl:h-12 rounded text-right flex-initial button-nav rounded xl:mr-2" onclick="toggleAccountModal()">
 
                          <i class="far fa-user text-2xl m-2"></i>
                          <span class="hidden xl:inline">My Account</span></button>
@@ -252,9 +925,8 @@
                 </div>
             </main>
  
-
 <footer class=" hidden lg:block wrapper">
-    <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/sg/about-us" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
+    <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/about-us" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
         Quality
       </h3> <span class="text-sm text-secondary">
         Bringing you authentic products
@@ -267,7 +939,10 @@
       </h3> <span class="text-sm text-secondary">
         7-day return guarantee for defective products
       </span></div></a></div>
-    <div class="flex flex-wrap justify-center items-center border-t py-6 pxl:x-8"><svg class="w-12 h-12 flex-0"><use xlink:href="/dist/sprite-icons.svg#paper-plane"></use></svg>
+    <div class="flex flex-wrap justify-center items-center border-t py-6 pxl:x-8">
+      <span class="w-12 h-12 flex-0">
+        <i class="fas fa-paper-plane fa-3x"></i>
+      </span>
         <div class="text-sm pl-4 flex-1 lg:mr-8">
             <h3>
                 Sign up to our newsletter
@@ -507,7 +1182,12 @@
             </div>
         </div>
         <a href="/sg/faq#purchase" data-testid="" id="footer_payment_secure" exact="" class="group group w-full py-4 border-t border-b md:w-1/2 md:border-0 xl:w-1/3 xl:px-16 xl:py-0">
-            <div class="flex items-center"><svg class="w-16 h-16 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#credit-card"></use></svg>
+            <div class="flex items-center">
+              <span class="w-16 h-16 group-hover:text-icon-hover">
+               <i class="far fa-credit-card fa-3x"></i>
+              </span>
+             
+
                 <h3 class="ml-4">
                     Secure Payment
                 </h3>
@@ -516,7 +1196,30 @@
                 We accept a variety of secure payment methods. The options depend on the currency.
             </div>
         </a>
-        <div class="flex items-center justify-center w-full pt-6 md:w-1/2 xl:w-1/6 xl:p-0"><a id="footer_footer_icon_facebook" href="https://www.facebook.com/wonect.com.jp" aria-label="Go to Facebook" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#facebook"></use></svg></a>            <a id="footer_footer_icon_instagram" href="https://www.instagram.com/wonectjp/" aria-label="Go to Instagram" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#instagram"></use></svg></a>            <a id="footer_footer_icon_pinterest" href="https://www.pinterest.jp/wonect/" aria-label="Go to Pinterest" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#pinterest-p"></use></svg></a>            <a id="footer_footer_icon_youtube" href="https://www.youtube.com/channel/UCaLZf1iW60K0ho5kncLblPQ" aria-label="Go to Youtube" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#youtube"></use></svg></a></div>
+        <div class="flex items-center justify-center w-full pt-6 md:w-1/2 xl:w-1/6 xl:p-0"><a id="footer_footer_icon_facebook" href="https://www.facebook.com/wonect.com.jp" aria-label="Go to Facebook" target="_blank" class="px-1 hover:text-icon-hover">
+          <span class="w-10 h-10">
+            <i class="fab fa-facebook-f"></i>
+          </span>
+        
+
+        </a>            <a id="footer_footer_icon_instagram" href="https://www.instagram.com/wonectjp/" aria-label="Go to Instagram" target="_blank" class="px-1 hover:text-icon-hover">
+                    <span class="w-10 h-10">
+           <i class="fab fa-instagram"></i>
+          </span>
+
+        </a>            <a id="footer_footer_icon_pinterest" href="https://www.pinterest.jp/wonect/" aria-label="Go to Pinterest" target="_blank" class="px-1 hover:text-icon-hover">
+
+            <span class="w-10 h-10">
+                   <i class="fab fa-pinterest"></i>
+          </span>
+
+        </a>            <a id="footer_footer_icon_youtube" href="https://www.youtube.com/channel/UCaLZf1iW60K0ho5kncLblPQ" aria-label="Go to Youtube" target="_blank" class="px-1 hover:text-icon-hover">
+
+                      <span class="w-10 h-10">
+                   <i class="fab fa-youtube"></i>
+                    </span>
+
+        </a></div>
     </div>
     <div class="border-t text-center pt-6 h-20 text-sm text-secondary bg-no-repeat bg-bottom" style="background-image:url(/assets/img/background/footer_kyoto.jpg)">
         © Copyright 2020 <span class="font-bold">wonect.com</span>. All Rights Reserved
@@ -544,16 +1247,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e0dddd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="20.5" r="1"/><circle cx="18" cy="20.5" r="1"/><path d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"/></svg>
   <p class="my-1">Cart</p>
 </div>
-<div class="flex flex-col text-gray-600 justify-center items-center">
+<button class="flex flex-col text-gray-600 justify-center items-center" onclick="toggleAccountModal()">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e0dddd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
   <p class="my-1">Account</p>
-</div>
+</button>
 
 </footer>
 
     </div>
-    <!---->
-    <!---->
+
+<!-- 
+START OF MOBILE SIDEBAR -->
 <div id="sidebar" tabindex="0" class="hidden transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none left-0 md:w-sidebar-left" style="">
   <div>
     <div class="flex items-center w-full border-b xl:hidden">
@@ -825,11 +1529,11 @@
 
 
 
-<!--     <button type="button" data-testid="" class="group flex items-center w-full flex items-center p-3 button-link" id="header_shipping" title="Order Tracking"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#plane"></use></svg>
+<!--     <button type="button" data-testid="" class="group flex items-center w-full flex items-center p-3 button-link" id="header_shipping" title="Order Tracking"><svg class="mr-1"><use xlink:href="https://wonect.com/sg/dist/sprite-icons.svg#plane"></use></svg>
   Order Tracking
 </button> 
  -->
-<button type="button" data-testid="accountButton" class="group flex items-center xl:px-2 xl:h-12 rounded p-3 button-link w-full" id="header_menu_login" aria-label="Open my account">
+<button type="button" data-testid="accountButton" class="group flex items-center xl:px-2 xl:h-12 rounded p-3 button-link w-full" id="header_menu_login" aria-label="Open my account" onclick="toggleAccountModal()">
 <i class="far fa-user mr-1"></i>
      <span class="">My Account</span></button>
 
@@ -861,7 +1565,10 @@
     <div class="__cov-progress" style="background-color: rgb(115, 204, 236); opacity: 0; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s; position: fixed;"></div>
     </div>
 
-<!--  START OF CART -->
+
+
+
+   <!--  START OF CART -->
    <div data-testid="sidebar" id="microcart" tabindex="0" class="transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none right-0 md:w-sidebar-right hidden" style="">
     <div data-testid="microcart" class="relative py-2 md:py-6">
         <div class="flex justify-between items-start border-b pb-2 px-4 md:px-8">
@@ -913,19 +1620,24 @@
                     <div class="col-span-2 flex flex-col items-center justify-center">
                         <div class="flex border rounded items-center mb-2">
                             <button type="button" data-testid="" class="group p-2 text-faint">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#minus-circle"></use></svg>
+
+                              <i class="fas fa-minus-circle"></i>
+
                             </button>
                             <div class="relative">
                                 <!---->
                                 <input id="input_494" type="number" min="1" class="w-8 text-center" /> <span class="text-accent text-xs absolute mt-10 -ml-6 w-64 left-0 top-0 pointer-events-none select-none"><!----></span>
                             </div>
                             <button type="button" data-testid="" class="group p-2 cursor-pointer text-secondary hover:text-icon-hover">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#plus-circle"></use></svg>
+                               <i class="fas fa-plus-circle"></i>
                             </button>
                         </div>
                         <button type="button" data-testid="" class="group text-sm text-secondary hover:text-primary hover:underline flex items-center">
                             Remove
-                            <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#trash"></use></svg>
+                            <span class="ml-1">
+                              <i class="fas fa-trash"></i>
+                            </span>
+                  
                         </button>
                     </div>
                     <div class="col-span-2 text-right mt-3">
@@ -967,19 +1679,21 @@
                     <div class="col-span-2 flex flex-col items-center justify-center">
                         <div class="flex border rounded items-center mb-2">
                             <button type="button" data-testid="" class="group p-2 text-faint">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#minus-circle"></use></svg>
+                           <i class="fas fa-minus-circle"></i>
                             </button>
                             <div class="relative">
                                 <!---->
                                 <input id="input_500" type="number" min="1" class="w-8 text-center" /> <span class="text-accent text-xs absolute mt-10 -ml-6 w-64 left-0 top-0 pointer-events-none select-none"><!----></span>
                             </div>
                             <button type="button" data-testid="" class="group p-2 cursor-pointer text-secondary hover:text-icon-hover">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#plus-circle"></use></svg>
+                               <i class="fas fa-plus-circle"></i>
                             </button>
                         </div>
                         <button type="button" data-testid="" class="group text-sm text-secondary hover:text-primary hover:underline flex items-center">
                             Remove
-                            <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#trash"></use></svg>
+                              <span class="ml-1">
+                              <i class="fas fa-trash"></i>
+                            </span>
                         </button>
                     </div>
                     <div class="col-span-2 text-right mt-3">
@@ -1021,19 +1735,19 @@
                     <div class="col-span-2 flex flex-col items-center justify-center">
                         <div class="flex border rounded items-center mb-2">
                             <button type="button" data-testid="" class="group p-2 text-faint">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#minus-circle"></use></svg>
+                                     <i class="fas fa-minus-circle"></i>
                             </button>
                             <div class="relative">
                                 <!---->
                                 <input id="input_506" type="number" min="1" class="w-8 text-center" /> <span class="text-accent text-xs absolute mt-10 -ml-6 w-64 left-0 top-0 pointer-events-none select-none"><!----></span>
                             </div>
                             <button type="button" data-testid="" class="group p-2 cursor-pointer text-secondary hover:text-icon-hover">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#plus-circle"></use></svg>
+                               <i class="fas fa-plus-circle"></i>
                             </button>
                         </div>
                         <button type="button" data-testid="" class="group text-sm text-secondary hover:text-primary hover:underline flex items-center">
                             Remove
-                            <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#trash"></use></svg>
+                              <i class="fas fa-minus-circle"></i>
                         </button>
                     </div>
                     <div class="col-span-2 text-right mt-3">
@@ -1075,19 +1789,19 @@
                     <div class="col-span-2 flex flex-col items-center justify-center">
                         <div class="flex border rounded items-center mb-2">
                             <button type="button" data-testid="" class="group p-2 text-faint">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#minus-circle"></use></svg>
+                               <i class="fas fa-minus-circle"></i>
                             </button>
                             <div class="relative">
                                 <!---->
                                 <input id="input_512" type="number" min="1" class="w-8 text-center" /> <span class="text-accent text-xs absolute mt-10 -ml-6 w-64 left-0 top-0 pointer-events-none select-none"><!----></span>
                             </div>
                             <button type="button" data-testid="" class="group p-2 cursor-pointer text-secondary hover:text-icon-hover">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#plus-circle"></use></svg>
+                                  <i class="fas fa-plus-circle"></i>
                             </button>
                         </div>
                         <button type="button" data-testid="" class="group text-sm text-secondary hover:text-primary hover:underline flex items-center">
                             Remove
-                            <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#trash"></use></svg>
+                             <i class="fas fa-minus-trash"></i>
                         </button>
                     </div>
                     <div class="col-span-2 text-right mt-3">
@@ -1159,6 +1873,9 @@
     </div>
 </div>
 
+
+<!-- START OF OVERLAY -->
+<div id="overlay" class="hidden z-overlay fixed top-0 left-0 w-full h-full bg-black bg-opacity-25"></div>
 
 <script type="text/javascript" src="js/app.js"></script>
 </body>

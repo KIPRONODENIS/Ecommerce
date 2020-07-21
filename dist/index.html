@@ -33,7 +33,7 @@
   <div class="absolute top-0 left-0 w-full h-full"></div> <div class="z-modal-content bg-white border-t-4 border-bold w-full h-full overflow-auto xl:w-modal xl:h-auto">
 
 <!--   Start of SignUp -->
-<div class="p-4 md:px-10 register">
+<div class="p-4 md:px-10 register mt-4 hidden">
   <div class="flex justify-between pb-8"><h3>
       Register
     </h3> 
@@ -55,7 +55,11 @@
     Password *
     <span class="text-accent text-xs"><!----><!----></span></label></div> <div class="relative mt-10"><input type="password" name="password-confirm" autocomplete="new-password" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
     Repeat password *
-    <span class="text-accent text-xs"><!----><!----></span></label></div> <div tabindex="0" class="mt-6"><div class="flex items-center group relative"><input type="checkbox" id="terms" class="invisible absolute top-0 left-0"> <label for="terms" class="pl-1 cursor-pointer"><svg class="w-8 h-8 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#square"></use></svg> 
+    <span class="text-accent text-xs"><!----><!----></span></label></div> <div tabindex="0" class="mt-6"><div class="flex items-center group relative"><input type="checkbox" id="terms" class="invisible absolute top-0 left-0"> <label for="terms" class="pl-1 cursor-pointer">
+<i class="far fa-square w-8 h-8"></i>
+
+
+
         I accept terms and conditions *
       </label></div> <span class="text-accent text-xs"><!----></span></div> <button type="submit" data-testid="" disabled="disabled" class="group button mt-6 w-full button-disabled" id="popup_register_an_account_button">
         Register an account
@@ -71,7 +75,7 @@
 
 <!-- start of Login -->
 
-    <div class="p-4 md:px-10 login hidden">
+    <div class="p-4 md:px-10 login ">
       <div class="flex justify-between pb-8">
         <h3>
       Log in
@@ -163,31 +167,48 @@
         <div class="hidden flex-none font-bold border-r cursor-pointer w-full xl:w-56" id="desktop-menu"> 
             <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3 bg-bright" id="skin-care-1559">
                 Skin Care
-                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg>
+                <span class="w-4 h-4 group-hover:text-icon-hover">
+                  <i class="fas fa-angle-right"></i>
+                </span>
+             
             </button>
             <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="hair-care-1560">
                 Hair Care
-                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg>
+                          
+                <span class="w-4 h-4 group-hover:text-icon-hover">
+                  <i class="fas fa-angle-right"></i>
+                </span>
             </button>
             <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="body-care-1561">
                 Body Care
-                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg>
+                
+                <span class="w-4 h-4 group-hover:text-icon-hover">
+                  <i class="fas fa-angle-right"></i>
+                </span>
             </button>
             <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="cosmetics-1558">
                 Cosmetics
-                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg>
+                  <span class="w-4 h-4 group-hover:text-icon-hover">
+                  <i class="fas fa-angle-right"></i>
+                </span>
             </button>
             <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="health-care-1562">
                 Health Care
-                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg>
+                  <span class="w-4 h-4 group-hover:text-icon-hover">
+                  <i class="fas fa-angle-right"></i>
+                </span>
             </button>
             <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="beauty-tools-1563">
                 Beauty Tools
-                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg>
+                  <span class="w-4 h-4 group-hover:text-icon-hover">
+                  <i class="fas fa-angle-right"></i>
+                </span>
             </button>
             <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="home-and-life-1548">
                 Home &amp; Life
-                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg>
+                  <span class="w-4 h-4 group-hover:text-icon-hover">
+                  <i class="fas fa-angle-right"></i>
+                </span>
             </button>
         </div>
 
@@ -196,7 +217,11 @@
      </div>
         <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative skin-care-1559 " style="display: none;">
             <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
-                <svg class="mr-2 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#arrow-left"></use></svg>
+
+                  <span class="mr-2 group-hover:text-highlight">
+                <i class="fas fa-long-arrow-alt-left"></i>
+                </span>
+     
                 Main Menu
             </button>
             <ul>
@@ -262,7 +287,9 @@
         <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative hair-care-1560" style="display: none;">
 
             <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
-                <svg class="mr-2 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#arrow-left"></use></svg>
+                  <span class="mr-2 group-hover:text-highlight">
+                 <i class="fas fa-long-arrow-alt-left"></i>
+                </span>
                 Main Menu
             </button>
             <ul>
@@ -330,7 +357,9 @@
         </div>
         <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative body-care-1561" style="display: none;">
             <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
-                <svg class="mr-2 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#arrow-left"></use></svg>
+                  <span class="mr-2 group-hover:text-highlight">
+                 <i class="fas fa-long-arrow-alt-left"></i>
+                </span>
                 Main Menu
             </button>
             <ul>
@@ -393,7 +422,9 @@
         </div>
         <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative cosmetics-1558" style="display: none;">
             <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
-                <svg class="mr-2 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#arrow-left"></use></svg>
+                  <span class="mr-2 group-hover:text-highlight">
+                 <i class="fas fa-long-arrow-alt-left"></i>
+                </span>
                 Main Menu
             </button>
             <ul>
@@ -436,7 +467,9 @@
         </div>
         <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative health-care-1562" style="display: none;">
             <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
-                <svg class="mr-2 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#arrow-left"></use></svg>
+                  <span class="mr-2 group-hover:text-highlight">
+                 <i class="fas fa-long-arrow-alt-left"></i>
+                </span>
                 Main Menu
             </button>
             <ul>
@@ -490,7 +523,9 @@
         </div>
         <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative beauty-tools-1563" style="display: none;">
             <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
-                <svg class="mr-2 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#arrow-left"></use></svg>
+                  <span class="mr-2 group-hover:text-highlight">
+                 <i class="fas fa-long-arrow-alt-left"></i>
+                </span>
                 Main Menu
             </button>
             <ul>
@@ -528,7 +563,9 @@
         </div>
         <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative home-and-life-1548" style="display: none;">
             <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
-                <svg class="mr-2 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#arrow-left"></use></svg>
+                  <span class="mr-2 group-hover:text-highlight">
+                 <i class="fas fa-long-arrow-alt-left"></i>
+                </span>
                 Main Menu
             </button>
             <ul>
@@ -598,59 +635,78 @@
     <div class="w-full flex flex-col font-bold bg-menu-open pb-6 xl:hidden">
         <ul class="items-center w-full bg-light border-t border-b">
             <li class="flex flex-auto">
-                <a href="/sg/time-sale" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_time_sale" exact="">
-                    <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#stopwatch"></use></svg>
+                <a href="/time-sale" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_time_sale" exact="">
+                  <span class="mr-1">
+                    <i class="fas fa-stopwatch"></i>
+                  </span>
+                  
                     Time Sale
                 </a>
             </li>
             <li class="flex flex-auto">
-                <a href="/sg/on-sale-now" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_on_sale_now" exact="">
-                    <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#tags"></use></svg>
+                <a href="/onsale-now" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_on_sale_now" exact="">
+                    <span class="mr-1">
+                    <i class="fas fa-tags"></i>
+                  </span>
                     On Sale Now
                 </a>
             </li>
             <li class="flex flex-auto">
-                <a href="/sg/most-wanted" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_most_wanted_sale" exact="">
-                    <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#fire"></use></svg>
+                <a href="/most-wanted" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_most_wanted_sale" exact="">
+                                    <span class="mr-1">
+                    <i class="fas fa-fire"></i>
+                  </span>
                     Most Wanted
                 </a>
             </li>
             <li class="flex flex-auto">
-                <a href="/sg/wishlist" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_wishlist" exact="">
-                    <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg>
+                <a href="/wishlist" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_wishlist" exact="">
+                                  <span class="mr-1">
+                    <i class="fas fa-heart"></i>
+                  </span>
                     Wish List
                 </a>
             </li>
             <li class="flex flex-auto">
-                <a href="/sg/special-offers" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_offers" exact="">
-                    <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#money-bill"></use></svg>
+                <a href="/special-offers" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_offers" exact="">
+                    <span class="mr-1">
+                    <i class="fas fa-money-bill"></i>
+                  </span>
                     Special Offers
                 </a>
             </li>
             <li class="flex flex-auto">
-                <a href="/sg/brands" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_brand" exact="">
-                    <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#label"></use></svg>
+                <a href="/brands" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_brand" exact="">
+                                     <span class="mr-1">
+                    <i class="fas fa-tag"></i>
+                  </span>
                     Brands
                 </a>
             </li>
             <li class="flex flex-auto">
-                <a href="/sg/buyers-guide" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_special" exact="">
-                    <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#certificate-solid"></use></svg>
+                <a href="/buyers-guide" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_special" exact="">
+                      <span class="mr-1">
+                    <i class="fas fa-certificate"></i>
+                  </span>
                     Buyer's Guide
                 </a>
             </li>
         </ul>
         <button type="button" data-testid="" class="group flex items-center w-full flex items-center p-3 button-link" id="header_shipping" title="Order Tracking">
-            <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#plane"></use></svg>
+            <span class="mr-1">
+                    <i class="fas fa-plane"></i>
+                  </span>
             Order Tracking
         </button>
         <button type="button" data-testid="accountButton" class="group flex items-center xl:px-2 xl:h-12 rounded p-3 button-link w-full" id="header_menu_login" aria-label="Open my account">
-            <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#user"></use></svg> <span class="">My Account</span>
+                <span class="mr-1">
+                    <i class="fas fa-user"></i>
+                  </span> <span class="">My Account</span>
         </button>
         <!---->
-        <button type="button" data-testid="" class="group flex xl:rounded xl:hover:bg-button-nav-hover group flex-col" id="header_item_switcher">
+<!--         <button type="button" data-testid="" class="group flex xl:rounded xl:hover:bg-button-nav-hover group flex-col" id="header_item_switcher">
             <span class="flex items-center text-left hover:underline xl:hover:no-underline p-3">
-                <svg class="mr-1 xl:group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#store"></use></svg>
+                <svg class="mr-1 xl:group-hover:text-icon-hover"><use xlink:href="https://wonect.com/sg/dist/sprite-icons.svg#store"></use></svg>
                 <span class="hidden">
                     SGD S$
                 </span>
@@ -659,24 +715,30 @@
                 </span>
             </span>
             <span class="flex items-center text-left hover:underline xl:hover:no-underline p-3">
-                <svg class="mr-1 xl:group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#map-marker"></use></svg>
+                <svg class="mr-1 xl:group-hover:text-icon-hover"><use xlink:href="https://wonect.com/sg/dist/sprite-icons.svg#map-marker"></use></svg>
                 Deliver to: Singapore
                 <span class="ml-2 hidden">
-                    <svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#au"></use></svg><svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#ca"></use></svg>
-                    <svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#hk"></use></svg><svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#id"></use></svg>
-                    <svg style="display: none;"><use xlink:href="/dist/sprite-flags-all.svg#kr"></use></svg><svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#my"></use></svg>
-                    <svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#nz"></use></svg><svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#ph"></use></svg>
-                    <svg><use xlink:href="/dist/sprite-flags-top.svg#sg"></use></svg><svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#th"></use></svg>
-                    <svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#tw"></use></svg>
+                    <svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#au"></use></svg><svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#ca"></use></svg>
+                    <svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#hk"></use></svg><svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#id"></use></svg>
+                    <svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-all.svg#kr"></use></svg><svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#my"></use></svg>
+                    <svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#nz"></use></svg><svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#ph"></use></svg>
+                    <svg><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#sg"></use></svg><svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#th"></use></svg>
+                    <svg style="display: none;"><use xlink:href="https://wonect.com/sg/dist/sprite-flags-top.svg#tw"></use></svg>
                 </span>
             </span>
-        </button>
-        <a href="/sg/help" class="group flex items-center p-3 button-link" data-testid="" id="header_help" title="Help and Contact">
-            <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#headset"></use></svg>
+        </button> -->
+
+        <a href="/help" class="group flex items-center p-3 button-link" data-testid="" id="header_help" title="Help and Contact">
+          <span class="mr-1">
+                <i class="fas fa-headset"></i>
+          </span>
+      
             Help &amp; Contact
         </a>
-        <a href="/sg/about-us" class="group p-3 flex items-center button-link" data-testid="" id="header_about" title="About Us">
-            <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#info-circle"></use></svg>
+        <a href="/about-us" class="group p-3 flex items-center button-link" data-testid="" id="header_about" title="About Us">
+          <span class="mr-1">
+                <i class="fas fa-info-circle"></i>
+          </span>
             About Us
         </a>
     </div>
@@ -687,8 +749,8 @@
                     </nav>
 
 
-                    <div class="flex-1 xl:order-1 xl:flex-initial flex wrapper-xl"><a href="/sg/" data-testid="" title="Home Page" id="header_item_logo" class="group flex items-center h-10 xl:h-20 router-link-exact-active router-link-active"><img src="https://assets.wonect.com/assets/img/logo/logo.png" alt="Wonect logo" class="mx-auto object-contain h-10 xl:h-16"> <span class="hidden">
-    Wonect
+                    <div class="flex-1 xl:order-1 xl:flex-initial flex wrapper-xl"><a href="/" data-testid="" title="Home Page" id="header_item_logo" class="group flex items-center h-10 xl:h-20 router-link-exact-active router-link-active"><img src="https://assets.wonect.com/assets/img/logo/logo.png" alt="Wonect logo" class="mx-auto object-contain h-10 xl:h-16"> <span class="hidden">
+
   </span></a></div>
                     <div class="flex-initial xl:order-3 flex wrapper-xl"><button type="button" data-testid="accountButton" id="header_menu_login" aria-label="Open my account" class="group flex items-center xl:px-2 xl:h-12 rounded text-right flex-initial button-nav rounded xl:mr-2" onclick="toggleAccountModal()">
 
@@ -767,13 +829,13 @@
   <div class="splide__track">
     <ul class="splide__list">
       <li class="splide__slide">
-               <div tabindex="-1" role="tabpanel" class="VueCarousel-slide" aria-hidden="true"><a href="/sg/" class="group router-link-exact-active router-link-active" data-testid="" id="toppage_main_banner_x2_review"><img src="https://assets.wonect.com/assets/home-banner-top/x2review_sp.jpg" alt="" class="mx-auto object-contain"></a></div>
+               <div tabindex="-1" role="tabpanel" class="VueCarousel-slide" aria-hidden="true"><a href="/" class="group router-link-exact-active router-link-active" data-testid="" id="toppage_main_banner_x2_review"><img src="https://assets.wonect.com/assets/home-banner-top/x2review_sp.jpg" alt="" class="mx-auto object-contain"></a></div>
       </li>
       <li class="splide__slide">
-               <div tabindex="-1" role="tabpanel" class="VueCarousel-slide" aria-hidden="true"><a href="/sg/" class="group router-link-exact-active router-link-active" data-testid="" id="toppage_main_banner_x2_review"><img src="https://assets.wonect.com/assets/home-banner-top/x2review_sp.jpg" alt="" class="mx-auto object-contain"></a></div>
+               <div tabindex="-1" role="tabpanel" class="VueCarousel-slide" aria-hidden="true"><a href="/" class="group router-link-exact-active router-link-active" data-testid="" id="toppage_main_banner_x2_review"><img src="https://assets.wonect.com/assets/home-banner-top/x2review_sp.jpg" alt="" class="mx-auto object-contain"></a></div>
       </li>
       <li class="splide__slide">
-               <div tabindex="-1" role="tabpanel" class="VueCarousel-slide" aria-hidden="true"><a href="/sg/" class="group router-link-exact-active router-link-active" data-testid="" id="toppage_main_banner_x2_review"><img src="https://assets.wonect.com/assets/home-banner-top/x2review_sp.jpg" alt="" class="mx-auto object-contain"></a></div>
+               <div tabindex="-1" role="tabpanel" class="VueCarousel-slide" aria-hidden="true"><a href="/" class="group router-link-exact-active router-link-active" data-testid="" id="toppage_main_banner_x2_review"><img src="https://assets.wonect.com/assets/home-banner-top/x2review_sp.jpg" alt="" class="mx-auto object-contain"></a></div>
       </li>
     </ul>
   </div>
@@ -790,7 +852,7 @@
             <div class="flex flex-col items-center justify-center bg-white hover:shadow-lg px-8 md:flex-row lg:flex-col lg:px-0 xl:px-8 my-4 min-h-80 w-84 mx-auto md:w-128 md:my-6 lg:w-64 lg:flex-1 lg:my-0 xl:ml-8 lg:mr-0 xl:w-84 lg:min-h-0 lg:h-banner-lt xl:h-banner-pc">
                 <div id="toppage_time_sale_products" class="py-1 border-b md:border-0 xl:border-b flex flex-1 w-full">
                     <div class="relative group flex flex-col w-64 lg:px-3 lg:h-56">
-                        <a href="/sg/p/4987067205202-1/kowa-cabagin-kowa-a-stomach-medicine-300-tablets-738" data-testid="productLink" class="flex flex-col flex-auto">
+                        <a href="/product.html" data-testid="productLink" class="flex flex-col flex-auto">
                             <div class="m-auto h-32 lg:h-40">
                                 <div data-testid="productImage" class="w-full h-full"><img src="https://assets.wonect.com/assets/placeholder.png" alt="KOWA Cabagin Kowa a Stomach Medicine 300 tablets" itemprop="image" class="object-contain w-auto h-full m-auto" style="display:none"> <img src="https://api.wonect.com/img/100/100/resize/o/t/oth01137_9__3.jpg"
                                         alt="KOWA Cabagin Kowa a Stomach Medicine 300 tablets" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/o/t/oth01137_9__3.jpg"
@@ -812,7 +874,7 @@
                         </a>
                         <!---->
                     </div>
-                </div> <a href="/sg/time-sale" data-testid="" id="toppage_time_sale_countdown" class="group flex-none text-center py-2"><span class="block font-bold mb-1">Current Time Sale ends in</span> <div class="flex justify-center" id="time-sale-flip-countdown"><span class="flex flex-col px-3 w-16 text-center"><span class="text-blue bg-blue p-1 font-bold">
+                </div> <a href="/time-sale" data-testid="" id="toppage_time_sale_countdown" class="group flex-none text-center py-2"><span class="block font-bold mb-1">Current Time Sale ends in</span> <div class="flex justify-center" id="time-sale-flip-countdown"><span class="flex flex-col px-3 w-16 text-center"><span class="text-blue bg-blue p-1 font-bold">
       1
     </span> <span class="text-xs">
       Day
@@ -829,7 +891,7 @@
         <main class="wrapper">
             <div class="flex flex-col items-center my-16">
                 <div class="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                    <a href="/sg/c/cleansers-1617" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1617">
+                    <a href="/category" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1617">
                         <div class="bg-bright rounded-full h-32 w-32 p-6 md:h-40 md:w-40 md:p-8 mb-4">
                             <div class="w-full h-full"><img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image"
                                     class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/?width=120&amp;height=120&amp;action=fit&amp;url=https%3A%2F%2Fwonect.cloud%2Fmedia%2Fcatalog%2Fcategory%2Fcleansers.png"
@@ -837,7 +899,7 @@
                         </div>
                         Cleansers
                     </a>
-                    <a href="/sg/c/moisturizers-and-creams-1620" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1620">
+                    <a href="/category" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1620">
                         <div class="bg-bright rounded-full h-32 w-32 p-6 md:h-40 md:w-40 md:p-8 mb-4">
                             <div class="w-full h-full"><img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image"
                                     class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/?width=120&amp;height=120&amp;action=fit&amp;url=https%3A%2F%2Fwonect.cloud%2Fmedia%2Fcatalog%2Fcategory%2Fmoisturizers-creams.png"
@@ -845,7 +907,7 @@
                         </div>
                         Moisturizers &amp; Creams
                     </a>
-                    <a href="/sg/c/serum-and-essence-1622" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1622">
+                    <a href="/category" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1622">
                         <div class="bg-bright rounded-full h-32 w-32 p-6 md:h-40 md:w-40 md:p-8 mb-4">
                             <div class="w-full h-full"><img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image"
                                     class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/?width=120&amp;height=120&amp;action=fit&amp;url=https%3A%2F%2Fwonect.cloud%2Fmedia%2Fcatalog%2Fcategory%2Fserums-essences.png"
@@ -853,7 +915,7 @@
                         </div>
                         Serum and Essence
                     </a>
-                    <a href="/sg/c/eyelash-care-1623" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1623">
+                    <a href="/category" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1623">
                         <div class="bg-bright rounded-full h-32 w-32 p-6 md:h-40 md:w-40 md:p-8 mb-4">
                             <div class="w-full h-full"><img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image"
                                     class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/?width=120&amp;height=120&amp;action=fit&amp;url=https%3A%2F%2Fwonect.cloud%2Fmedia%2Fcatalog%2Fcategory%2Feyelash-care.png"
@@ -861,7 +923,7 @@
                         </div>
                         Eyelash care
                     </a>
-                    <a href="/sg/c/shampoo-1627" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1627">
+                    <a href="/category" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1627">
                         <div class="bg-bright rounded-full h-32 w-32 p-6 md:h-40 md:w-40 md:p-8 mb-4">
                             <div class="w-full h-full"><img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image"
                                     class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/?width=120&amp;height=120&amp;action=fit&amp;url=https%3A%2F%2Fwonect.cloud%2Fmedia%2Fcatalog%2Fcategory%2Fshampoo.png"
@@ -869,7 +931,7 @@
                         </div>
                         Shampoo
                     </a>
-                    <a href="/sg/c/hair-loss-1631" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1631">
+                    <a href="/category" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1631">
                         <div class="bg-bright rounded-full h-32 w-32 p-6 md:h-40 md:w-40 md:p-8 mb-4">
                             <div class="w-full h-full"><img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image"
                                     class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/?width=120&amp;height=120&amp;action=fit&amp;url=https%3A%2F%2Fwonect.cloud%2Fmedia%2Fcatalog%2Fcategory%2Fhair-loss.png"
@@ -877,7 +939,7 @@
                         </div>
                         Hair Loss
                     </a>
-                    <a href="/sg/c/oral-care-1642" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1642">
+                    <a href="/category" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1642">
                         <div class="bg-bright rounded-full h-32 w-32 p-6 md:h-40 md:w-40 md:p-8 mb-4">
                             <div class="w-full h-full"><img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image"
                                     class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/?width=120&amp;height=120&amp;action=fit&amp;url=https%3A%2F%2Fwonect.cloud%2Fmedia%2Fcatalog%2Fcategory%2Foral-care.png"
@@ -885,7 +947,7 @@
                         </div>
                         Oral Care
                     </a>
-                    <a href="/sg/c/base-makeup-1645" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1645">
+                    <a href="/category" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1645">
                         <div class="bg-bright rounded-full h-32 w-32 p-6 md:h-40 md:w-40 md:p-8 mb-4">
                             <div class="w-full h-full"><img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image"
                                     class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/?width=120&amp;height=120&amp;action=fit&amp;url=https%3A%2F%2Fwonect.cloud%2Fmedia%2Fcatalog%2Fcategory%2Fbase-makeup.png"
@@ -893,7 +955,7 @@
                         </div>
                         Base Makeup
                     </a>
-                    <a href="/sg/c/collagen-1654" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1654">
+                    <a href="/category" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1654">
                         <div class="bg-bright rounded-full h-32 w-32 p-6 md:h-40 md:w-40 md:p-8 mb-4">
                             <div class="w-full h-full"><img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image"
                                     class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/?width=120&amp;height=120&amp;action=fit&amp;url=https%3A%2F%2Fwonect.cloud%2Fmedia%2Fcatalog%2Fcategory%2Fcollagen.png"
@@ -901,7 +963,7 @@
                         </div>
                         Collagen
                     </a>
-                    <a href="/sg/c/food-and-drink-1550" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1550">
+                    <a href="/category" class="group flex flex-col items-center p-2 capitalize rounded hover:shadow" data-testid="" id="toppage_product_category_1550">
                         <div class="bg-bright rounded-full h-32 w-32 p-6 md:h-40 md:w-40 md:p-8 mb-4">
                             <div class="w-full h-full"><img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image"
                                     class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/?width=120&amp;height=120&amp;action=fit&amp;url=https%3A%2F%2Fwonect.cloud%2Fmedia%2Fcatalog%2Fcategory%2Ffood-and-drink.png"
@@ -909,7 +971,7 @@
                         </div>
                         Food &amp; Drink
                     </a>
-                </div> <a href="/sg/departments" class="group button mt-6 w-56" data-testid="" id="departments">
+                </div> <a href="/category" class="group button mt-6 w-56" data-testid="" id="departments">
     Browse all categories
   </a></div>
 
@@ -921,7 +983,7 @@
     <div class="flex flex-wrap">
         <div class="w-full bg-button p-6 mb-6 rounded featured-product flex flex-col md:flex-row md:items-center lg:flex-col lg:items-start lg:w-1/3 lg:mb-0">
             <div class="relative group flex flex-col">
-                <a href="/sg/p/4562189171187/svelty-hot-pakkun-yeast-black-ginger-diet-supplement-56-tablets-9567" class="flex flex-col flex-auto" data-testid="productLink">
+                <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
                     <div class="m-auto h-32 lg:h-40 xl:h-72">
                         <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="SVELTY Hot Pakkun Yeast Black Ginger Diet Supplement 56 tablets" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/s/v/svelty.png"
                                 alt="SVELTY Hot Pakkun Yeast Black Ginger Diet Supplement 56 tablets" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/s/v/svelty.png"
@@ -943,7 +1005,7 @@
                 </a>
                 <!---->
             </div>
-            <a href="/sg/p/4562189171187/svelty-hot-pakkun-yeast-black-ginger-diet-supplement-56-tablets-9567" class="pt-4" id="toppage_featured_product" data-testid="productLink">
+            <a href="/product" class="pt-4" id="toppage_featured_product" data-testid="productLink">
                 <div class="w-32 h-10 text-primary hover:bg-light text-sm bg-white rounded-sm flex items-center justify-center">
                     Shop now
                 </div>
@@ -952,7 +1014,7 @@
         <div class="grid gap-4 md:gap-6 w-full grid-cols-2 md:grid-cols-3 lg:w-2/3 lg:pl-6" id="toppage_best_seller_products">
             <div class="border rounded hover:shadow-xl p-2">
                 <div class="relative group flex flex-col h-full">
-                    <a href="/sg/p/SUN01002/suntory-royal-jelly-sesamin-e-anti-aging-supplement-120-tablets-x-2-bottles-1" class="flex flex-col flex-auto" data-testid="productLink">
+                    <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
                         <div class="m-auto h-32 lg:h-40">
                             <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="SUNTORY Royal Jelly + Sesamin E Anti Aging Supplement (120 tablets x 2 bottles)" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;">                                <img src="https://api.wonect.com/img/100/100/resize/2/_/2_bottle.jpg" alt="SUNTORY Royal Jelly + Sesamin E Anti Aging Supplement (120 tablets x 2 bottles)" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;">                                <img src="https://api.wonect.com/img/310/300/resize/2/_/2_bottle.jpg" alt="SUNTORY Royal Jelly + Sesamin E Anti Aging Supplement (120 tablets x 2 bottles)" itemprop="image" class="object-contain w-auto h-full m-auto" style=""></div>
                         </div>
@@ -969,7 +1031,11 @@
                                 <!---->
                             </div>
                         </div>
-                    </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+                    </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2">
+  <span class="mr-1 text-button-light hover:text-button-light-hover">
+    <i class="fas fa-heart"></i>
+  </span>
+                      <span class="" style="display: none;">
     Add to Wish List
   </span></button>
                     <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><i class="fas fa-cart-plus"></i>
@@ -979,7 +1045,7 @@
             </div>
             <div class="border rounded hover:shadow-xl p-2">
                 <div class="relative group flex flex-col h-full">
-                    <a href="/sg/p/4987205590207/hoyu-medilook-scalp-shampoo-500ml-607" class="flex flex-col flex-auto" data-testid="productLink">
+                    <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
                         <div class="m-auto h-32 lg:h-40">
                             <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="HOYU Medilook Scalp Shampoo 500ml" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/s/h/sha1_1.jpg"
                                     alt="HOYU Medilook Scalp Shampoo 500ml" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/s/h/sha1_1.jpg" alt="HOYU Medilook Scalp Shampoo 500ml"
@@ -998,7 +1064,12 @@
                                 <!---->
                             </div>
                         </div>
-                    </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+                    </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2">
+             <span class="mr-1 text-button-light hover:text-button-light-hover">
+    <i class="fas fa-heart"></i>
+  </span>
+
+   <span class="" style="display: none;">
     Add to Wish List
   </span></button>
                     <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><i class="fas fa-cart-plus"></i>
@@ -1008,7 +1079,7 @@
             </div>
             <div class="border rounded hover:shadow-xl p-2">
                 <div class="relative group flex flex-col h-full">
-                    <a href="/sg/p/4987415957517/shiseido-the-collagen-tablet-126-tablets-1391" class="flex flex-col flex-auto" data-testid="productLink">
+                    <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
                         <div class="m-auto h-32 lg:h-40">
                             <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="SHISEIDO The Collagen Tablet 126 tablets" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/s/h/shiseido_collagen_2.jpg"
                                     alt="SHISEIDO The Collagen Tablet 126 tablets" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/s/h/shiseido_collagen_2.jpg" alt="SHISEIDO The Collagen Tablet 126 tablets"
@@ -1027,7 +1098,12 @@
                                 <!---->
                             </div>
                         </div>
-                    </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+                    </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2">
+                   <span class="mr-1 text-button-light hover:text-button-light-hover">
+                    <i class="fas fa-heart"></i>
+                 </span>
+
+   <span class="" style="display: none;">
     Add to Wish List
   </span></button>
                     <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><i class="fas fa-cart-plus"></i>
@@ -1037,7 +1113,7 @@
             </div>
             <div class="border rounded hover:shadow-xl p-2">
                 <div class="relative group flex flex-col h-full">
-                    <a href="/sg/p/OTH01812/chocola-bb-lucent-c-whitening-supplement-180-tablets-3119" class="flex flex-col flex-auto" data-testid="productLink">
+                    <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
                         <div class="m-auto h-32 lg:h-40">
                             <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="CHOCOLA BB Lucent C Whitening Supplement 180 tablets" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/1/8/1801_1.jpg"
                                     alt="CHOCOLA BB Lucent C Whitening Supplement 180 tablets" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/1/8/1801_1.jpg" alt="CHOCOLA BB Lucent C Whitening Supplement 180 tablets"
@@ -1056,7 +1132,12 @@
                                 <!---->
                             </div>
                         </div>
-                    </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+                    </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2">
+     <span class="mr-1 text-button-light hover:text-button-light-hover">
+    <i class="fas fa-heart"></i>
+  </span>
+
+                       <span class="" style="display: none;">
     Add to Wish List
   </span></button>
                     <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><i class="fas fa-cart-plus"></i>
@@ -1066,7 +1147,7 @@
             </div>
             <div class="border rounded hover:shadow-xl p-2">
                 <div class="relative group flex flex-col h-full">
-                    <a href="/sg/p/4901777268470/suntory-milcolla-collagen-powder-30-sachets-1231" class="flex flex-col flex-auto" data-testid="productLink">
+                    <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
                         <div class="m-auto h-32 lg:h-40">
                             <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="SUNTORY Milcolla Collagen Powder 30 sachets " itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/m/i/milcolla3_2.jpg"
                                     alt="SUNTORY Milcolla Collagen Powder 30 sachets " itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/m/i/milcolla3_2.jpg" alt="SUNTORY Milcolla Collagen Powder 30 sachets "
@@ -1085,7 +1166,12 @@
                                 <!---->
                             </div>
                         </div>
-                    </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+                    </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2">
+               <span class="mr-1 text-button-light hover:text-button-light-hover">
+    <i class="fas fa-heart"></i>
+  </span>
+
+                       <span class="" style="display: none;">
     Add to Wish List
   </span></button>
                     <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><i class="fas fa-cart-plus"></i>
@@ -1095,7 +1181,7 @@
             </div>
             <div class="border rounded hover:shadow-xl p-2">
                 <div class="relative group flex flex-col h-full">
-                    <a href="/sg/p/FAN01078/fancl-mild-cleansing-oil-120ml-465" class="flex flex-col flex-auto" data-testid="productLink">
+                    <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
                         <div class="m-auto h-32 lg:h-40">
                             <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="FANCL Mild Cleansing Oil 120ml" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/f/a/fan01002_1_1.jpg"
                                     alt="FANCL Mild Cleansing Oil 120ml" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/f/a/fan01002_1_1.jpg" alt="FANCL Mild Cleansing Oil 120ml"
@@ -1114,7 +1200,11 @@
                                 <!---->
                             </div>
                         </div>
-                    </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+                    </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2">
+                        <span class="mr-1 text-button-light hover:text-button-light-hover">
+                       <i class="fas fa-heart"></i>
+                       </span>
+                           <span class="" style="display: none;">
     Add to Wish List
   </span></button>
                     <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><i class="fas fa-cart-plus"></i>
@@ -1132,7 +1222,7 @@
         Trending
     </h3>
     <div class="w-full grid gap-8 grid-cols-2 md:grid-cols-4">
-        <a href="/sg/c/whitening-2061" class="group" data-testid="" id="toppage_trending_whitening-2061">
+        <a href="/product" class="group" data-testid="" id="toppage_trending_whitening-2061">
             <div class="rounded p-6 border border-light h-56 xl:h-84 hover:border-light-hover hover:shadow-xl">
                 <div class="w-full h-full"><img src="https://assets.wonect.com/assets/placeholder.png" alt="Whitening" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://assets.wonect.com/assets/placeholder.png" alt="Whitening"
                         itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/?width=200&amp;height=266&amp;action=fit&amp;url=https%3A%2F%2Fwonect.cloud%2Fmedia%2Fcatalog%2Fcategory%2Fwhitening-title_1.png"
@@ -1142,7 +1232,7 @@
                 Whitening
             </h4>
         </a>
-        <a href="/sg/c/diet-2062" class="group" data-testid="" id="toppage_trending_diet-2062">
+        <a href="/product" class="group" data-testid="" id="toppage_trending_diet-2062">
             <div class="rounded p-6 border border-light h-56 xl:h-84 hover:border-light-hover hover:shadow-xl">
                 <div class="w-full h-full"><img src="https://assets.wonect.com/assets/placeholder.png" alt="Diet" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://assets.wonect.com/assets/placeholder.png" alt="Diet" itemprop="image"
                         class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/?width=200&amp;height=266&amp;action=fit&amp;url=https%3A%2F%2Fwonect.cloud%2Fmedia%2Fcatalog%2Fcategory%2Fdiet-title.png" alt="Diet"
@@ -1152,7 +1242,7 @@
                 Diet
             </h4>
         </a>
-        <a href="/sg/c/hair-care-2064" class="group" data-testid="" id="toppage_trending_hair-care-2064">
+        <a href="/product" class="group" data-testid="" id="toppage_trending_hair-care-2064">
             <div class="rounded p-6 border border-light h-56 xl:h-84 hover:border-light-hover hover:shadow-xl">
                 <div class="w-full h-full"><img src="https://assets.wonect.com/assets/placeholder.png" alt="Hair Care" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://assets.wonect.com/assets/placeholder.png" alt="Hair Care"
                         itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/?width=200&amp;height=266&amp;action=fit&amp;url=https%3A%2F%2Fwonect.cloud%2Fmedia%2Fcatalog%2Fcategory%2Fhair-care-title.png"
@@ -1162,7 +1252,7 @@
                 Hair Care
             </h4>
         </a>
-        <a href="/sg/c/collagen-2142" class="group" data-testid="" id="toppage_trending_collagen-2142">
+        <a href="/product" class="group" data-testid="" id="toppage_trending_collagen-2142">
             <div class="rounded p-6 border border-light h-56 xl:h-84 hover:border-light-hover hover:shadow-xl">
                 <div class="w-full h-full"><img src="https://assets.wonect.com/assets/placeholder.png" alt="Collagen" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://assets.wonect.com/assets/placeholder.png" alt="Collagen"
                         itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/?width=200&amp;height=266&amp;action=fit&amp;url=https%3A%2F%2Fwonect.cloud%2Fmedia%2Fcatalog%2Fcategory%2Fcollagen-title.png"
@@ -1183,7 +1273,7 @@
     <div class="grid gap-4 md:gap-6 grid-cols-2 lg:grid-cols-4" id="toppage_new_products_products">
         <div class="border rounded hover:shadow-xl p-2">
             <div class="relative group flex flex-col h-full">
-                <a href="/sg/p/4952195625628/lebel-viege-shampoo-600ml-10451" class="flex flex-col flex-auto" data-testid="productLink">
+                <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
                     <div class="m-auto h-32 lg:h-40 xl:h-56">
                         <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="Lebel Viege Shampoo 600ml" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/_/2/_2020-05-21_16.59.23.png"
                                 alt="Lebel Viege Shampoo 600ml" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/_/2/_2020-05-21_16.59.23.png" alt="Lebel Viege Shampoo 600ml"
@@ -1202,7 +1292,11 @@
                             <!---->
                         </div>
                     </div>
-                </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+                </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2">
+        <span class="mr-1 text-button-light hover:text-button-light-hover">
+    <i class="fas fa-heart"></i>
+  </span>
+                   <span class="" style="display: none;">
     Add to Wish List
   </span></button>
                 <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><i class="fas fa-cart-plus"></i>
@@ -1212,7 +1306,7 @@
         </div>
         <div class="border rounded hover:shadow-xl p-2">
             <div class="relative group flex flex-col h-full">
-                <a href="/sg/p/4907211129819/ecom-air-ea-mask-anti-virus-shield-badge-pink-es-020-10450" class="flex flex-col flex-auto" data-testid="productLink">
+                <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
                     <div class="m-auto h-32 lg:h-40 xl:h-56">
                         <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="ECOM Air EA Mask Anti-Virus Shield Badge (Pink) ES-020 " itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/e/c/ecom_4.jpg"
                                 alt="ECOM Air EA Mask Anti-Virus Shield Badge (Pink) ES-020 " itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/e/c/ecom_4.jpg" alt="ECOM Air EA Mask Anti-Virus Shield Badge (Pink) ES-020 "
@@ -1231,7 +1325,11 @@
                             <!---->
                         </div>
                     </div>
-                </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+                </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2">
+               <span class="mr-1 text-button-light hover:text-button-light-hover">
+    <i class="fas fa-heart"></i>
+  </span>
+   <span class="" style="display: none;">
     Add to Wish List
   </span></button>
                 <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><i class="fas fa-cart-plus"></i>
@@ -1241,7 +1339,7 @@
         </div>
         <div class="border rounded hover:shadow-xl p-2">
             <div class="relative group flex flex-col h-full">
-                <a href="/sg/p/4907211129826/ecom-air-ea-mask-anti-virus-shield-badge-blue-es-020-10449" class="flex flex-col flex-auto" data-testid="productLink">
+                <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
                     <div class="m-auto h-32 lg:h-40 xl:h-56">
                         <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="ECOM Air EA Mask Anti-Virus Shield Badge (Blue) ES-020 " itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/e/c/ecom.jpg"
                                 alt="ECOM Air EA Mask Anti-Virus Shield Badge (Blue) ES-020 " itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/e/c/ecom.jpg" alt="ECOM Air EA Mask Anti-Virus Shield Badge (Blue) ES-020 "
@@ -1260,7 +1358,12 @@
                             <!---->
                         </div>
                     </div>
-                </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+                </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2">
+               <span class="mr-1 text-button-light hover:text-button-light-hover">
+    <i class="fas fa-heart"></i>
+  </span>
+
+   <span class="" style="display: none;">
     Add to Wish List
   </span></button>
                 <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><i class="fas fa-cart-plus"></i>
@@ -1270,7 +1373,7 @@
         </div>
         <div class="border rounded hover:shadow-xl p-2">
             <div class="relative group flex flex-col h-full">
-                <a href="/sg/p/4562441906380/toamit-virus-shut-out-sanitizer-necklace-tvso-01-10447" class="flex flex-col flex-auto" data-testid="productLink">
+                <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
                     <div class="m-auto h-32 lg:h-40 xl:h-56">
                         <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="TOAMIT Virus Shut-Out Sanitizer Necklace TVSO-01" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/_/2/_2020-03-24_17.04.41.png"
                                 alt="TOAMIT Virus Shut-Out Sanitizer Necklace TVSO-01" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/_/2/_2020-03-24_17.04.41.png" alt="TOAMIT Virus Shut-Out Sanitizer Necklace TVSO-01"
@@ -1289,7 +1392,11 @@
                             <!---->
                         </div>
                     </div>
-                </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+                </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2">
+                 <span class="mr-1 text-button-light hover:text-button-light-hover">
+    <i class="fas fa-heart"></i>
+  </span>
+   <span class="" style="display: none;">
     Add to Wish List
   </span></button>
                 <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><i class="fas fa-cart-plus"></i>
@@ -1304,25 +1411,32 @@
     From the Blog
   </h3> <a href="https://wonect.life" target="_blank" class="bg-button w-56 mb-8 p-2 rounded hover:bg-button-hover flex items-center justify-center">
     View all on wonect.life
-    <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#external-link-square-alt-solid"></use></svg></a> <div class="grid gap-6 md:grid-cols-3"><a href="https://wonect.life/adjusting-to-the-new-normal-easy-mask-friendly-makeup-from-japan/" id="blog-link12233" target="_blank" class="flex flex-col items-center p-2 hover:shadow"><img src="https://api.wonect.com/img/?width=370&amp;height=250&amp;action=fit&amp;url=https%3A%2F%2Fwonect.life%2Fwp-content%2Fuploads%2F2020%2F06%2FUntitled-design-19.png" alt="Wonect.life article" id="blog-img12233" class="h-56" data-src="https://api.wonect.com/img/?width=370&amp;height=250&amp;action=fit&amp;url=https%3A%2F%2Fwonect.life%2Fwp-content%2Fuploads%2F2020%2F06%2FUntitled-design-19.png" lazy="loaded"> <div class="px-4 py-2"><h4 id="blog-title0">
+    <i class="fas fa-external-link-square-alt ml-1"></i>
+
+
+  </a> <div class="grid gap-6 md:grid-cols-3"><a href="https://wonect.life/adjusting-to-the-new-normal-easy-mask-friendly-makeup-from-japan/" id="blog-link12233" target="_blank" class="flex flex-col items-center p-2 hover:shadow"><img src="https://api.wonect.com/img/?width=370&amp;height=250&amp;action=fit&amp;url=https%3A%2F%2Fwonect.life%2Fwp-content%2Fuploads%2F2020%2F06%2FUntitled-design-19.png" alt="Wonect.life article" id="blog-img12233" class="h-56" data-src="https://api.wonect.com/img/?width=370&amp;height=250&amp;action=fit&amp;url=https%3A%2F%2Fwonect.life%2Fwp-content%2Fuploads%2F2020%2F06%2FUntitled-design-19.png" lazy="loaded"> <div class="px-4 py-2"><h4 id="blog-title0">
       Easy Mask Friendly Makeup from Japan
     </h4> <div id="blog-text0" class="text-xs text-secondary">
       Between social distancing and daily mask-wearing, many of us have stopped bothering with makeup in t...
     </div></div> <span class="link flex items-center">
     Read more on wonect.life
-    <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#external-link-square-alt-solid"></use></svg></span></a><a href="https://wonect.life/its-all-about-the-eyes-japanese-eye-makeup-to-wear-with-your-mask/" id="blog-link12307" target="_blank" class="flex flex-col items-center p-2 hover:shadow"><img src="https://api.wonect.com/img/?width=370&amp;height=250&amp;action=fit&amp;url=https%3A%2F%2Fwonect.life%2Fwp-content%2Fuploads%2F2020%2F06%2FUntitled-design-5.png" alt="Wonect.life article" id="blog-img12307" class="h-56" data-src="https://api.wonect.com/img/?width=370&amp;height=250&amp;action=fit&amp;url=https%3A%2F%2Fwonect.life%2Fwp-content%2Fuploads%2F2020%2F06%2FUntitled-design-5.png" lazy="loaded"> <div class="px-4 py-2"><h4 id="blog-title0">
+  <i class="fas fa-external-link-square-alt ml-1"></i>
+
+</span></a><a href="https://wonect.life/its-all-about-the-eyes-japanese-eye-makeup-to-wear-with-your-mask/" id="blog-link12307" target="_blank" class="flex flex-col items-center p-2 hover:shadow"><img src="https://api.wonect.com/img/?width=370&amp;height=250&amp;action=fit&amp;url=https%3A%2F%2Fwonect.life%2Fwp-content%2Fuploads%2F2020%2F06%2FUntitled-design-5.png" alt="Wonect.life article" id="blog-img12307" class="h-56" data-src="https://api.wonect.com/img/?width=370&amp;height=250&amp;action=fit&amp;url=https%3A%2F%2Fwonect.life%2Fwp-content%2Fuploads%2F2020%2F06%2FUntitled-design-5.png" lazy="loaded"> <div class="px-4 py-2"><h4 id="blog-title0">
       Japanese Eye Makeup to Wear With Your Mask
     </h4> <div id="blog-text0" class="text-xs text-secondary">
       Just because we have to wear masks doesn’t mean we can’t still turn heads. The best way to create an...
     </div></div> <span class="link flex items-center">
     Read more on wonect.life
-    <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#external-link-square-alt-solid"></use></svg></span></a><a href="https://wonect.life/atorrege-ad-range-guide/" id="blog-link12189" target="_blank" class="flex flex-col items-center p-2 hover:shadow"><img src="https://api.wonect.com/img/?width=370&amp;height=250&amp;action=fit&amp;url=https%3A%2F%2Fwonect.life%2Fwp-content%2Fuploads%2F2020%2F06%2FUntitled-design-11.png" alt="Wonect.life article" id="blog-img12189" class="h-56" data-src="https://api.wonect.com/img/?width=370&amp;height=250&amp;action=fit&amp;url=https%3A%2F%2Fwonect.life%2Fwp-content%2Fuploads%2F2020%2F06%2FUntitled-design-11.png" lazy="loaded"> <div class="px-4 py-2"><h4 id="blog-title0">
+  <i class="fas fa-external-link-square-alt ml-1"></i>
+
+  </span></a><a href="https://wonect.life/atorrege-ad-range-guide/" id="blog-link12189" target="_blank" class="flex flex-col items-center p-2 hover:shadow"><img src="https://api.wonect.com/img/?width=370&amp;height=250&amp;action=fit&amp;url=https%3A%2F%2Fwonect.life%2Fwp-content%2Fuploads%2F2020%2F06%2FUntitled-design-11.png" alt="Wonect.life article" id="blog-img12189" class="h-56" data-src="https://api.wonect.com/img/?width=370&amp;height=250&amp;action=fit&amp;url=https%3A%2F%2Fwonect.life%2Fwp-content%2Fuploads%2F2020%2F06%2FUntitled-design-11.png" lazy="loaded"> <div class="px-4 py-2"><h4 id="blog-title0">
       Atorrege AD+: Quality Japanese Skincare for Sensitive Skin
     </h4> <div id="blog-text0" class="text-xs text-secondary">
       When caring for sensitive skin, you know just how vital finding the right skincare products are. It’...
     </div></div> <span class="link flex items-center">
     Read more on wonect.life
-    <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#external-link-square-alt-solid"></use></svg></span></a></div></section>
+  <i class="fas fa-external-link-square-alt ml-1"></i></span></a></div></section>
 
 
         </main>
@@ -1330,7 +1444,7 @@
 
 
 <footer class=" hidden lg:block wrapper">
-    <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/sg/about-us" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
+    <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/about-us" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
         Quality
       </h3> <span class="text-sm text-secondary">
         Bringing you authentic products
@@ -1343,7 +1457,10 @@
       </h3> <span class="text-sm text-secondary">
         7-day return guarantee for defective products
       </span></div></a></div>
-    <div class="flex flex-wrap justify-center items-center border-t py-6 pxl:x-8"><svg class="w-12 h-12 flex-0"><use xlink:href="/dist/sprite-icons.svg#paper-plane"></use></svg>
+    <div class="flex flex-wrap justify-center items-center border-t py-6 pxl:x-8">
+      <span class="w-12 h-12 flex-0">
+        <i class="fas fa-paper-plane fa-3x"></i>
+      </span>
         <div class="text-sm pl-4 flex-1 lg:mr-8">
             <h3>
                 Sign up to our newsletter
@@ -1583,7 +1700,12 @@
             </div>
         </div>
         <a href="/sg/faq#purchase" data-testid="" id="footer_payment_secure" exact="" class="group group w-full py-4 border-t border-b md:w-1/2 md:border-0 xl:w-1/3 xl:px-16 xl:py-0">
-            <div class="flex items-center"><svg class="w-16 h-16 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#credit-card"></use></svg>
+            <div class="flex items-center">
+              <span class="w-16 h-16 group-hover:text-icon-hover">
+               <i class="far fa-credit-card fa-3x"></i>
+              </span>
+             
+
                 <h3 class="ml-4">
                     Secure Payment
                 </h3>
@@ -1592,7 +1714,30 @@
                 We accept a variety of secure payment methods. The options depend on the currency.
             </div>
         </a>
-        <div class="flex items-center justify-center w-full pt-6 md:w-1/2 xl:w-1/6 xl:p-0"><a id="footer_footer_icon_facebook" href="https://www.facebook.com/wonect.com.jp" aria-label="Go to Facebook" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#facebook"></use></svg></a>            <a id="footer_footer_icon_instagram" href="https://www.instagram.com/wonectjp/" aria-label="Go to Instagram" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#instagram"></use></svg></a>            <a id="footer_footer_icon_pinterest" href="https://www.pinterest.jp/wonect/" aria-label="Go to Pinterest" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#pinterest-p"></use></svg></a>            <a id="footer_footer_icon_youtube" href="https://www.youtube.com/channel/UCaLZf1iW60K0ho5kncLblPQ" aria-label="Go to Youtube" target="_blank" class="px-1 hover:text-icon-hover"><svg class="w-10 h-10"><use xlink:href="/dist/sprite-icons.svg#youtube"></use></svg></a></div>
+        <div class="flex items-center justify-center w-full pt-6 md:w-1/2 xl:w-1/6 xl:p-0"><a id="footer_footer_icon_facebook" href="https://www.facebook.com/wonect.com.jp" aria-label="Go to Facebook" target="_blank" class="px-1 hover:text-icon-hover">
+          <span class="w-10 h-10">
+            <i class="fab fa-facebook-f"></i>
+          </span>
+        
+
+        </a>            <a id="footer_footer_icon_instagram" href="https://www.instagram.com/wonectjp/" aria-label="Go to Instagram" target="_blank" class="px-1 hover:text-icon-hover">
+                    <span class="w-10 h-10">
+           <i class="fab fa-instagram"></i>
+          </span>
+
+        </a>            <a id="footer_footer_icon_pinterest" href="https://www.pinterest.jp/wonect/" aria-label="Go to Pinterest" target="_blank" class="px-1 hover:text-icon-hover">
+
+            <span class="w-10 h-10">
+                   <i class="fab fa-pinterest"></i>
+          </span>
+
+        </a>            <a id="footer_footer_icon_youtube" href="https://www.youtube.com/channel/UCaLZf1iW60K0ho5kncLblPQ" aria-label="Go to Youtube" target="_blank" class="px-1 hover:text-icon-hover">
+
+                      <span class="w-10 h-10">
+                   <i class="fab fa-youtube"></i>
+                    </span>
+
+        </a></div>
     </div>
     <div class="border-t text-center pt-6 h-20 text-sm text-secondary bg-no-repeat bg-bottom" style="background-image:url(/assets/img/background/footer_kyoto.jpg)">
         © Copyright 2020 <span class="font-bold">wonect.com</span>. All Rights Reserved
@@ -1902,7 +2047,7 @@ START OF MOBILE SIDEBAR -->
 
 
 
-<!--     <button type="button" data-testid="" class="group flex items-center w-full flex items-center p-3 button-link" id="header_shipping" title="Order Tracking"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#plane"></use></svg>
+<!--     <button type="button" data-testid="" class="group flex items-center w-full flex items-center p-3 button-link" id="header_shipping" title="Order Tracking"><svg class="mr-1"><use xlink:href="https://wonect.com/sg/dist/sprite-icons.svg#plane"></use></svg>
   Order Tracking
 </button> 
  -->
@@ -1993,19 +2138,24 @@ START OF MOBILE SIDEBAR -->
                     <div class="col-span-2 flex flex-col items-center justify-center">
                         <div class="flex border rounded items-center mb-2">
                             <button type="button" data-testid="" class="group p-2 text-faint">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#minus-circle"></use></svg>
+
+                              <i class="fas fa-minus-circle"></i>
+
                             </button>
                             <div class="relative">
                                 <!---->
                                 <input id="input_494" type="number" min="1" class="w-8 text-center" /> <span class="text-accent text-xs absolute mt-10 -ml-6 w-64 left-0 top-0 pointer-events-none select-none"><!----></span>
                             </div>
                             <button type="button" data-testid="" class="group p-2 cursor-pointer text-secondary hover:text-icon-hover">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#plus-circle"></use></svg>
+                               <i class="fas fa-plus-circle"></i>
                             </button>
                         </div>
                         <button type="button" data-testid="" class="group text-sm text-secondary hover:text-primary hover:underline flex items-center">
                             Remove
-                            <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#trash"></use></svg>
+                            <span class="ml-1">
+                              <i class="fas fa-trash"></i>
+                            </span>
+                  
                         </button>
                     </div>
                     <div class="col-span-2 text-right mt-3">
@@ -2047,19 +2197,21 @@ START OF MOBILE SIDEBAR -->
                     <div class="col-span-2 flex flex-col items-center justify-center">
                         <div class="flex border rounded items-center mb-2">
                             <button type="button" data-testid="" class="group p-2 text-faint">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#minus-circle"></use></svg>
+                           <i class="fas fa-minus-circle"></i>
                             </button>
                             <div class="relative">
                                 <!---->
                                 <input id="input_500" type="number" min="1" class="w-8 text-center" /> <span class="text-accent text-xs absolute mt-10 -ml-6 w-64 left-0 top-0 pointer-events-none select-none"><!----></span>
                             </div>
                             <button type="button" data-testid="" class="group p-2 cursor-pointer text-secondary hover:text-icon-hover">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#plus-circle"></use></svg>
+                               <i class="fas fa-plus-circle"></i>
                             </button>
                         </div>
                         <button type="button" data-testid="" class="group text-sm text-secondary hover:text-primary hover:underline flex items-center">
                             Remove
-                            <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#trash"></use></svg>
+                              <span class="ml-1">
+                              <i class="fas fa-trash"></i>
+                            </span>
                         </button>
                     </div>
                     <div class="col-span-2 text-right mt-3">
@@ -2101,19 +2253,19 @@ START OF MOBILE SIDEBAR -->
                     <div class="col-span-2 flex flex-col items-center justify-center">
                         <div class="flex border rounded items-center mb-2">
                             <button type="button" data-testid="" class="group p-2 text-faint">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#minus-circle"></use></svg>
+                                     <i class="fas fa-minus-circle"></i>
                             </button>
                             <div class="relative">
                                 <!---->
                                 <input id="input_506" type="number" min="1" class="w-8 text-center" /> <span class="text-accent text-xs absolute mt-10 -ml-6 w-64 left-0 top-0 pointer-events-none select-none"><!----></span>
                             </div>
                             <button type="button" data-testid="" class="group p-2 cursor-pointer text-secondary hover:text-icon-hover">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#plus-circle"></use></svg>
+                               <i class="fas fa-plus-circle"></i>
                             </button>
                         </div>
                         <button type="button" data-testid="" class="group text-sm text-secondary hover:text-primary hover:underline flex items-center">
                             Remove
-                            <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#trash"></use></svg>
+                              <i class="fas fa-minus-circle"></i>
                         </button>
                     </div>
                     <div class="col-span-2 text-right mt-3">
@@ -2155,19 +2307,19 @@ START OF MOBILE SIDEBAR -->
                     <div class="col-span-2 flex flex-col items-center justify-center">
                         <div class="flex border rounded items-center mb-2">
                             <button type="button" data-testid="" class="group p-2 text-faint">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#minus-circle"></use></svg>
+                               <i class="fas fa-minus-circle"></i>
                             </button>
                             <div class="relative">
                                 <!---->
                                 <input id="input_512" type="number" min="1" class="w-8 text-center" /> <span class="text-accent text-xs absolute mt-10 -ml-6 w-64 left-0 top-0 pointer-events-none select-none"><!----></span>
                             </div>
                             <button type="button" data-testid="" class="group p-2 cursor-pointer text-secondary hover:text-icon-hover">
-                                <svg><use xlink:href="/dist/sprite-icons.svg#plus-circle"></use></svg>
+                                  <i class="fas fa-plus-circle"></i>
                             </button>
                         </div>
                         <button type="button" data-testid="" class="group text-sm text-secondary hover:text-primary hover:underline flex items-center">
                             Remove
-                            <svg class="ml-1"><use xlink:href="/dist/sprite-icons.svg#trash"></use></svg>
+                             <i class="fas fa-minus-trash"></i>
                         </button>
                     </div>
                     <div class="col-span-2 text-right mt-3">
