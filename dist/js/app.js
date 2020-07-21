@@ -158,3 +158,10 @@ let submenu= document.querySelector(id).innerHTML;
  	 document.querySelector('.login').classList.toggle('hidden')
  	  document.querySelector('.register').classList.toggle('hidden')
  }
+
+
+ //function to open category
+ function toggleCategory(id) {
+ let el="#"+id+" "+"ul";
+document.querySelector(el).classList.toggle('xl:block');
+ }

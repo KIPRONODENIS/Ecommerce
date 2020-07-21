@@ -27,6 +27,79 @@
                 <!---->
             </div>
         </div>
+
+<!-- start of account modal -->
+<div class="hidden z-modal fixed top-0 left-0 bottom-0 right-0 flex items-center justify-center xl:overflow-auto transform duration-300 account-modal  bg-black bg-opacity-25">
+  <div class="absolute top-0 left-0 w-full h-full"></div> <div class="z-modal-content bg-white border-t-4 border-bold w-full h-full overflow-auto xl:w-modal xl:h-auto">
+
+<!--   Start of SignUp -->
+<div class="p-4 md:px-10 register mt-4">
+  <div class="flex justify-between pb-8"><h3>
+      Register
+    </h3> 
+  <button type="button" data-testid="" class="group" onclick="toggleAccountModal()">
+      <i class="h-8 w-8 fas fa-times"></i>
+     </button>
+
+  </div> <div>
+
+    <form novalidate="novalidate"><div class="relative mt-4"><input type="email" name="email" autocomplete="email" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    E-mail address *
+    <span class="text-accent text-xs"><span data-testid="errorMessage" class="ml-1">
+    E-mail address is required.
+  </span><!----></span></label></div> <div class="relative mt-10"><input type="text" name="first-name" autocomplete="given-name" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    First name *
+    <span class="text-accent text-xs"><!----><!----><!----></span></label></div> <div class="relative mt-10"><input type="text" name="last-name" autocomplete="last-name" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    Last name *
+    <span class="text-accent text-xs"><!----><!----></span></label></div> <div class="relative mt-10"><input type="password" name="password" autocomplete="new-password" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    Password *
+    <span class="text-accent text-xs"><!----><!----></span></label></div> <div class="relative mt-10"><input type="password" name="password-confirm" autocomplete="new-password" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    Repeat password *
+    <span class="text-accent text-xs"><!----><!----></span></label></div> <div tabindex="0" class="mt-6"><div class="flex items-center group relative"><input type="checkbox" id="terms" class="invisible absolute top-0 left-0"> <label for="terms" class="pl-1 cursor-pointer"><svg class="w-8 h-8 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#square"></use></svg> 
+        I accept terms and conditions *
+      </label></div> <span class="text-accent text-xs"><!----></span></div> <button type="submit" data-testid="" disabled="disabled" class="group button mt-6 w-full button-disabled" id="popup_register_an_account_button">
+        Register an account
+      </button> <div class="py-8 text-center text-secondary">
+        Or
+        <button type="button" data-testid="" class="group button-link" onclick="openLogin()" >
+          login to your account
+        </button></div>
+      </form>
+    </div>
+  </div>
+
+
+<!-- start of Login -->
+
+    <div class="p-4 md:px-10 login hidden">
+      <div class="flex justify-between pb-8">
+        <h3>
+      Log in
+    </h3>
+
+     <button type="button" data-testid="" class="group" onclick="toggleAccountModal()">
+      <i class="h-8 w-8 fas fa-times"></i>
+     </button>
+   </div> 
+    <div>
+
+    <form novalidate="novalidate"><div class="relative mt-6"><input type="email" name="email" autocomplete="" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    E-mail address *
+    <span class="text-accent text-xs"><span data-testid="errorMessage" class="ml-1">
+    E-mail address is required.
+  </span><!----></span></label></div> <div class="relative mt-8"><input type="password" name="password" autocomplete="" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    Password *
+    <span class="text-accent text-xs"><!----></span></label></div> <div class="mt-6 text-right text-secondary"><button type="button" data-testid="" class="group button-link">
+          Forgot your password?
+        </button></div> <button type="submit" data-testid="loginSubmit" disabled="disabled" class="group button mt-6 w-full button-disabled" id="popup_login_in_account_button">
+        Log in to your account
+      </button> <div class="py-8 text-center text-secondary">
+        Or
+        <button type="button" data-testid="registerLink" class="group button-link" onclick="openRegister()">
+          register an account
+        </button></div></form></div></div> <!----> <!----></div></div>
+
+       <!--  End of account modal -->
         <div id="viewport" class="container">
             <header class="flex flex-col mt-1">
                 <div class="flex flex-wrap items-center">
@@ -38,9 +111,18 @@
                         </button></div>
 
 
-                        <div class="items-center w-full hidden xl:flex"><button type="button" data-testid="" id="header_category_menu" class="group flex flex-0 items-center group cursor-pointer m-0 px-10 py-3 w-56 bg-menu hover:bg-menu-hover">
-                      <i class="fas fa-bars"></i>
-                             <span class="ml-2 inline">Categories</span></button>
+                        <div class="items-center w-full hidden xl:flex z-categorymenu">
+                          <button type="button" data-testid="" id="header_category_menu" class="group flex flex-0 items-center group cursor-pointer m-0 px-10 py-3 w-56 bg-menu hover:bg-menu-hover" onclick="openMenu()">
+                            <span id="menu-bar" >
+                          <i class="fas fa-bars" ></i>
+                             </span>
+                             <span id="menu-close" class="hidden">
+                          <i class="fas fa-times" id="menu-times"></i>
+                            </span>
+                             <span class="ml-2 inline">Categories</span>
+
+
+                           </button>
                             <ul class="items-center w-full flex flex-1">
                                 <li class="flex flex-auto"><a href="/time-sale" data-testid="" id="header_menu_time_sale" exact="" class=" flex items-center w-full button-nav p-3">
 
@@ -72,6 +154,535 @@
     </a></li>
                             </ul>
                         </div>
+
+
+                       <!--  START OF CATEGORIES DESKTOP MENU -->
+                       <div class="hidden xl:flex z-categorymenu overflow-y-auto absolute w-1/2 h-auto left-0 top-full wrapper-xl" >
+
+    <div class="bg-white flex pointer-events-auto w-full relative xl:shadow-2xl xl:w-auto">
+        <div class="hidden flex-none font-bold border-r cursor-pointer w-full xl:w-56" id="desktop-menu"> 
+            <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3 bg-bright" id="skin-care-1559">
+                Skin Care
+                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg>
+            </button>
+            <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="hair-care-1560">
+                Hair Care
+                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg>
+            </button>
+            <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="body-care-1561">
+                Body Care
+                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg>
+            </button>
+            <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="cosmetics-1558">
+                Cosmetics
+                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg>
+            </button>
+            <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="health-care-1562">
+                Health Care
+                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg>
+            </button>
+            <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="beauty-tools-1563">
+                Beauty Tools
+                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg>
+            </button>
+            <button type="button" data-testid="" class="group w-full flex items-center justify-between hover:bg-bright group px-4 py-3" id="home-and-life-1548">
+                Home &amp; Life
+                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg>
+            </button>
+        </div>
+
+     <div class="hidden absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative  submenu" style="display: none;">
+
+     </div>
+        <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative skin-care-1559 " style="display: none;">
+            <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+                <svg class="mr-2 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#arrow-left"></use></svg>
+                Main Menu
+            </button>
+            <ul>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1559">
+                        All Skin Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2 router-link-exact-active router-link-active bg-bright" data-testid="" id="category_menu_1617">
+                        Cleansers
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1618">
+                        Makeup Remover
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1619">
+                        Toner
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1620">
+                        Moisturizers &amp; Creams
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1621">
+                        Masks
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1622">
+                        Serum and Essence
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1623">
+                        Eyelash care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1624">
+                        Sunscreen
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1625">
+                        Mini Size Kit
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1626">
+                        Men's skin care
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative hair-care-1560" style="display: none;">
+
+            <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+                <svg class="mr-2 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#arrow-left"></use></svg>
+                Main Menu
+            </button>
+            <ul>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1560">
+                        All Hair Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1627">
+                        Shampoo
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1628">
+                        Conditioner &amp; Treatment
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1629">
+                        Mask
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1630">
+                        Styling
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1631">
+                        Hair Loss
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1632">
+                        Hair Tools
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1633">
+                        Hair Colors
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1634">
+                        Men's Hair Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2131">
+                        Shampoo &amp; Conditioner
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2132">
+                        Special Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2133">
+                        Others
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative body-care-1561" style="display: none;">
+            <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+                <svg class="mr-2 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#arrow-left"></use></svg>
+                Main Menu
+            </button>
+            <ul>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1561">
+                        All Body Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1635">
+                        Soap
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1636">
+                        Lotion
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1637">
+                        Cream
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1638">
+                        Hand and Foot care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1640">
+                        Deodorant
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1642">
+                        Oral Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1643">
+                        Bath
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1644">
+                        Tights
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1656">
+                        Eye Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2134">
+                        Others
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative cosmetics-1558" style="display: none;">
+            <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+                <svg class="mr-2 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#arrow-left"></use></svg>
+                Main Menu
+            </button>
+            <ul>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2 " data-testid="" id="category_menu_1558">
+                        All Cosmetics
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1645">
+                        Base Makeup
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1646">
+                        Foundation
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1647">
+                        Cheek
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1648">
+                        Eye Makeup
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1649">
+                        Lip Makeup
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1652">
+                        Men’s Grooming &amp; Cosmetics
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative health-care-1562" style="display: none;">
+            <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+                <svg class="mr-2 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#arrow-left"></use></svg>
+                Main Menu
+            </button>
+            <ul>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2 " data-testid="" id="category_menu_1562">
+                        All Health Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1653">
+                        Vitamins
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1654">
+                        Collagen
+                    </a>
+                </li>
+                <li>
+                    <a href="/category
+                    " class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1655">
+                        Health Supplements
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1658">
+                        Medicine
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2135">
+                        Others
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2136">
+                        Weight Loss
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2138">
+                        Beauty Supplements
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2139">
+                        Whitening Supplements
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative beauty-tools-1563" style="display: none;">
+            <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+                <svg class="mr-2 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#arrow-left"></use></svg>
+                Main Menu
+            </button>
+            <ul>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2 " data-testid="" id="category_menu_1563">
+                        All Beauty Tools
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1661">
+                        Iron
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1662">
+                        Hairdryer
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1663">
+                        Massager
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1920">
+                        Cotton
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1922">
+                        Others
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="absolute left-0 top-0 bg-white w-full h-full xl:h-auto flex-1 xl:relative home-and-life-1548" style="display: none;">
+            <button type="button" data-testid="" class="group w-full flex items-center font-bold px-4 py-2 cursor-pointer bg-light hover:bg-bright group xl:hidden">
+                <svg class="mr-2 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#arrow-left"></use></svg>
+                Main Menu
+            </button>
+            <ul>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1548">
+                        All Home &amp; Life
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1550">
+                        Food &amp; Drink
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1551">
+                        Sports
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1572">
+                        Others
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1573">
+                        Stationery
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1591">
+                        Baby
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1599">
+                        Toys
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1666">
+                        Water Filter
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1667">
+                        Kitchen
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1673">
+                        Bedding
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_1675">
+                        Laundry
+                    </a>
+                </li>
+                <li>
+                    <a href="/category" class="group flex items-center hover:bg-bright px-4 py-2" data-testid="" id="category_menu_2137">
+                        Adult
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="w-full flex flex-col font-bold bg-menu-open pb-6 xl:hidden">
+        <ul class="items-center w-full bg-light border-t border-b">
+            <li class="flex flex-auto">
+                <a href="/sg/time-sale" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_time_sale" exact="">
+                    <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#stopwatch"></use></svg>
+                    Time Sale
+                </a>
+            </li>
+            <li class="flex flex-auto">
+                <a href="/sg/on-sale-now" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_on_sale_now" exact="">
+                    <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#tags"></use></svg>
+                    On Sale Now
+                </a>
+            </li>
+            <li class="flex flex-auto">
+                <a href="/sg/most-wanted" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_most_wanted_sale" exact="">
+                    <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#fire"></use></svg>
+                    Most Wanted
+                </a>
+            </li>
+            <li class="flex flex-auto">
+                <a href="/sg/wishlist" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_wishlist" exact="">
+                    <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg>
+                    Wish List
+                </a>
+            </li>
+            <li class="flex flex-auto">
+                <a href="/sg/special-offers" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_offers" exact="">
+                    <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#money-bill"></use></svg>
+                    Special Offers
+                </a>
+            </li>
+            <li class="flex flex-auto">
+                <a href="/sg/brands" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_brand" exact="">
+                    <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#label"></use></svg>
+                    Brands
+                </a>
+            </li>
+            <li class="flex flex-auto">
+                <a href="/sg/buyers-guide" class="group flex items-center w-full button-nav p-3" data-testid="" id="header_menu_special" exact="">
+                    <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#certificate-solid"></use></svg>
+                    Buyer's Guide
+                </a>
+            </li>
+        </ul>
+        <button type="button" data-testid="" class="group flex items-center w-full flex items-center p-3 button-link" id="header_shipping" title="Order Tracking">
+            <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#plane"></use></svg>
+            Order Tracking
+        </button>
+        <button type="button" data-testid="accountButton" class="group flex items-center xl:px-2 xl:h-12 rounded p-3 button-link w-full" id="header_menu_login" aria-label="Open my account">
+            <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#user"></use></svg> <span class="">My Account</span>
+        </button>
+        <!---->
+        <button type="button" data-testid="" class="group flex xl:rounded xl:hover:bg-button-nav-hover group flex-col" id="header_item_switcher">
+            <span class="flex items-center text-left hover:underline xl:hover:no-underline p-3">
+                <svg class="mr-1 xl:group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#store"></use></svg>
+                <span class="hidden">
+                    SGD S$
+                </span>
+                <span class="">
+                    Singapore Store (SGD $)
+                </span>
+            </span>
+            <span class="flex items-center text-left hover:underline xl:hover:no-underline p-3">
+                <svg class="mr-1 xl:group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#map-marker"></use></svg>
+                Deliver to: Singapore
+                <span class="ml-2 hidden">
+                    <svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#au"></use></svg><svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#ca"></use></svg>
+                    <svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#hk"></use></svg><svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#id"></use></svg>
+                    <svg style="display: none;"><use xlink:href="/dist/sprite-flags-all.svg#kr"></use></svg><svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#my"></use></svg>
+                    <svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#nz"></use></svg><svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#ph"></use></svg>
+                    <svg><use xlink:href="/dist/sprite-flags-top.svg#sg"></use></svg><svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#th"></use></svg>
+                    <svg style="display: none;"><use xlink:href="/dist/sprite-flags-top.svg#tw"></use></svg>
+                </span>
+            </span>
+        </button>
+        <a href="/sg/help" class="group flex items-center p-3 button-link" data-testid="" id="header_help" title="Help and Contact">
+            <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#headset"></use></svg>
+            Help &amp; Contact
+        </a>
+        <a href="/sg/about-us" class="group p-3 flex items-center button-link" data-testid="" id="header_about" title="About Us">
+            <svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#info-circle"></use></svg>
+            About Us
+        </a>
+    </div>
+</div>
+
+                       <!--  END OF CATEGORIES DESKTOP MENU -->
                         <!---->
                     </nav>
 
@@ -79,7 +690,7 @@
                     <div class="flex-1 xl:order-1 xl:flex-initial flex wrapper-xl"><a href="/sg/" data-testid="" title="Home Page" id="header_item_logo" class="group flex items-center h-10 xl:h-20 router-link-exact-active router-link-active"><img src="https://assets.wonect.com/assets/img/logo/logo.png" alt="Wonect logo" class="mx-auto object-contain h-10 xl:h-16"> <span class="hidden">
     Wonect
   </span></a></div>
-                    <div class="flex-initial xl:order-3 flex wrapper-xl"><button type="button" data-testid="accountButton" id="header_menu_login" aria-label="Open my account" class="group flex items-center xl:px-2 xl:h-12 rounded text-right flex-initial button-nav rounded xl:mr-2">
+                    <div class="flex-initial xl:order-3 flex wrapper-xl"><button type="button" data-testid="accountButton" id="header_menu_login" aria-label="Open my account" class="group flex items-center xl:px-2 xl:h-12 rounded text-right flex-initial button-nav rounded xl:mr-2" onclick="toggleAccountModal()">
 
                          <i class="far fa-user text-2xl m-2"></i>
                          <span class="hidden xl:inline">My Account</span></button>
@@ -131,8 +742,9 @@
                     </div>
                 </div>
 
+            </header>
 
-            <div id="breadcrumbs" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList" class="wrapper border-t bg-light py-4 text-secondary"><span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/sg/" itemprop="item" class="link router-link-active"><meta itemprop="position" content="1"> <meta itemprop="name" content="Singapore Store Home">
+            <div id="breadcrumbs" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList" class="wrapper border-t bg-light py-4 text-secondary"><span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/" itemprop="item" class="link router-link-active"><meta itemprop="position" content="1">
       Home
     </a>
     /
@@ -140,319 +752,584 @@
     Skin Care
   </span></div>
             <main class="wrapper flex flex-wrap mt-4 mb-6 xl:my-10">
-                <nav class="pb-8 xl-p0 w-full xl:w-1/5">
-                    <div class="hidden xl:flex itens-end justify-between mb-2">
-                        <h4>
-                            Categories
-                        </h4> <a href="/sg/departments" class="group link text-lg" data-testid="">
-      View All...
-    </a></div>
-                    <div class="flex flex-wrap items-center relative pb-2 xl:p-0 xl:block xl:border">
-                        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 border-strong"><a href="/sg/c/skin-care-1559" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden router-link-exact-active router-link-active bg-light" data-testid="">
-    Skin Care
-  </a> <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright">
-    Skin Care
-    <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-up"></use></svg></button>
-                            <ul class="mx-2 hidden xl:block">
-                                <li><a href="/sg/c/skin-care-1559" class="group flex items-start p-2 group hover:bg-bright router-link-exact-active router-link-active bg-menu hover:bg-menu-hover" data-testid=""><svg class="flex-none mr-2"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        All Skin Care
-      </a></li>
-                                <li><a href="/sg/c/cleansers-1617" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Cleansers
-      </a></li>
-                                <li><a href="/sg/c/makeup-remover-1618" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Makeup Remover
-      </a></li>
-                                <li><a href="/sg/c/toner-1619" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Toner
-      </a></li>
-                                <li><a href="/sg/c/moisturizers-and-creams-1620" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Moisturizers &amp; Creams
-      </a></li>
-                                <li><a href="/sg/c/masks-1621" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Masks
-      </a></li>
-                                <li><a href="/sg/c/serum-and-essence-1622" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Serum and Essence
-      </a></li>
-                                <li><a href="/sg/c/eyelash-care-1623" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Eyelash care
-      </a></li>
-                                <li><a href="/sg/c/sunscreen-1624" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Sunscreen
-      </a></li>
-                                <li><a href="/sg/c/mini-size-kit-1625" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Mini Size Kit
-      </a></li>
-                                <li><a href="/sg/c/mens-skin-care-1626" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Men's skin care
-      </a></li>
-                            </ul>
-                        </div>
-                        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 text-secondary"><a href="/sg/c/hair-care-1560" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden" data-testid="">
-    Hair Care
-  </a> <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright">
-    Hair Care
-    <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg></button>
-                            <ul class="mx-2 hidden">
-                                <li><a href="/sg/c/hair-care-1560" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        All Hair Care
-      </a></li>
-                                <li><a href="/sg/c/shampoo-1627" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Shampoo
-      </a></li>
-                                <li><a href="/sg/c/conditioner-and-treatment-1628" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Conditioner &amp; Treatment
-      </a></li>
-                                <li><a href="/sg/c/mask-1629" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Mask
-      </a></li>
-                                <li><a href="/sg/c/styling-1630" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Styling
-      </a></li>
-                                <li><a href="/sg/c/hair-loss-1631" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Hair Loss
-      </a></li>
-                                <li><a href="/sg/c/hair-tools-1632" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Hair Tools
-      </a></li>
-                                <li><a href="/sg/c/hair-colors-1633" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Hair Colors
-      </a></li>
-                                <li><a href="/sg/c/mens-hair-care-1634" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Men's Hair Care
-      </a></li>
-                                <li><a href="/sg/c/shampoo-and-conditioner-2131" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Shampoo &amp; Conditioner
-      </a></li>
-                                <li><a href="/sg/c/special-care-2132" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Special Care
-      </a></li>
-                                <li><a href="/sg/c/others-2133" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Others
-      </a></li>
-                            </ul>
-                        </div>
-                        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 text-secondary"><a href="/sg/c/body-care-1561" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden" data-testid="">
-    Body Care
-  </a> <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright">
-    Body Care
-    <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg></button>
-                            <ul class="mx-2 hidden">
-                                <li><a href="/sg/c/body-care-1561" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        All Body Care
-      </a></li>
-                                <li><a href="/sg/c/soap-1635" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Soap
-      </a></li>
-                                <li><a href="/sg/c/lotion-1636" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Lotion
-      </a></li>
-                                <li><a href="/sg/c/cream-1637" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Cream
-      </a></li>
-                                <li><a href="/sg/c/hand-and-foot-care-1638" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Hand and Foot care
-      </a></li>
-                                <li><a href="/sg/c/deodorant-1640" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Deodorant
-      </a></li>
-                                <li><a href="/sg/c/oral-care-1642" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Oral Care
-      </a></li>
-                                <li><a href="/sg/c/bath-1643" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Bath
-      </a></li>
-                                <li><a href="/sg/c/tights-1644" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Tights
-      </a></li>
-                                <li><a href="/sg/c/eye-care-1656" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Eye Care
-      </a></li>
-                                <li><a href="/sg/c/others-2134" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Others
-      </a></li>
-                            </ul>
-                        </div>
-                        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 text-secondary"><a href="/sg/c/cosmetics-1558" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden" data-testid="">
-    Cosmetics
-  </a> <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright">
-    Cosmetics
-    <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg></button>
-                            <ul class="mx-2 hidden">
-                                <li><a href="/sg/c/cosmetics-1558" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        All Cosmetics
-      </a></li>
-                                <li><a href="/sg/c/base-makeup-1645" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Base Makeup
-      </a></li>
-                                <li><a href="/sg/c/foundation-1646" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Foundation
-      </a></li>
-                                <li><a href="/sg/c/cheek-1647" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Cheek
-      </a></li>
-                                <li><a href="/sg/c/eye-makeup-1648" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Eye Makeup
-      </a></li>
-                                <li><a href="/sg/c/lip-makeup-1649" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Lip Makeup
-      </a></li>
-                                <li><a href="/sg/c/mens-grooming-and-cosmetics-1652" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Men’s Grooming &amp; Cosmetics
-      </a></li>
-                            </ul>
-                        </div>
-                        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 text-secondary"><a href="/sg/c/health-care-1562" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden" data-testid="">
-    Health Care
-  </a> <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright">
-    Health Care
-    <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg></button>
-                            <ul class="mx-2 hidden">
-                                <li><a href="/sg/c/health-care-1562" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        All Health Care
-      </a></li>
-                                <li><a href="/sg/c/vitamins-1653" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Vitamins
-      </a></li>
-                                <li><a href="/sg/c/collagen-1654" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Collagen
-      </a></li>
-                                <li><a href="/sg/c/health-supplements-1655" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Health Supplements
-      </a></li>
-                                <li><a href="/sg/c/medicine-1658" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Medicine
-      </a></li>
-                                <li><a href="/sg/c/others-2135" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Others
-      </a></li>
-                                <li><a href="/sg/c/weight-loss-2136" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Weight Loss
-      </a></li>
-                                <li><a href="/sg/c/beauty-supplements-2138" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Beauty Supplements
-      </a></li>
-                                <li><a href="/sg/c/whitening-supplements-2139" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Whitening Supplements
-      </a></li>
-                            </ul>
-                        </div>
-                        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 text-secondary"><a href="/sg/c/beauty-tools-1563" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden" data-testid="">
-    Beauty Tools
-  </a> <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright">
-    Beauty Tools
-    <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg></button>
-                            <ul class="mx-2 hidden">
-                                <li><a href="/sg/c/beauty-tools-1563" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        All Beauty Tools
-      </a></li>
-                                <li><a href="/sg/c/iron-1661" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Iron
-      </a></li>
-                                <li><a href="/sg/c/hairdryer-1662" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Hairdryer
-      </a></li>
-                                <li><a href="/sg/c/massager-1663" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Massager
-      </a></li>
-                                <li><a href="/sg/c/cotton-1920" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Cotton
-      </a></li>
-                                <li><a href="/sg/c/others-1922" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Others
-      </a></li>
-                            </ul>
-                        </div>
-                        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 text-secondary"><a href="/sg/c/home-and-life-1548" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden" data-testid="">
-    Home &amp; Life
-  </a> <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright">
-    Home &amp; Life
-    <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg></button>
-                            <ul class="mx-2 hidden">
-                                <li><a href="/sg/c/home-and-life-1548" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        All Home &amp; Life
-      </a></li>
-                                <li><a href="/sg/c/food-and-drink-1550" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Food &amp; Drink
-      </a></li>
-                                <li><a href="/sg/c/sports-1551" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Sports
-      </a></li>
-                                <li><a href="/sg/c/others-1572" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Others
-      </a></li>
-                                <li><a href="/sg/c/stationery-1573" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Stationery
-      </a></li>
-                                <li><a href="/sg/c/baby-1591" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Baby
-      </a></li>
-                                <li><a href="/sg/c/toys-1599" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Toys
-      </a></li>
-                                <li><a href="/sg/c/water-filter-1666" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Water Filter
-      </a></li>
-                                <li><a href="/sg/c/kitchen-1667" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Kitchen
-      </a></li>
-                                <li><a href="/sg/c/bedding-1673" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Bedding
-      </a></li>
-                                <li><a href="/sg/c/laundry-1675" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Laundry
-      </a></li>
-                                <li><a href="/sg/c/adult-2137" class="group flex items-start p-2 group hover:bg-bright" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        Adult
-      </a></li>
-                            </ul>
-                        </div>
-                        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 xl:hidden text-secondary"><a href="/sg/departments" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden" data-testid="">
-    View All...
-  </a> <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright">
-    View All...
-    <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg></button>
-                            <ul class="mx-2 hidden">
-                                <li><a href="/" class="group flex items-start p-2 group hover:bg-bright router-link-active" data-testid=""><svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
-        All View All...
-      </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <ul class="flex overflow-x-auto scrolling-touch border-t border-b border-strong bg-light text-secondary xl:hidden">
-                        <li class="whitespace-no-wrap p-1 mx-1 link"><a href="/sg/c/cleansers-1617" class="group" data-testid="">
-      Cleansers
-    </a></li>
-                        <li class="whitespace-no-wrap p-1 mx-1 link"><a href="/sg/c/makeup-remover-1618" class="group" data-testid="">
-      Makeup Remover
-    </a></li>
-                        <li class="whitespace-no-wrap p-1 mx-1 link"><a href="/sg/c/toner-1619" class="group" data-testid="">
-      Toner
-    </a></li>
-                        <li class="whitespace-no-wrap p-1 mx-1 link"><a href="/sg/c/moisturizers-and-creams-1620" class="group" data-testid="">
-      Moisturizers &amp; Creams
-    </a></li>
-                        <li class="whitespace-no-wrap p-1 mx-1 link"><a href="/sg/c/masks-1621" class="group" data-testid="">
-      Masks
-    </a></li>
-                        <li class="whitespace-no-wrap p-1 mx-1 link"><a href="/sg/c/serum-and-essence-1622" class="group" data-testid="">
-      Serum and Essence
-    </a></li>
-                        <li class="whitespace-no-wrap p-1 mx-1 link"><a href="/sg/c/eyelash-care-1623" class="group" data-testid="">
-      Eyelash care
-    </a></li>
-                        <li class="whitespace-no-wrap p-1 mx-1 link"><a href="/sg/c/sunscreen-1624" class="group" data-testid="">
-      Sunscreen
-    </a></li>
-                        <li class="whitespace-no-wrap p-1 mx-1 link"><a href="/sg/c/mini-size-kit-1625" class="group" data-testid="">
-      Mini Size Kit
-    </a></li>
-                        <li class="whitespace-no-wrap p-1 mx-1 link"><a href="/sg/c/mens-skin-care-1626" class="group" data-testid="">
-      Men's skin care
-    </a></li>
-                    </ul>
-                </nav>
+<nav class="pb-8 xl-p0 w-full xl:w-1/5">
+    <div class="hidden xl:flex itens-end justify-between mb-2">
+        <h4>
+            Categories
+        </h4>
+        <a href="/sg/departments" data-testid="" class="group link text-lg">
+            View All...
+        </a>
+    </div>
+    <div class="flex flex-wrap items-center relative pb-2 xl:p-0 xl:block xl:border">
+        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 border-strong" id="skin-care-1559">
+            <a href="/sg/c/skin-care-1559" data-testid="" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden bg-light">
+                Skin Care
+            </a>
+            <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright" onclick="toggleCategory('skin-care-1559')">
+                Skin Care
+                <span class="w-4 h-4 group-hover:text-icon-hover">
+                  <i class="fas fa-angle-up"></i>
+                </span>
+            </button>
+            <ul class="mx-2 hidden xl:block">
+                <li>
+                    <a href="/sg/c/skin-care-1559" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        All Skin Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/cleansers-1617" data-testid="" class="group flex items-start p-2 group hover:bg-bright router-link-exact-active router-link-active bg-menu hover:bg-menu-hover">
+                        <svg class="flex-none mr-2"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Cleansers
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/makeup-remover-1618" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Makeup Remover
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/toner-1619" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Toner
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/moisturizers-and-creams-1620" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Moisturizers &amp; Creams
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/masks-1621" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Masks
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/serum-and-essence-1622" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Serum and Essence
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/eyelash-care-1623" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Eyelash care
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/sunscreen-1624" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Sunscreen
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/mini-size-kit-1625" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Mini Size Kit
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/mens-skin-care-1626" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Men's skin care
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 text-secondary" id="hair-care-1560">
+            <a href="/sg/c/hair-care-1560" data-testid="" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden">
+                Hair Care
+            </a>
+            <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright" onclick="toggleCategory('hair-care-1560')">
+                Hair Care
+                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg>
+            </button>
+            <ul class="mx-2 hidden">
+                <li>
+                    <a href="/sg/c/hair-care-1560" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        All Hair Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/shampoo-1627" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Shampoo
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/conditioner-and-treatment-1628" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Conditioner &amp; Treatment
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/mask-1629" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Mask
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/styling-1630" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Styling
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/hair-loss-1631" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Hair Loss
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/hair-tools-1632" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Hair Tools
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/hair-colors-1633" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Hair Colors
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/mens-hair-care-1634" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Men's Hair Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/shampoo-and-conditioner-2131" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Shampoo &amp; Conditioner
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/special-care-2132" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Special Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/others-2133" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Others
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 text-secondary" id="body-care-1561">
+            <a href="/sg/c/body-care-1561" data-testid="" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden">
+                Body Care
+            </a>
+            <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright" onclick="toggleCategory('body-care-1561')">
+                Body Care
+                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-up"></use></svg>
+            </button>
+            <ul class="mx-2 hidden xl:block">
+                <li>
+                    <a href="/sg/c/body-care-1561" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        All Body Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/soap-1635" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Soap
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/lotion-1636" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Lotion
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/cream-1637" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Cream
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/hand-and-foot-care-1638" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Hand and Foot care
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/deodorant-1640" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Deodorant
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/oral-care-1642" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Oral Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/bath-1643" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Bath
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/tights-1644" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Tights
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/eye-care-1656" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Eye Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/others-2134" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Others
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 text-secondary" id="cosmetics-1558">
+            <a href="/sg/c/cosmetics-1558" data-testid="" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden">
+                Cosmetics
+            </a>
+            <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright" onclick="toggleCategory('cosmetics-1558')">
+                Cosmetics
+                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg>
+            </button>
+            <ul class="mx-2 hidden">
+                <li>
+                    <a href="/sg/c/cosmetics-1558" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        All Cosmetics
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/base-makeup-1645" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Base Makeup
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/foundation-1646" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Foundation
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/cheek-1647" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Cheek
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/eye-makeup-1648" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Eye Makeup
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/lip-makeup-1649" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Lip Makeup
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/mens-grooming-and-cosmetics-1652" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Men’s Grooming &amp; Cosmetics
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 text-secondary" id="health-care-1562">
+            <a href="/sg/c/health-care-1562" data-testid="" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden">
+                Health Care
+            </a>
+            <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright" onclick="toggleCategory('health-care-1562')">
+                Health Care
+                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg>
+            </button>
+            <ul class="mx-2 hidden">
+                <li>
+                    <a href="/sg/c/health-care-1562" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        All Health Care
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/vitamins-1653" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Vitamins
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/collagen-1654" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Collagen
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/health-supplements-1655" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Health Supplements
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/medicine-1658" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Medicine
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/others-2135" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Others
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/weight-loss-2136" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Weight Loss
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/beauty-supplements-2138" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Beauty Supplements
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/whitening-supplements-2139" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Whitening Supplements
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 text-secondary" id="beauty-tools-1563">
+            <a href="/sg/c/beauty-tools-1563" data-testid="" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden">
+                Beauty Tools
+            </a>
+            <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright" onclick="toggleCategory('beauty-tools-1563')">
+                Beauty Tools
+                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg>
+            </button>
+            <ul class="mx-2 hidden">
+                <li>
+                    <a href="/sg/c/beauty-tools-1563" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        All Beauty Tools
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/iron-1661" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Iron
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/hairdryer-1662" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Hairdryer
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/massager-1663" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Massager
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/cotton-1920" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Cotton
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/others-1922" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Others
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 text-secondary" id="home-and-life-1548">
+            <a href="/sg/c/home-and-life-1548" data-testid="" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden">
+                Home &amp; Life
+            </a>
+            <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright" onclick="toggleCategory('home-and-life-1548')">
+                Home &amp; Life
+                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg>
+            </button>
+            <ul class="mx-2 hidden">
+                <li>
+                    <a href="/sg/c/home-and-life-1548" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        All Home &amp; Life
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/food-and-drink-1550" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Food &amp; Drink
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/sports-1551" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Sports
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/others-1572" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Others
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/stationery-1573" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Stationery
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/baby-1591" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Baby
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/toys-1599" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Toys
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/water-filter-1666" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Water Filter
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/kitchen-1667" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Kitchen
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/bedding-1673" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Bedding
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/laundry-1675" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Laundry
+                    </a>
+                </li>
+                <li>
+                    <a href="/sg/c/adult-2137" data-testid="" class="group flex items-start p-2 group hover:bg-bright">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        Adult
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="border mr-2 mb-2 flex xl:block xl:border-0 xl:m-0 xl:hidden text-secondary">
+            <a href="/sg/departments" data-testid="" class="group flex items-center justify-center px-2 py-1 group cursor-pointer font-bold xl:hidden">
+                View All...
+            </a>
+            <button type="button" data-testid="" class="group hidden xl:flex items-center group cursor-pointer font-bold w-full p-3 justify-between hover:bg-bright">
+                View All...
+                <svg class="w-4 h-4 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-down"></use></svg>
+            </button>
+            <ul class="mx-2 hidden">
+                <li>
+                    <a href="/" data-testid="" class="group flex items-start p-2 group hover:bg-bright router-link-active">
+                        <svg class="flex-none mr-2 group-hover:text-icon-hover"><use xlink:href="/dist/sprite-icons.svg#angle-double-right-solid"></use></svg>
+                        All View All...
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <ul class="flex overflow-x-auto scrolling-touch border-t border-b border-strong bg-light text-secondary xl:hidden">
+        <li class="whitespace-no-wrap p-1 mx-1 link text-primary order-first">
+            <a href="/sg/c/cleansers-1617" data-testid="" class="group router-link-exact-active router-link-active">
+                Cleansers
+            </a>
+        </li>
+        <li class="whitespace-no-wrap p-1 mx-1 link">
+            <a href="/sg/c/makeup-remover-1618" data-testid="" class="group">
+                Makeup Remover
+            </a>
+        </li>
+        <li class="whitespace-no-wrap p-1 mx-1 link">
+            <a href="/sg/c/toner-1619" data-testid="" class="group">
+                Toner
+            </a>
+        </li>
+        <li class="whitespace-no-wrap p-1 mx-1 link">
+            <a href="/sg/c/moisturizers-and-creams-1620" data-testid="" class="group">
+                Moisturizers &amp; Creams
+            </a>
+        </li>
+        <li class="whitespace-no-wrap p-1 mx-1 link">
+            <a href="/sg/c/masks-1621" data-testid="" class="group">
+                Masks
+            </a>
+        </li>
+        <li class="whitespace-no-wrap p-1 mx-1 link">
+            <a href="/sg/c/serum-and-essence-1622" data-testid="" class="group">
+                Serum and Essence
+            </a>
+        </li>
+        <li class="whitespace-no-wrap p-1 mx-1 link">
+            <a href="/sg/c/eyelash-care-1623" data-testid="" class="group">
+                Eyelash care
+            </a>
+        </li>
+        <li class="whitespace-no-wrap p-1 mx-1 link">
+            <a href="/sg/c/sunscreen-1624" data-testid="" class="group">
+                Sunscreen
+            </a>
+        </li>
+        <li class="whitespace-no-wrap p-1 mx-1 link">
+            <a href="/sg/c/mini-size-kit-1625" data-testid="" class="group">
+                Mini Size Kit
+            </a>
+        </li>
+        <li class="whitespace-no-wrap p-1 mx-1 link">
+            <a href="/sg/c/mens-skin-care-1626" data-testid="" class="group">
+                Men's skin care
+            </a>
+        </li>
+    </ul>
+</nav>
+
                 <div id="category" class="w-full xl:w-4/5 xl:pl-10">
                     <!---->
                     <!---->
@@ -2147,16 +3024,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e0dddd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="20.5" r="1"/><circle cx="18" cy="20.5" r="1"/><path d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"/></svg>
   <p class="my-1">Cart</p>
 </div>
-<div class="flex flex-col text-gray-600 justify-center items-center">
+<button class="flex flex-col text-gray-600 justify-center items-center" onclick="toggleAccountModal()">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e0dddd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
   <p class="my-1">Account</p>
-</div>
+</button>
 
 </footer>
 
     </div>
-    <!---->
-    <!---->
+
+<!-- 
+START OF MOBILE SIDEBAR -->
 <div id="sidebar" tabindex="0" class="hidden transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none left-0 md:w-sidebar-left" style="">
   <div>
     <div class="flex items-center w-full border-b xl:hidden">
@@ -2432,7 +3310,7 @@
   Order Tracking
 </button> 
  -->
-<button type="button" data-testid="accountButton" class="group flex items-center xl:px-2 xl:h-12 rounded p-3 button-link w-full" id="header_menu_login" aria-label="Open my account">
+<button type="button" data-testid="accountButton" class="group flex items-center xl:px-2 xl:h-12 rounded p-3 button-link w-full" id="header_menu_login" aria-label="Open my account" onclick="toggleAccountModal()">
 <i class="far fa-user mr-1"></i>
      <span class="">My Account</span></button>
 
@@ -2464,7 +3342,10 @@
     <div class="__cov-progress" style="background-color: rgb(115, 204, 236); opacity: 0; top: 0px; left: 0px; width: 0%; height: 2px; transition: opacity 0.6s ease 0s; position: fixed;"></div>
     </div>
 
-<!--  START OF CART -->
+
+
+
+   <!--  START OF CART -->
    <div data-testid="sidebar" id="microcart" tabindex="0" class="transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none right-0 md:w-sidebar-right hidden" style="">
     <div data-testid="microcart" class="relative py-2 md:py-6">
         <div class="flex justify-between items-start border-b pb-2 px-4 md:px-8">
@@ -2762,6 +3643,9 @@
     </div>
 </div>
 
+
+<!-- START OF OVERLAY -->
+<div id="overlay" class="hidden z-overlay fixed top-0 left-0 w-full h-full bg-black bg-opacity-25"></div>
 
 <script type="text/javascript" src="js/app.js"></script>
 </body>
