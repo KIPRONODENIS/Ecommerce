@@ -27,6 +27,79 @@
                 <!---->
             </div>
         </div>
+
+<!-- start of account modal -->
+<div class="hidden z-modal fixed top-0 left-0 bottom-0 right-0 flex items-center justify-center xl:overflow-auto transform duration-300 account-modal  bg-black bg-opacity-25">
+  <div class="absolute top-0 left-0 w-full h-full"></div> <div class="z-modal-content bg-white border-t-4 border-bold w-full h-full overflow-auto xl:w-modal xl:h-auto">
+
+<!--   Start of SignUp -->
+<div class="p-4 md:px-10 register">
+  <div class="flex justify-between pb-8"><h3>
+      Register
+    </h3> 
+  <button type="button" data-testid="" class="group" onclick="toggleAccountModal()">
+      <i class="h-8 w-8 fas fa-times"></i>
+     </button>
+
+  </div> <div>
+
+    <form novalidate="novalidate"><div class="relative mt-4"><input type="email" name="email" autocomplete="email" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    E-mail address *
+    <span class="text-accent text-xs"><span data-testid="errorMessage" class="ml-1">
+    E-mail address is required.
+  </span><!----></span></label></div> <div class="relative mt-10"><input type="text" name="first-name" autocomplete="given-name" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    First name *
+    <span class="text-accent text-xs"><!----><!----><!----></span></label></div> <div class="relative mt-10"><input type="text" name="last-name" autocomplete="last-name" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    Last name *
+    <span class="text-accent text-xs"><!----><!----></span></label></div> <div class="relative mt-10"><input type="password" name="password" autocomplete="new-password" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    Password *
+    <span class="text-accent text-xs"><!----><!----></span></label></div> <div class="relative mt-10"><input type="password" name="password-confirm" autocomplete="new-password" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    Repeat password *
+    <span class="text-accent text-xs"><!----><!----></span></label></div> <div tabindex="0" class="mt-6"><div class="flex items-center group relative"><input type="checkbox" id="terms" class="invisible absolute top-0 left-0"> <label for="terms" class="pl-1 cursor-pointer"><svg class="w-8 h-8 group-hover:text-highlight"><use xlink:href="/dist/sprite-icons.svg#square"></use></svg> 
+        I accept terms and conditions *
+      </label></div> <span class="text-accent text-xs"><!----></span></div> <button type="submit" data-testid="" disabled="disabled" class="group button mt-6 w-full button-disabled" id="popup_register_an_account_button">
+        Register an account
+      </button> <div class="py-8 text-center text-secondary">
+        Or
+        <button type="button" data-testid="" class="group button-link" onclick="openLogin()" >
+          login to your account
+        </button></div>
+      </form>
+    </div>
+  </div>
+
+
+<!-- start of Login -->
+
+    <div class="p-4 md:px-10 login hidden">
+      <div class="flex justify-between pb-8">
+        <h3>
+      Log in
+    </h3>
+
+     <button type="button" data-testid="" class="group" onclick="toggleAccountModal()">
+      <i class="h-8 w-8 fas fa-times"></i>
+     </button>
+   </div> 
+    <div>
+
+    <form novalidate="novalidate"><div class="relative mt-6"><input type="email" name="email" autocomplete="" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    E-mail address *
+    <span class="text-accent text-xs"><span data-testid="errorMessage" class="ml-1">
+    E-mail address is required.
+  </span><!----></span></label></div> <div class="relative mt-8"><input type="password" name="password" autocomplete="" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    Password *
+    <span class="text-accent text-xs"><!----></span></label></div> <div class="mt-6 text-right text-secondary"><button type="button" data-testid="" class="group button-link">
+          Forgot your password?
+        </button></div> <button type="submit" data-testid="loginSubmit" disabled="disabled" class="group button mt-6 w-full button-disabled" id="popup_login_in_account_button">
+        Log in to your account
+      </button> <div class="py-8 text-center text-secondary">
+        Or
+        <button type="button" data-testid="registerLink" class="group button-link" onclick="openRegister()">
+          register an account
+        </button></div></form></div></div> <!----> <!----></div></div>
+
+       <!--  End of account modal -->
         <div id="viewport" class="container">
             <header class="flex flex-col mt-1">
                 <div class="flex flex-wrap items-center">
@@ -616,7 +689,7 @@
                     <div class="flex-1 xl:order-1 xl:flex-initial flex wrapper-xl"><a href="/sg/" data-testid="" title="Home Page" id="header_item_logo" class="group flex items-center h-10 xl:h-20 router-link-exact-active router-link-active"><img src="https://assets.wonect.com/assets/img/logo/logo.png" alt="Wonect logo" class="mx-auto object-contain h-10 xl:h-16"> <span class="hidden">
     Wonect
   </span></a></div>
-                    <div class="flex-initial xl:order-3 flex wrapper-xl"><button type="button" data-testid="accountButton" id="header_menu_login" aria-label="Open my account" class="group flex items-center xl:px-2 xl:h-12 rounded text-right flex-initial button-nav rounded xl:mr-2">
+                    <div class="flex-initial xl:order-3 flex wrapper-xl"><button type="button" data-testid="accountButton" id="header_menu_login" aria-label="Open my account" class="group flex items-center xl:px-2 xl:h-12 rounded text-right flex-initial button-nav rounded xl:mr-2" onclick="toggleAccountModal()">
 
                          <i class="far fa-user text-2xl m-2"></i>
                          <span class="hidden xl:inline">My Account</span></button>
@@ -1546,10 +1619,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e0dddd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="20.5" r="1"/><circle cx="18" cy="20.5" r="1"/><path d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"/></svg>
   <p class="my-1">Cart</p>
 </div>
-<div class="flex flex-col text-gray-600 justify-center items-center">
+<button class="flex flex-col text-gray-600 justify-center items-center" onclick="toggleAccountModal()">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e0dddd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
   <p class="my-1">Account</p>
-</div>
+</button>
 
 </footer>
 
@@ -1832,7 +1905,7 @@ START OF MOBILE SIDEBAR -->
   Order Tracking
 </button> 
  -->
-<button type="button" data-testid="accountButton" class="group flex items-center xl:px-2 xl:h-12 rounded p-3 button-link w-full" id="header_menu_login" aria-label="Open my account">
+<button type="button" data-testid="accountButton" class="group flex items-center xl:px-2 xl:h-12 rounded p-3 button-link w-full" id="header_menu_login" aria-label="Open my account" onclick="toggleAccountModal()">
 <i class="far fa-user mr-1"></i>
      <span class="">My Account</span></button>
 

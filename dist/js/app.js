@@ -137,3 +137,24 @@ let submenu= document.querySelector(id).innerHTML;
    document.querySelector('.submenu').innerHTML=submenu;
   });
 
+
+//function to toggle modal login
+
+ function toggleAccountModal() {
+ 	  document.querySelector('.account-modal').classList.toggle('hidden')
+ }
+
+ //function to open login form
+
+ function openLogin() {
+ 	 document.querySelector('.register').classList.toggle('hidden')
+ 	 document.querySelector('.login').classList.toggle('hidden')
+ }
+
+ //function to open register
+
+  function openRegister() {
+ 	
+ 	 document.querySelector('.login').classList.toggle('hidden')
+ 	  document.querySelector('.register').classList.toggle('hidden')
+ }
