@@ -34,6 +34,106 @@ document.querySelector('#skin-care-menu').style.display="none";
 
 //function to toggle cart
   function toggleCart(){
-  	console.log('click');
+  
   	document.querySelector('#microcart').classList.toggle('hidden');
   }
+
+  //function to toggle desktop Menu
+
+  function openMenu() {
+
+   document.querySelector('#desktop-menu').classList.toggle('hidden');
+   document.querySelector('#overlay').classList.toggle('hidden');
+   document.querySelector('#menu-bar').classList.toggle('hidden');
+   document.querySelector('#menu-close').classList.toggle('hidden');
+   document.querySelector('.submenu').style.display="none";
+  }
+
+//select the menu item and bind an event to display it submenu
+ document.querySelector('#skin-care-1559').addEventListener('click',function(){
+ //the id of the menu item is the class of its submenu
+ let id="."+this.getAttribute('id');
+//its submenu
+let submenu= document.querySelector(id).innerHTML;
+
+  document.querySelector('.submenu').innerHTML=submenu;
+  document.querySelector('.submenu').style.display="block";
+  });
+
+
+
+//select the menu item and bind an event to display it submenu
+ document.querySelector('#hair-care-1560').addEventListener('click',function(){
+ //the id of the menu item is the class of its submenu
+ let id="."+this.getAttribute('id');
+//its submenu
+let submenu= document.querySelector(id).innerHTML;
+
+ 
+  document.querySelector('.submenu').style.display="block";
+   document.querySelector('.submenu').innerHTML=submenu;
+  });
+
+
+//select the menu item and bind an event to display it submenu
+ document.querySelector('#body-care-1561').addEventListener('click',function(){
+ //the id of the menu item is the class of its submenu
+ let id="."+this.getAttribute('id');
+//its submenu
+let submenu= document.querySelector(id).innerHTML;
+
+ 
+  document.querySelector('.submenu').style.display="block";
+   document.querySelector('.submenu').innerHTML=submenu;
+  });
+
+//select the menu item and bind an event to display it submenu
+ document.querySelector('#cosmetics-1558').addEventListener('click',function(){
+ //the id of the menu item is the class of its submenu
+ let id="."+this.getAttribute('id');
+//its submenu
+let submenu= document.querySelector(id).innerHTML;
+
+ 
+  document.querySelector('.submenu').style.display="block";
+   document.querySelector('.submenu').innerHTML=submenu;
+  });
+
+ //select the menu item and bind an event to display it submenu
+ document.querySelector('#health-care-1562').addEventListener('click',function(){
+ //the id of the menu item is the class of its submenu
+ let id="."+this.getAttribute('id');
+//its submenu
+let submenu= document.querySelector(id).innerHTML;
+
+ 
+  document.querySelector('.submenu').style.display="block";
+   document.querySelector('.submenu').innerHTML=submenu;
+  });
+
+
+
+ //select the menu item and bind an event to display it submenu
+ document.querySelector('#beauty-tools-1563').addEventListener('click',function(){
+ //the id of the menu item is the class of its submenu
+ let id="."+this.getAttribute('id');
+//its submenu
+let submenu= document.querySelector(id).innerHTML;
+
+ 
+  document.querySelector('.submenu').style.display="block";
+   document.querySelector('.submenu').innerHTML=submenu;
+  });
+
+  //select the menu item and bind an event to display it submenu
+ document.querySelector('#home-and-life-1548').addEventListener('click',function(){
+ //the id of the menu item is the class of its submenu
+ let id="."+this.getAttribute('id');
+//its submenu
+let submenu= document.querySelector(id).innerHTML;
+
+ 
+  document.querySelector('.submenu').style.display="block";
+   document.querySelector('.submenu').innerHTML=submenu;
+  });
+
