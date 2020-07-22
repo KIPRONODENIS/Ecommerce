@@ -93,7 +93,7 @@
     E-mail address is required.
   </span><!----></span></label></div> <div class="relative mt-8"><input type="password" name="password" autocomplete="" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
     Password *
-    <span class="text-accent text-xs"><!----></span></label></div> <div class="mt-6 text-right text-secondary"><button type="button" data-testid="" class="group button-link">
+    <span class="text-accent text-xs"><!----></span></label></div> <div class="mt-6 text-right text-secondary"><button type="button" data-testid="" class="group button-link" onclick="openForgot()">
           Forgot your password?
         </button></div> <button type="submit" data-testid="loginSubmit" disabled="disabled" class="group button mt-6 w-full button-disabled" id="popup_login_in_account_button">
         Log in to your account
@@ -101,7 +101,41 @@
         Or
         <button type="button" data-testid="registerLink" class="group button-link" onclick="openRegister()">
           register an account
-        </button></div></form></div></div> <!----> <!----></div></div>
+        </button></div></form></div></div>
+
+<!-- START OF FORGOT PASSWORD -->
+<div class="hidden p-4 md:px-10 forgot">
+    <div class="flex justify-between pb-8">
+        <h3>
+            Reset password
+        </h3> <button type="button" data-testid="" class="group" slot="close" onclick="toggleAccountModal()">
+          <span class="w-8 h-8">
+            <i class="fas fa-times"></i>
+          </span></button></div>
+    <div>
+        <form novalidate="novalidate">
+            <div>
+                <p class="my-8">
+                    Enter your email to receive instructions on how to reset your password.
+                </p>
+                <div class="relative"><input type="email" name="email" autocomplete="" class="w-full p-2 border border-input hover:border-input-hover rounded"> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-300 ease-in-out mt-2 text-secondary">
+    E-mail address *
+    <span class="text-accent text-xs"><!----><!----></span></label></div>
+            </div> <button type="submit" data-testid="" disabled="disabled" class="group button mt-6 w-full button-disabled" id="popup_fogetpasswd_reset_password_button">
+          Reset password
+        </button>
+            <div class="py-8 text-center text-secondary">
+                Or
+                <button type="button" data-testid="" class="group button-link" onclick="openLogin()">
+            return to login
+          </button></div>
+        </form>
+        <!---->
+    </div>
+</div>
+
+
+         <!----> <!----></div></div>
 
        <!--  End of account modal -->
         <div id="viewport" class="container">

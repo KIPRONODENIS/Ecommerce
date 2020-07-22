@@ -147,16 +147,26 @@ let submenu= document.querySelector(id).innerHTML;
  //function to open login form
 
  function openLogin() {
- 	 document.querySelector('.register').classList.toggle('hidden')
+ 	 document.querySelector('.register').classList.add('hidden')
  	 document.querySelector('.login').classList.toggle('hidden')
+     document.querySelector('.forgot').classList.add('hidden')
  }
 
  //function to open register
 
   function openRegister() {
  	
- 	 document.querySelector('.login').classList.toggle('hidden')
+ 	 document.querySelector('.login').classList.add('hidden')
  	  document.querySelector('.register').classList.toggle('hidden')
+      document.querySelector('.forgot').classList.add('hidden')
+ }
+ //function to open forgot password form
+
+  function openForgot() {
+  
+   document.querySelector('.login').classList.add('hidden')
+    document.querySelector('.register').classList.add('hidden')
+    document.querySelector('.forgot').classList.toggle('hidden')
  }
 
 
@@ -164,4 +174,26 @@ let submenu= document.querySelector(id).innerHTML;
  function toggleCategory(id) {
  let el="#"+id+" "+"ul";
 document.querySelector(el).classList.toggle('xl:block');
+ }
+
+ //function to toggle checkout forms
+
+ function openForm(id) {
+   let el="#"+id;
+   let details="."+id;
+document.querySelector(el).classList.toggle('hidden');
+document.querySelector(details).classList.toggle('hidden');
+ }
+
+ //function to make active tab in account
+
+ function makeActive(id) {
+
+     let el="#"+id;
+  
+
+let active=document.querySelector(el).innerHTML;
+document.querySelector(el).classList.toggle('hidden');
+document.querySelector('#my-account-content').innerHTML=active;
+
  }
