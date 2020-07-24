@@ -769,7 +769,7 @@
       
             Help &amp; Contact
         </a>
-        <a href="/about-us" class="group p-3 flex items-center button-link" data-testid="" id="header_about" title="About Us">
+        <a href="/aboutus" class="group p-3 flex items-center button-link" data-testid="" id="header_about" title="About Us">
           <span class="mr-1">
                 <i class="fas fa-info-circle"></i>
           </span>
@@ -844,271 +844,92 @@
       Home
     </a>
     /
-  </span><span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/account" class="link router-link-active" itemprop="item"><meta itemprop="position" content="2"> <meta itemprop="name" content="My Account">
-      My Account
+  </span><span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/about-us" class="link" itemprop="item"><meta itemprop="position" content="2"> <meta itemprop="name" content="About Us">
+      About Us
     </a>
     /
-  </span> <span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><meta itemprop="position" content="3"> <meta itemprop="name" content="My Recently Viewed">
-    My Recently Viewed
+  </span> <span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><meta itemprop="position" content="3"> <meta itemprop="name" content="Corporate Profile">
+    Corporate Profile
   </span></div>
-
   
 <!-- START OF MAIN SECTION -->
-<main class="wrapper my-10 flex flex-wrap">
-    <div class="w-full pb-6 xl:w-1/4 xl:pr-16">
-        <nav class="grid gap-6 md:grid-cols-2 xl:grid-cols-1">
-            <ul class="border-l border-r border-t">
-                <li class="border-b cursor-pointer" onclick="makeActive('orders')">
-
-                  <span  class="group flex items-center uppercase group p-2 text-sm xl:py-4 xl:text-base hover:bg-bright" data-testid="" >
-                    <span class="flex-0 mr-2 group-hover:text-icon-hover">
-                     <i class="fas fa-list"></i>
-                    </span>
-
-                     <span class="flex-1 font-bold" >
-              My Orders
-            </span>
-             <span class="flex-0 ml-2 w-4 h-4">
-               <i class="fas fa-angle-right"></i>
-             </span>
-
-           </span></li>
-
-                <li class="border-b cursor-pointer" onclick="makeActive('my-profile')"><span href="" class="group flex items-center uppercase group p-2 text-sm xl:py-4 xl:text-base router-link-active hover:bg-bright" data-testid="">
-                  <span class="flex-0 mr-2 group-hover:text-icon-hover">
-                   <i class="fas fa-user"></i>
-                  </span>
-                   <span class="flex-1 font-bold">
-              My Profile
-            </span>
-             <span class="flex-0 ml-2 w-4 h-4">
-              <i class="fas fa-angle-right"></i>
-            </span>
-           </span></li>
-                <li class="border-b cursor-pointer" onclick="makeActive('shipping-details')">
-                  <span href="#" class="group flex items-center uppercase group p-2 text-sm xl:py-4 xl:text-base hover:bg-bright" data-testid="">
-                    <span class="flex-0 mr-2 group-hover:text-icon-hover">
-                    <i class="fas fa-map-marker"></i></span>
-
-                     <span class="flex-1 font-bold">
-              Shipping details
-            </span> <span class="flex-0 ml-2 w-4 h-4">
-   <i class="fas fa-angle-right"></i>
-            </span></span></li>
-
-                <li class="border-b cursor-pointer" onclick="makeActive('newsletter')"><span href="#" class="group flex items-center uppercase group p-2 text-sm xl:py-4 xl:text-base hover:bg-bright" data-testid="">
-                  <span class="flex-0 mr-2 group-hover:text-icon-hover">
-                    <i class="fas fa-envelope-open-text"></i>
-                  </span>
-
-                   <span class="flex-1 font-bold">
-              Newsletter
-            </span>
-               <span class="flex-0 ml-2 w-4 h-4">
-                 <i class="fas fa-angle-right"></i>
-               </span>
-            </span></li>
-
-                <li class="border-b cursor-pointer" onclick="makeActive('reward-points')"><span href="#" class="group flex items-center uppercase group p-2 text-sm xl:py-4 xl:text-base hover:bg-bright" data-testid="">
-                  <span class="flex-0 mr-2 group-hover:text-icon-hover">
-                    <i class="fas fa-gift"></i>
-                  </span>
-                   <span class="flex-1 font-bold">
-              Reward points
-            </span>
-             <span class="flex-0 ml-2 w-4 h-4">
-               <i class="fas fa-angle-right"></i>
-             </span>
-           </span></li>
-
-                <li class="border-b cursor-pointer" onclick="makeActive('recently-viewed')"><span href="" class="group flex items-center uppercase group p-2 text-sm xl:py-4 xl:text-base router-link-exact-active router-link-active bg-menu-open" data-testid="">
-                  <span class="flex-0 mr-2">
-                    <i class="fas fa-history"></i>
-                  </span>
-
-                  <span class="flex-1 font-bold">
-              Recently viewed
-            </span> <span class="flex-0 ml-2 w-4 h-4">
-              <i class="fas fa-angle-right"></i>
-            </span></span></li>
-
-
-            </ul>
-            <div><a class="flex items-center border uppercase group hover:bg-bright p-2 cursor-pointer text-sm xl:py-4 xl:text-base">
-
-              <span class="flex-0 mr-2 group-hover:text-icon-hover">
-                <i class="fas fa-sign-out-alt"></i>
-              </span> <span class="flex-1 font-bold">
-            Logout
-          </span> <span class="flex-0 ml-2 w-4 h-4">
-            <i class="fa fa-angle-right"></i>
-          </span></a></div>
-        </nav>
-    </div>
-        <div id="my-account-content" class="w-full xl:w-3/4">
-                  <div >
-            <h3 class="mb-6">
-                Recently viewed items
-            </h3>
-            <div>
-                <div>
-                    <p>No products yet</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    <div class="w-full xl:w-3/4">
-
-
-<div id="orders" class="hidden">
-
-  <div class="flex justify-end mb-6"><button type="button" data-testid="" class="group flex"><span class="bg-button hover:bg-button-hover rounded-full flex p-1 mr-2">
-    <span>
-      <i class="fas fa-sync"></i>
-    </span>
-  </span> <span>
-        Refresh
-      </span></button></div> 
-
-      <div class="shadow-lg">
-
-<a href="/order-confirmation" class="relative mx-2 block w-full bg-white shadow-sm rounded hover:shadow-xl my-4"><!----> <div class="rounded p-3"><h1>
-              Order # <span class="font-bold">M11052211700</span></h1> <p class="text-gray-800">
-              Date:
-              <span class="text-xs">Jul 21, 2020, 4:42 PM</span></p> <div>
-              Total:
-              ₹133
-            </div> <a href="/order-confirmation" class="inline-block my-2 px-4 py-2 shadow rounded bg-green-500 text-white"><span class="mr-4">Live Order</span> <span class="pulse w-4 h-4 white"></span></a></div> <hr> <div class="flex flex-wrap p-3 justify-between"><div class="flex items-center"><div><img alt="" class="rounded-full bg-blue-500 mr-2 w-12 h-12" lazy-progressive="true" data-src="https://ik.imagekit.io/3wzatecz51w3i/grocery/images/product/grocery-staples/sugar.webp" src="https://ik.imagekit.io/3wzatecz51w3i/grocery/images/product/grocery-staples/sugar.webp" lazy="loaded"></div> <div><div class="text-sm font-semibold">Sugar</div> <div class="text-gray-500 text-xs">
-                  1 *
-                  ₹38 =
-                  ₹38
-                </div></div></div></div><div class="flex flex-wrap p-3 justify-between border-t"><div class="flex items-center"><div><img alt="" class="rounded-full bg-blue-500 mr-2 w-12 h-12" lazy-progressive="true" data-src="https://ik.imagekit.io/3wzatecz51w3i/grocery/images/product/grocery-staples/arhar-daltoor-dal.webp" src="https://ik.imagekit.io/3wzatecz51w3i/grocery/images/product/grocery-staples/arhar-daltoor-dal.webp" lazy="loaded"></div> <div><div class="text-sm font-semibold">Arhar Dal/Toor Dal</div> <div class="text-gray-500 text-xs">
-                  1 *
-                  ₹70 =
-                  ₹70
-                </div></div></div></div></a>
-
-      </div> <!----> <!----></div>
-
-
-<div id="my-profile" class="hidden">
-    <div class="flex justify-end mb-2"><button type="button" data-testid="" class="group flex"><span class="rounded-full flex p-1 mr-2 bg-button hover:bg-button-hover">
-      <span>
-       <i class="fas fa-pen"></i>
-      </span></span> <span>
-          Edit profile
-        </span></button></div>
-    <h2>
-        Denis kiprono
-    </h2>
-    <div class="mt-6">
-        <h4 class="uppercase text-secondary mb-2">
-            Email address
-        </h4>
-        <p>
-            kipronokemei98@gmail.com
-        </p>
-    </div>
-    <!---->
-    <!---->
-</div>
-
-
-<div id="shipping-details" class="hidden">
-  <div class="flex justify-end mb-2"><button type="button" data-testid="" class="group flex items-center"><span class="bg-button hover:bg-button-hover rounded-full flex p-1 mr-2">
-        <span>
-       <i class="fas fa-pen"></i>
-      </span>
-  </span> <span>
-          Edit shipping details
-        </span></button></div> <h2 class="mb-6">
-      Denis kiprono
-    </h2> <!----> <p class="py-2">
-      
-    </p> <p class="py-2">
-      
-      <!----></p> <p class="py-2">
-       
-    </p> <p class="py-2"><!---->
-      
-    </p> <div class="py-2">
-      
-      <!----></div>
-    </div>
-
-<div class="hidden" id="newsletter">
-    <h3 class="mb-6">
-        Newsletter signup
-    </h3>
-    <div tabindex="0" class="mb-4">
-        <div class="flex items-center group relative"><input type="checkbox" id="generalAgreement" class="invisible absolute top-0 left-0"> <label for="generalAgreement" class="pl-1 cursor-pointer">
-          <span class="w-8 h-8 group-hover:text-highlight">
-            <i class="far fa-square"></i>
-          </span> 
-    I want to receive a newsletter, and agree to its terms
-  </label></div> <span class="text-accent text-xs"></span></div> <button type="button" data-testid="" class="group button">
-    Update my preferences
-  </button></div>
-
-
-<div class="hidden" id="reward-points">
-    <h3 class="mb-6">
-        Reward points
-    </h3>
-    <div>
-        <p class="mb-6">
-            Current points balance: <strong>500 Points</strong>.
-        </p>
-        <p>
-            Points history:
-        </p>
-        <div class="font-bold border-b p-2 grid gap-4 grid-cols-3 xl:grid-cols-6">
-            <div>
-                Date earned
-            </div>
-            <div>
-                Amount
-            </div>
-            <div class="hidden xl:block col-span-3">
-                For
-            </div>
-            <div>
-                Expires
-            </div>
-        </div>
-        <div class="border-b p-2 grid gap-4 grid-cols-3 xl:grid-cols-6">
-            <div>
-                Jul 21, 2020
-            </div>
-            <div class="">
-                500
-            </div>
-            <div class="hidden xl:block col-span-3">
-                A Warm Welcome to Wonect, Denis kiprono
-            </div>
-            <div class="">
-                Oct 19, 2020
-            </div>
-        </div>
-</div>
-</div>
-
-
-        <div id="recently-viewed" class="hidden">
-            <h3 class="mb-6">
-                Recently viewed items
-            </h3>
-            <div>
-                <div>
-                    <p>No products yet</p>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
+<main>
+    <div class="wrapper my-10 flex flex-col items-center">
+        <table class="w-full text-xs xl:w-auto xl:text-base">
+            <tbody>
+                <tr>
+                    <th>
+                        Company name
+                    </th>
+                    <td>
+                        WONECT Co.,Ltd.
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Address
+                    </th>
+                    <td>
+                        Keihan Shijo Kawaramachi Bld. 3F, Tominaga-cho, Shimogyo-ku, Kyoto-shi, Kyoto, 600-8023, Japan
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Founded
+                    </th>
+                    <td>
+                        January, 2015
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Capital stock
+                    </th>
+                    <td>
+                        5,000,000 yen
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        The total of issued stocks
+                    </th>
+                    <td>
+                        100
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Representative director
+                    </th>
+                    <td>
+                        Kota Mizuguchi (President)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Activities
+                    </th>
+                    <td>
+                        Sales of Japanese products
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Corporate site
+                    </th>
+                    <td><a href="https://wonect.jp/">https://wonect.jp/</a></td>
+                </tr>
+                <tr>
+                    <th>
+                        Contact
+                    </th>
+                    <td><a href="mailto:customer_info@wonect.com">customer_info@wonect.com</a></td>
+                </tr>
+            </tbody>
+        </table> <a href="/" class="group link my-10" data-testid="">
+    Specific Commercial Transactions Law
+  </a></div>
 </main>
-
 <!-- END OF MAIN SECTION -->
 
  
@@ -1329,11 +1150,11 @@
                 <h6 class="uppercase">
                     Company
                 </h6>
-                <div class="flex flex-col text-secondary"><a href="/company-profile" data-testid="" id="footer_footer_company_corporate_profile" exact="" class="group p-1 hover:underline">
+                <div class="flex flex-col text-secondary"><a href="/sg/corporate-profile" data-testid="" id="footer_footer_company_corporate_profile" exact="" class="group p-1 hover:underline">
           Corporate Profile
-        </a> <a href="/privacy-policy" data-testid="" id="footer_footer_company_privary_policy" exact="" class="group p-1 hover:underline">
+        </a> <a href="/sg/privacy-policy" data-testid="" id="footer_footer_company_privary_policy" exact="" class="group p-1 hover:underline">
           Privacy Policy
-        </a> <a href="/aboutus" data-testid="" id="footer_footer_company_about_us" exact="" class="group p-1 hover:underline">
+        </a> <a href="/sg/about-us" data-testid="" id="footer_footer_company_about_us" exact="" class="group p-1 hover:underline">
           About us
         </a></div>
             </div>

@@ -193,7 +193,7 @@ document.querySelector(details).classList.toggle('hidden');
   
 
 let active=document.querySelector(el).innerHTML;
-document.querySelector(el).classList.toggle('hidden');
+document.querySelector(el).classList.add('hidden');
 document.querySelector('#my-account-content').innerHTML=active;
 
  }

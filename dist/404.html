@@ -844,284 +844,221 @@
       Home
     </a>
     /
-  </span><span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/account" class="link router-link-active" itemprop="item"><meta itemprop="position" content="2"> <meta itemprop="name" content="My Account">
-      My Account
-    </a>
-    /
-  </span> <span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><meta itemprop="position" content="3"> <meta itemprop="name" content="My Recently Viewed">
-    My Recently Viewed
+  </span> <span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><meta itemprop="position" content="2"> <meta itemprop="name" content="Page Not Found">
+    Page Not Found
   </span></div>
-
-  
-<!-- START OF MAIN SECTION -->
-<main class="wrapper my-10 flex flex-wrap">
-    <div class="w-full pb-6 xl:w-1/4 xl:pr-16">
-        <nav class="grid gap-6 md:grid-cols-2 xl:grid-cols-1">
-            <ul class="border-l border-r border-t">
-                <li class="border-b cursor-pointer" onclick="makeActive('orders')">
-
-                  <span  class="group flex items-center uppercase group p-2 text-sm xl:py-4 xl:text-base hover:bg-bright" data-testid="" >
-                    <span class="flex-0 mr-2 group-hover:text-icon-hover">
-                     <i class="fas fa-list"></i>
-                    </span>
-
-                     <span class="flex-1 font-bold" >
-              My Orders
-            </span>
-             <span class="flex-0 ml-2 w-4 h-4">
-               <i class="fas fa-angle-right"></i>
-             </span>
-
-           </span></li>
-
-                <li class="border-b cursor-pointer" onclick="makeActive('my-profile')"><span href="" class="group flex items-center uppercase group p-2 text-sm xl:py-4 xl:text-base router-link-active hover:bg-bright" data-testid="">
-                  <span class="flex-0 mr-2 group-hover:text-icon-hover">
-                   <i class="fas fa-user"></i>
-                  </span>
-                   <span class="flex-1 font-bold">
-              My Profile
-            </span>
-             <span class="flex-0 ml-2 w-4 h-4">
-              <i class="fas fa-angle-right"></i>
-            </span>
-           </span></li>
-                <li class="border-b cursor-pointer" onclick="makeActive('shipping-details')">
-                  <span href="#" class="group flex items-center uppercase group p-2 text-sm xl:py-4 xl:text-base hover:bg-bright" data-testid="">
-                    <span class="flex-0 mr-2 group-hover:text-icon-hover">
-                    <i class="fas fa-map-marker"></i></span>
-
-                     <span class="flex-1 font-bold">
-              Shipping details
-            </span> <span class="flex-0 ml-2 w-4 h-4">
-   <i class="fas fa-angle-right"></i>
-            </span></span></li>
-
-                <li class="border-b cursor-pointer" onclick="makeActive('newsletter')"><span href="#" class="group flex items-center uppercase group p-2 text-sm xl:py-4 xl:text-base hover:bg-bright" data-testid="">
-                  <span class="flex-0 mr-2 group-hover:text-icon-hover">
-                    <i class="fas fa-envelope-open-text"></i>
-                  </span>
-
-                   <span class="flex-1 font-bold">
-              Newsletter
-            </span>
-               <span class="flex-0 ml-2 w-4 h-4">
-                 <i class="fas fa-angle-right"></i>
-               </span>
-            </span></li>
-
-                <li class="border-b cursor-pointer" onclick="makeActive('reward-points')"><span href="#" class="group flex items-center uppercase group p-2 text-sm xl:py-4 xl:text-base hover:bg-bright" data-testid="">
-                  <span class="flex-0 mr-2 group-hover:text-icon-hover">
-                    <i class="fas fa-gift"></i>
-                  </span>
-                   <span class="flex-1 font-bold">
-              Reward points
-            </span>
-             <span class="flex-0 ml-2 w-4 h-4">
-               <i class="fas fa-angle-right"></i>
-             </span>
-           </span></li>
-
-                <li class="border-b cursor-pointer" onclick="makeActive('recently-viewed')"><span href="" class="group flex items-center uppercase group p-2 text-sm xl:py-4 xl:text-base router-link-exact-active router-link-active bg-menu-open" data-testid="">
-                  <span class="flex-0 mr-2">
-                    <i class="fas fa-history"></i>
-                  </span>
-
-                  <span class="flex-1 font-bold">
-              Recently viewed
-            </span> <span class="flex-0 ml-2 w-4 h-4">
-              <i class="fas fa-angle-right"></i>
-            </span></span></li>
-
-
-            </ul>
-            <div><a class="flex items-center border uppercase group hover:bg-bright p-2 cursor-pointer text-sm xl:py-4 xl:text-base">
-
-              <span class="flex-0 mr-2 group-hover:text-icon-hover">
-                <i class="fas fa-sign-out-alt"></i>
-              </span> <span class="flex-1 font-bold">
-            Logout
-          </span> <span class="flex-0 ml-2 w-4 h-4">
-            <i class="fa fa-angle-right"></i>
-          </span></a></div>
-        </nav>
-    </div>
-        <div id="my-account-content" class="w-full xl:w-3/4">
-                  <div >
-            <h3 class="mb-6">
-                Recently viewed items
-            </h3>
-            <div>
-                <div>
-                    <p>No products yet</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    <div class="w-full xl:w-3/4">
-
-
-<div id="orders" class="hidden">
-
-  <div class="flex justify-end mb-6"><button type="button" data-testid="" class="group flex"><span class="bg-button hover:bg-button-hover rounded-full flex p-1 mr-2">
-    <span>
-      <i class="fas fa-sync"></i>
-    </span>
-  </span> <span>
-        Refresh
-      </span></button></div> 
-
-      <div class="shadow-lg">
-
-<a href="/order-confirmation" class="relative mx-2 block w-full bg-white shadow-sm rounded hover:shadow-xl my-4"><!----> <div class="rounded p-3"><h1>
-              Order # <span class="font-bold">M11052211700</span></h1> <p class="text-gray-800">
-              Date:
-              <span class="text-xs">Jul 21, 2020, 4:42 PM</span></p> <div>
-              Total:
-              ₹133
-            </div> <a href="/order-confirmation" class="inline-block my-2 px-4 py-2 shadow rounded bg-green-500 text-white"><span class="mr-4">Live Order</span> <span class="pulse w-4 h-4 white"></span></a></div> <hr> <div class="flex flex-wrap p-3 justify-between"><div class="flex items-center"><div><img alt="" class="rounded-full bg-blue-500 mr-2 w-12 h-12" lazy-progressive="true" data-src="https://ik.imagekit.io/3wzatecz51w3i/grocery/images/product/grocery-staples/sugar.webp" src="https://ik.imagekit.io/3wzatecz51w3i/grocery/images/product/grocery-staples/sugar.webp" lazy="loaded"></div> <div><div class="text-sm font-semibold">Sugar</div> <div class="text-gray-500 text-xs">
-                  1 *
-                  ₹38 =
-                  ₹38
-                </div></div></div></div><div class="flex flex-wrap p-3 justify-between border-t"><div class="flex items-center"><div><img alt="" class="rounded-full bg-blue-500 mr-2 w-12 h-12" lazy-progressive="true" data-src="https://ik.imagekit.io/3wzatecz51w3i/grocery/images/product/grocery-staples/arhar-daltoor-dal.webp" src="https://ik.imagekit.io/3wzatecz51w3i/grocery/images/product/grocery-staples/arhar-daltoor-dal.webp" lazy="loaded"></div> <div><div class="text-sm font-semibold">Arhar Dal/Toor Dal</div> <div class="text-gray-500 text-xs">
-                  1 *
-                  ₹70 =
-                  ₹70
-                </div></div></div></div></a>
-
-      </div> <!----> <!----></div>
-
-
-<div id="my-profile" class="hidden">
-    <div class="flex justify-end mb-2"><button type="button" data-testid="" class="group flex"><span class="rounded-full flex p-1 mr-2 bg-button hover:bg-button-hover">
-      <span>
-       <i class="fas fa-pen"></i>
-      </span></span> <span>
-          Edit profile
-        </span></button></div>
-    <h2>
-        Denis kiprono
+<main id="page_not_found" class="wrapper my-6 flex flex-col items-center xl:my-10">
+    <h1>
+        404
+    </h1>
+    <h2 class="mb-6 xl:text-3xl xl:mb-8">
+        Sorry, we can't find that page
     </h2>
-    <div class="mt-6">
-        <h4 class="uppercase text-secondary mb-2">
-            Email address
-        </h4>
-        <p>
-            kipronokemei98@gmail.com
-        </p>
-    </div>
-    <!---->
-    <!---->
-</div>
-
-
-<div id="shipping-details" class="hidden">
-  <div class="flex justify-end mb-2"><button type="button" data-testid="" class="group flex items-center"><span class="bg-button hover:bg-button-hover rounded-full flex p-1 mr-2">
-        <span>
-       <i class="fas fa-pen"></i>
-      </span>
-  </span> <span>
-          Edit shipping details
-        </span></button></div> <h2 class="mb-6">
-      Denis kiprono
-    </h2> <!----> <p class="py-2">
-      
-    </p> <p class="py-2">
-      
-      <!----></p> <p class="py-2">
-       
-    </p> <p class="py-2"><!---->
-      
-    </p> <div class="py-2">
-      
-      <!----></div>
-    </div>
-
-<div class="hidden" id="newsletter">
-    <h3 class="mb-6">
-        Newsletter signup
-    </h3>
-    <div tabindex="0" class="mb-4">
-        <div class="flex items-center group relative"><input type="checkbox" id="generalAgreement" class="invisible absolute top-0 left-0"> <label for="generalAgreement" class="pl-1 cursor-pointer">
-          <span class="w-8 h-8 group-hover:text-highlight">
-            <i class="far fa-square"></i>
-          </span> 
-    I want to receive a newsletter, and agree to its terms
-  </label></div> <span class="text-accent text-xs"></span></div> <button type="button" data-testid="" class="group button">
-    Update my preferences
-  </button></div>
-
-
-<div class="hidden" id="reward-points">
-    <h3 class="mb-6">
-        Reward points
-    </h3>
-    <div>
-        <p class="mb-6">
-            Current points balance: <strong>500 Points</strong>.
-        </p>
-        <p>
-            Points history:
-        </p>
-        <div class="font-bold border-b p-2 grid gap-4 grid-cols-3 xl:grid-cols-6">
-            <div>
-                Date earned
-            </div>
-            <div>
-                Amount
-            </div>
-            <div class="hidden xl:block col-span-3">
-                For
-            </div>
-            <div>
-                Expires
+    <p class="mb-4 text-lg">
+        You could try searching our catalog or browsing by
+        <a href="/category" data-testid="" id="departments" class="group link">
+      Category
+    </a> or by
+        <a href="/brands" data-testid="" id="brands" class="group link">
+      Brand.
+    </a></p>
+    <p class="text-lg mb-8">
+        You could also visit our
+        <a href="/" data-testid="" id="home" class="group link router-link-active">
+      Homepage
+    </a> or check out some of our bestselling items below.
+    </p> <button type="button" data-testid="" id="chatplus" class="group button flex items-center"><svg class="mr-1"><use xlink:href="/dist/sprite-icons.svg#headset"></use></svg> Contact us with any questions</button>
+    <div id="toppage_best_seller_products"
+        class="grid gap-4 md:gap-6 mt-8 w-full grid-cols-2 md:grid-cols-3 lg:w-3/4 xl:w-2/3 xl:mt-10">
+        <div class="border rounded hover:shadow-xl p-2">
+            <div class="relative group flex flex-col h-full">
+                <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
+                    <div class="m-auto h-32 lg:h-40">
+                        <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="SUNTORY Milcolla Collagen Powder 30 sachets " itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/m/i/milcolla3_2.jpg"
+                                alt="SUNTORY Milcolla Collagen Powder 30 sachets " itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/m/i/milcolla3_2.jpg" alt="SUNTORY Milcolla Collagen Powder 30 sachets "
+                                itemprop="image" class="object-contain w-auto h-full m-auto" style=""></div>
+                    </div>
+                    <!---->
+                    <div class="flex flex-col justify-between flex-auto pt-2">
+                        <p class="font-bold flex-auto">
+                            SUNTORY Milcolla Collagen Powder 30 sachets
+                        </p>
+                        <div class="flex justify-between items-end w-full"><span class="pr-1"><span class="text-faint line-through text-xs mr-1">
+            S$78.71
+          </span> <span class="text-accent font-bold">
+            S$66.90
+          </span></span>
+                            <!---->
+                        </div>
+                    </div>
+                </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+    Add to Wish List
+  </span></button>
+                <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><svg><use xlink:href="/dist/sprite-icons.svg#shopping-cart"></use></svg>
+  Add to Cart
+</button></div>
             </div>
         </div>
-        <div class="border-b p-2 grid gap-4 grid-cols-3 xl:grid-cols-6">
-            <div>
-                Jul 21, 2020
-            </div>
-            <div class="">
-                500
-            </div>
-            <div class="hidden xl:block col-span-3">
-                A Warm Welcome to Wonect, Denis kiprono
-            </div>
-            <div class="">
-                Oct 19, 2020
+        <div class="border rounded hover:shadow-xl p-2">
+            <div class="relative group flex flex-col h-full">
+                <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
+                    <div class="m-auto h-32 lg:h-40">
+                        <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="FANCL Mild Cleansing Oil 120ml" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/f/a/fan01002_1_1.jpg"
+                                alt="FANCL Mild Cleansing Oil 120ml" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/f/a/fan01002_1_1.jpg" alt="FANCL Mild Cleansing Oil 120ml"
+                                itemprop="image" class="object-contain w-auto h-full m-auto" style=""></div>
+                    </div>
+                    <!---->
+                    <div class="flex flex-col justify-between flex-auto pt-2">
+                        <p class="font-bold flex-auto">
+                            FANCL Mild Cleansing Oil 120ml
+                        </p>
+                        <div class="flex justify-between items-end w-full"><span class="pr-1"><span class="text-accent font-bold">
+            S$30.47
+          </span>
+                            <!---->
+                            </span>
+                            <!---->
+                        </div>
+                    </div>
+                </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+    Add to Wish List
+  </span></button>
+                <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><svg><use xlink:href="/dist/sprite-icons.svg#shopping-cart"></use></svg>
+  Add to Cart
+</button></div>
             </div>
         </div>
-</div>
-</div>
-
-
-        <div id="recently-viewed" class="hidden">
-            <h3 class="mb-6">
-                Recently viewed items
-            </h3>
-            <div>
-                <div>
-                    <p>No products yet</p>
-                </div>
+        <div class="border rounded hover:shadow-xl p-2">
+            <div class="relative group flex flex-col h-full">
+                <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
+                    <div class="m-auto h-32 lg:h-40">
+                        <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="MEIJI Amino Collagen Power Premium Can 200g" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/m/e/mei010001_1.jpg"
+                                alt="MEIJI Amino Collagen Power Premium Can 200g" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/m/e/mei010001_1.jpg" alt="MEIJI Amino Collagen Power Premium Can 200g"
+                                itemprop="image" class="object-contain w-auto h-full m-auto" style=""></div>
+                    </div>
+                    <!---->
+                    <div class="flex flex-col justify-between flex-auto pt-2">
+                        <p class="font-bold flex-auto">
+                            MEIJI Amino Collagen Power Premium Can 200g
+                        </p>
+                        <div class="flex justify-between items-end w-full"><span class="pr-1"><span class="text-faint line-through text-xs mr-1">
+            S$55.90
+          </span> <span class="text-accent font-bold">
+            S$47.52
+          </span></span>
+                            <!---->
+                        </div>
+                    </div>
+                </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+    Add to Wish List
+  </span></button>
+                <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><svg><use xlink:href="/dist/sprite-icons.svg#shopping-cart"></use></svg>
+  Add to Cart
+</button></div>
             </div>
         </div>
-
-
+        <div class="border rounded hover:shadow-xl p-2">
+            <div class="relative group flex flex-col h-full">
+                <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
+                    <div class="m-auto h-32 lg:h-40">
+                        <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="SHISEIDO The Collagen Tablet 126 tablets" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/s/h/shiseido_collagen_2.jpg"
+                                alt="SHISEIDO The Collagen Tablet 126 tablets" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/s/h/shiseido_collagen_2.jpg" alt="SHISEIDO The Collagen Tablet 126 tablets"
+                                itemprop="image" class="object-contain w-auto h-full m-auto" style=""></div>
+                    </div>
+                    <!---->
+                    <div class="flex flex-col justify-between flex-auto pt-2">
+                        <p class="font-bold flex-auto">
+                            SHISEIDO The Collagen Tablet 126 tablets
+                        </p>
+                        <div class="flex justify-between items-end w-full"><span class="pr-1"><span class="text-faint line-through text-xs mr-1">
+            S$39.88
+          </span> <span class="text-accent font-bold">
+            S$31.00
+          </span></span>
+                            <!---->
+                        </div>
+                    </div>
+                </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+    Add to Wish List
+  </span></button>
+                <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><svg><use xlink:href="/dist/sprite-icons.svg#shopping-cart"></use></svg>
+  Add to Cart
+</button></div>
+            </div>
+        </div>
+        <div class="border rounded hover:shadow-xl p-2">
+            <div class="relative group flex flex-col h-full">
+                <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
+                    <div class="m-auto h-32 lg:h-40">
+                        <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="CHOCOLA BB Lucent C Whitening Supplement 180 tablets" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/1/8/1801_1.jpg"
+                                alt="CHOCOLA BB Lucent C Whitening Supplement 180 tablets" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/1/8/1801_1.jpg" alt="CHOCOLA BB Lucent C Whitening Supplement 180 tablets"
+                                itemprop="image" class="object-contain w-auto h-full m-auto" style=""></div>
+                    </div>
+                    <!---->
+                    <div class="flex flex-col justify-between flex-auto pt-2">
+                        <p class="font-bold flex-auto">
+                            CHOCOLA BB Lucent C Whitening Supplement 180 tablets
+                        </p>
+                        <div class="flex justify-between items-end w-full"><span class="pr-1"><span class="text-faint line-through text-xs mr-1">
+            S$46.94
+          </span> <span class="text-accent font-bold">
+            S$39.90
+          </span></span>
+                            <!---->
+                        </div>
+                    </div>
+                </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+    Add to Wish List
+  </span></button>
+                <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><svg><use xlink:href="/dist/sprite-icons.svg#shopping-cart"></use></svg>
+  Add to Cart
+</button></div>
+            </div>
+        </div>
+        <div class="border rounded hover:shadow-xl p-2">
+            <div class="relative group flex flex-col h-full">
+                <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
+                    <div class="m-auto h-32 lg:h-40">
+                        <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="MUCOTA Adllura Aire 10 Leave In Treatment for Damaged Straight Hair 100g" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;">
+                            <img
+                                src="https://api.wonect.com/img/100/100/resize/1/0/10.jpeg" alt="MUCOTA Adllura Aire 10 Leave In Treatment for Damaged Straight Hair 100g" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;">
+                            <img src="https://api.wonect.com/img/310/300/resize/1/0/10.jpeg" alt="MUCOTA Adllura Aire 10 Leave In Treatment for Damaged Straight Hair 100g" itemprop="image" class="object-contain w-auto h-full m-auto" style=""></div>
+                    </div>
+                    <!---->
+                    <div class="flex flex-col justify-between flex-auto pt-2">
+                        <p class="font-bold flex-auto">
+                            MUCOTA Adllura Aire 10 Leave In Treatment for Damaged Straight Hair 100g
+                        </p>
+                        <div class="flex justify-between items-end w-full"><span class="pr-1"><span class="text-faint line-through text-xs mr-1">
+            S$19.88
+          </span> <span class="text-accent font-bold">
+            S$16.90
+          </span></span>
+                            <!---->
+                        </div>
+                    </div>
+                </a> <button type="button" data-testid="" class="group flex items-center justify-center button-plain absolute top-0 right-0 p-2"><svg class="mr-1 text-button-light hover:text-button-light-hover"><use xlink:href="/dist/sprite-icons.svg#heart"></use></svg> <span class="" style="display: none;">
+    Add to Wish List
+  </span></button>
+                <div class="pt-2 md:px-4 md:py-2 text-center xl:bg-semi xl:border-t xl:border-light xl:absolute xl:bottom-0 xl:left-0 xl:right-0 xl:hidden xl:group-hover:block"><button type="button" data-testid="addToCart" class="group w-full button"><svg><use xlink:href="/dist/sprite-icons.svg#shopping-cart"></use></svg>
+  Add to Cart
+</button></div>
+            </div>
+        </div>
     </div>
 </main>
 
-<!-- END OF MAIN SECTION -->
 
- 
 <footer class=" hidden lg:block wrapper">
-    <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/help" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
+    <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/about-us" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
         Quality
       </h3> <span class="text-sm text-secondary">
         Bringing you authentic products
-      </span></div></a><a href="/order-confirmation" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_delivery" exact=""><img alt="Delivery" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" lazy="loaded"> <div class="ml-4"><h3>
+      </span></div></a><a href="/" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_delivery" exact=""><img alt="Delivery" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" lazy="loaded"> <div class="ml-4"><h3>
         Delivery
       </h3> <span class="text-sm text-secondary">
         Fast international delivery
-      </span></div></a><a href="/order-confirmation" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_refund" exact=""><img alt="Refund" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-refund.png" src="https://assets.wonect.com/assets/img/icon/icon-refund.png" lazy="loaded"> <div class="ml-4"><h3>
+      </span></div></a><a href="/" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_refund" exact=""><img alt="Refund" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-refund.png" src="https://assets.wonect.com/assets/img/icon/icon-refund.png" lazy="loaded"> <div class="ml-4"><h3>
         Refund
       </h3> <span class="text-sm text-secondary">
         7-day return guarantee for defective products
@@ -1296,7 +1233,7 @@
             <h5 class="mb-2">
                 Home &amp; Life
             </h5>
-            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/home-and-life-1548" data-testid="" id="footer_category_menu_1548" class="group hover:underline p-1">
+            <div class="text-sm text-secondary flex flex-col"><a href="/category" data-testid="" id="footer_category_menu_1548" class="group hover:underline p-1">
       All Home &amp; Life
     </a> <a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1550">
       Food &amp; Drink
@@ -1329,11 +1266,11 @@
                 <h6 class="uppercase">
                     Company
                 </h6>
-                <div class="flex flex-col text-secondary"><a href="/company-profile" data-testid="" id="footer_footer_company_corporate_profile" exact="" class="group p-1 hover:underline">
+                <div class="flex flex-col text-secondary"><a href="/" data-testid="" id="footer_footer_company_corporate_profile" exact="" class="group p-1 hover:underline">
           Corporate Profile
-        </a> <a href="/privacy-policy" data-testid="" id="footer_footer_company_privary_policy" exact="" class="group p-1 hover:underline">
+        </a> <a href="/help" data-testid="" id="footer_footer_company_privary_policy" exact="" class="group p-1 hover:underline">
           Privacy Policy
-        </a> <a href="/aboutus" data-testid="" id="footer_footer_company_about_us" exact="" class="group p-1 hover:underline">
+        </a> <a href="/help" data-testid="" id="footer_footer_company_about_us" exact="" class="group p-1 hover:underline">
           About us
         </a></div>
             </div>
@@ -1341,13 +1278,13 @@
                 <h6 class="uppercase">
                     Customer Service
                 </h6>
-                <div class="flex flex-col text-secondary"><a href="/sg/shipping-delivery" data-testid="" id="footer_footer_customer_service_shipping_delivery" exact="" class="group p-1 hover:underline">
+                <div class="flex flex-col text-secondary"><a href="order-confirmation" data-testid="" id="footer_footer_customer_service_shipping_delivery" exact="" class="group p-1 hover:underline">
           Shipping &amp; Delivery
-        </a> <a href="/sg/returns-replacement" data-testid="" id="footer_footer_customer_service_returns_replacement" exact="" class="group p-1 hover:underline">
+        </a> <a href="/" data-testid="" id="footer_footer_customer_service_returns_replacement" exact="" class="group p-1 hover:underline">
           Returns &amp; Replacement
-        </a> <a href="/sg/user-agreement" data-testid="" id="footer_footer_customer_service_user_agreement" exact="" class="group p-1 hover:underline">
+        </a> <a href="/" data-testid="" id="footer_footer_customer_service_user_agreement" exact="" class="group p-1 hover:underline">
           User Agreement
-        </a> <a href="/sg/faq" data-testid="" id="footer_footer_customer_service_faq" exact="" class="group p-1 hover:underline">
+        </a> <a href="/help" data-testid="" id="footer_footer_customer_service_faq" exact="" class="group p-1 hover:underline">
           FAQ
         </a></div>
             </div>
@@ -1355,7 +1292,7 @@
                 <h6 class="uppercase">
                     Welcome to Wonect
                 </h6>
-                <div class="flex flex-col text-secondary"><a href="/sg/help" data-testid="" id="footer_footer_new_to_wonect_click_here" exact="" class="group p-1 hover:underline">
+                <div class="flex flex-col text-secondary"><a href="/help" data-testid="" id="footer_footer_new_to_wonect_click_here" exact="" class="group p-1 hover:underline">
           Help and Contact
         </a></div>
             </div>
@@ -1368,7 +1305,7 @@
         </a></div>
             </div>
         </div>
-        <a href="/sg/faq#purchase" data-testid="" id="footer_payment_secure" exact="" class="group group w-full py-4 border-t border-b md:w-1/2 md:border-0 xl:w-1/3 xl:px-16 xl:py-0">
+        <a href="/help" data-testid="" id="footer_payment_secure" exact="" class="group group w-full py-4 border-t border-b md:w-1/2 md:border-0 xl:w-1/3 xl:px-16 xl:py-0">
             <div class="flex items-center">
               <span class="w-16 h-16 group-hover:text-icon-hover">
                <i class="far fa-credit-card fa-3x"></i>
@@ -1778,7 +1715,7 @@ START OF MOBILE SIDEBAR -->
             <ul>
                 <li class="grid grid-cols-6 gap-1 border-b py-4">
                     <div class="col-span-2 md:col-span-1">
-                        <a href="/sg/p/4901872093601/shiseido-elixir-reflet-balancing-oshiroi-milk-35g-8592" class="flex h-24 p-1" data-testid="productLink">
+                        <a href="/product" class="flex h-24 p-1" data-testid="productLink">
                             <div class="w-full h-full">
                                 <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
                                 <img src="https://api.wonect.com/img/150/150/resize/o/s/oshiroi1.jpg" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
@@ -1788,7 +1725,7 @@ START OF MOBILE SIDEBAR -->
                     </div>
                     <div class="col-span-4 md:col-span-5">
                         <div>
-                            <a href="/sg/p/4901872093601/shiseido-elixir-reflet-balancing-oshiroi-milk-35g-8592" class="" data-testid="productLink">
+                            <a href="/product" class="" data-testid="productLink">
                                 SHISEIDO Elixir Reflet Balancing Oshiroi Milk 35g
                             </a>
                         </div>
@@ -1837,7 +1774,7 @@ START OF MOBILE SIDEBAR -->
                 </li>
                 <li class="grid grid-cols-6 gap-1 border-b py-4">
                     <div class="col-span-2 md:col-span-1">
-                        <a href="/sg/p/4515061186953/saborino-good-night-sheet-mask-28-sheets-8705" class="flex h-24 p-1" data-testid="productLink">
+                        <a href="/product" class="flex h-24 p-1" data-testid="productLink">
                             <div class="w-full h-full">
                                 <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
                                 <img src="https://api.wonect.com/img/150/150/resize/2/0/2018-11-20_saborino.jpg" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
@@ -1847,7 +1784,7 @@ START OF MOBILE SIDEBAR -->
                     </div>
                     <div class="col-span-4 md:col-span-5">
                         <div>
-                            <a href="/sg/p/4515061186953/saborino-good-night-sheet-mask-28-sheets-8705" class="" data-testid="productLink">
+                            <a href="/product" class="" data-testid="productLink">
                                 SABORINO Good Night Sheet Mask 28 sheets
                             </a>
                         </div>
@@ -1893,7 +1830,7 @@ START OF MOBILE SIDEBAR -->
                 </li>
                 <li class="grid grid-cols-6 gap-1 border-b py-4">
                     <div class="col-span-2 md:col-span-1">
-                        <a href="/sg/p/4901872333776/shiseido-mg5-skin-conditioner-150ml-9011" class="flex h-24 p-1" data-testid="productLink">
+                        <a href="/product" class="flex h-24 p-1" data-testid="productLink">
                             <div class="w-full h-full">
                                 <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
                                 <img src="https://api.wonect.com/img/150/150/resize/2/0/2018-08-06_mg5-skin-conditioner.jpg" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
@@ -1903,7 +1840,7 @@ START OF MOBILE SIDEBAR -->
                     </div>
                     <div class="col-span-4 md:col-span-5">
                         <div>
-                            <a href="/sg/p/4901872333776/shiseido-mg5-skin-conditioner-150ml-9011" class="" data-testid="productLink">
+                            <a href="/product" class="" data-testid="productLink">
                                 SHISEIDO MG5 Skin Conditioner 150ml
                             </a>
                         </div>
@@ -1947,7 +1884,7 @@ START OF MOBILE SIDEBAR -->
                 </li>
                 <li class="grid grid-cols-6 gap-1 border-b py-4">
                     <div class="col-span-2 md:col-span-1">
-                        <a href="/sg/p/4901872449637/shiseido-uno-gel-cleans-cool-cleanser-130g-4272" class="flex h-24 p-1" data-testid="productLink">
+                        <a href="/product" class="flex h-24 p-1" data-testid="productLink">
                             <div class="w-full h-full">
                                 <img src="https://assets.wonect.com/assets/placeholder.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
                                 <img src="https://api.wonect.com/img/150/150/resize/s/h/shiseido_uno_gel_cleans_-cool-_130g.png" alt="" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;" />
@@ -1957,7 +1894,7 @@ START OF MOBILE SIDEBAR -->
                     </div>
                     <div class="col-span-4 md:col-span-5">
                         <div>
-                            <a href="/sg/p/4901872449637/shiseido-uno-gel-cleans-cool-cleanser-130g-4272" class="" data-testid="productLink">
+                            <a href="/product" class="" data-testid="productLink">
                                 SHISEIDO Uno Gel Cleans Cool Cleanser 130g
                             </a>
                         </div>
@@ -2051,7 +1988,7 @@ START OF MOBILE SIDEBAR -->
                     Return to shopping
                 </button>
                 <span class="w-1/2">
-                    <a href="/sg/checkout" class="group button flex justify-center" data-testid="">
+                    <a href="/checkout" class="group button flex justify-center" data-testid="">
                         Go to checkout
                     </a>
                 </span>
