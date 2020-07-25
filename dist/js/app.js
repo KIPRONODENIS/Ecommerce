@@ -197,3 +197,9 @@ document.querySelector(el).classList.add('hidden');
 document.querySelector('#my-account-content').innerHTML=active;
 
  }
+
+ //function to open shipping tabs
+
+ function openShipping() {
+   // body...
+ }

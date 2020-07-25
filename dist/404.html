@@ -7,9 +7,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  
+
+    <script data-vue-meta="1" src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js" async="" integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA" crossorigin="anonymous"></script>
+    <script src="/js/manifest.js"></script>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="carousel.css">
    <script src="https://kit.fontawesome.com/5d4a91f360.js" crossorigin="anonymous"></script>
 
@@ -832,7 +837,7 @@
                                     </div> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-500 ease-in-out transform -translate-y-5 text-xs text-primary">
     
   </label> <span class="text-accent text-xs"></span></div>
-                            </div> <button type="button" data-testid="" class="group bg-button hover:bg-button-hover font-bold p-2 rounded-r">
+                            </div> <button type="button" data-testid="" class="group bg-button hover:bg-button-hover font-bold p-2 rounded-r" onclick="location.href='/search'">
                             <i class="fas fa-search"></i>
                                  <span class="hidden md:inline">Search</span></button></form>
                     </div>
@@ -1050,15 +1055,15 @@
 
 
 <footer class=" hidden lg:block wrapper">
-    <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/about-us" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
+    <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/aboutus" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
         Quality
       </h3> <span class="text-sm text-secondary">
         Bringing you authentic products
-      </span></div></a><a href="/" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_delivery" exact=""><img alt="Delivery" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" lazy="loaded"> <div class="ml-4"><h3>
+      </span></div></a><a href="/shipping-delivery" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_delivery" exact=""><img alt="Delivery" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" lazy="loaded"> <div class="ml-4"><h3>
         Delivery
       </h3> <span class="text-sm text-secondary">
         Fast international delivery
-      </span></div></a><a href="/" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_refund" exact=""><img alt="Refund" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-refund.png" src="https://assets.wonect.com/assets/img/icon/icon-refund.png" lazy="loaded"> <div class="ml-4"><h3>
+      </span></div></a><a href="/returns-replacement" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_refund" exact=""><img alt="Refund" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-refund.png" src="https://assets.wonect.com/assets/img/icon/icon-refund.png" lazy="loaded"> <div class="ml-4"><h3>
         Refund
       </h3> <span class="text-sm text-secondary">
         7-day return guarantee for defective products
@@ -1266,11 +1271,11 @@
                 <h6 class="uppercase">
                     Company
                 </h6>
-                <div class="flex flex-col text-secondary"><a href="/" data-testid="" id="footer_footer_company_corporate_profile" exact="" class="group p-1 hover:underline">
+                <div class="flex flex-col text-secondary"><a href="/company-profile" data-testid="" id="footer_footer_company_corporate_profile" exact="" class="group p-1 hover:underline">
           Corporate Profile
-        </a> <a href="/help" data-testid="" id="footer_footer_company_privary_policy" exact="" class="group p-1 hover:underline">
+        </a> <a href="/privacy" data-testid="" id="footer_footer_company_privary_policy" exact="" class="group p-1 hover:underline">
           Privacy Policy
-        </a> <a href="/help" data-testid="" id="footer_footer_company_about_us" exact="" class="group p-1 hover:underline">
+        </a> <a href="/about" data-testid="" id="footer_footer_company_about_us" exact="" class="group p-1 hover:underline">
           About us
         </a></div>
             </div>
@@ -1278,13 +1283,13 @@
                 <h6 class="uppercase">
                     Customer Service
                 </h6>
-                <div class="flex flex-col text-secondary"><a href="order-confirmation" data-testid="" id="footer_footer_customer_service_shipping_delivery" exact="" class="group p-1 hover:underline">
+                <div class="flex flex-col text-secondary"><a href="/shipping" data-testid="" id="footer_footer_customer_service_shipping_delivery" exact="" class="group p-1 hover:underline">
           Shipping &amp; Delivery
-        </a> <a href="/" data-testid="" id="footer_footer_customer_service_returns_replacement" exact="" class="group p-1 hover:underline">
+        </a> <a href="/returns-replacement" data-testid="" id="footer_footer_customer_service_returns_replacement" exact="" class="group p-1 hover:underline">
           Returns &amp; Replacement
-        </a> <a href="/" data-testid="" id="footer_footer_customer_service_user_agreement" exact="" class="group p-1 hover:underline">
+        </a> <a href="/user-agreement" data-testid="" id="footer_footer_customer_service_user_agreement" exact="" class="group p-1 hover:underline">
           User Agreement
-        </a> <a href="/help" data-testid="" id="footer_footer_customer_service_faq" exact="" class="group p-1 hover:underline">
+        </a> <a href="/faq" data-testid="" id="footer_footer_customer_service_faq" exact="" class="group p-1 hover:underline">
           FAQ
         </a></div>
             </div>
@@ -1292,7 +1297,7 @@
                 <h6 class="uppercase">
                     Welcome to Wonect
                 </h6>
-                <div class="flex flex-col text-secondary"><a href="/help" data-testid="" id="footer_footer_new_to_wonect_click_here" exact="" class="group p-1 hover:underline">
+                <div class="flex flex-col text-secondary"><a href="help" data-testid="" id="footer_footer_new_to_wonect_click_here" exact="" class="group p-1 hover:underline">
           Help and Contact
         </a></div>
             </div>
@@ -1305,7 +1310,7 @@
         </a></div>
             </div>
         </div>
-        <a href="/help" data-testid="" id="footer_payment_secure" exact="" class="group group w-full py-4 border-t border-b md:w-1/2 md:border-0 xl:w-1/3 xl:px-16 xl:py-0">
+        <a href="/faq#purchase" data-testid="" id="footer_payment_secure" exact="" class="group group w-full py-4 border-t border-b md:w-1/2 md:border-0 xl:w-1/3 xl:px-16 xl:py-0">
             <div class="flex items-center">
               <span class="w-16 h-16 group-hover:text-icon-hover">
                <i class="far fa-credit-card fa-3x"></i>
@@ -1663,10 +1668,10 @@ START OF MOBILE SIDEBAR -->
 
 
 
-     <a href="/sg/help" class="group flex items-center p-3 button-link" data-testid="" id="header_help" title="Help and Contact">
+     <a href="/help" class="group flex items-center p-3 button-link" data-testid="" id="header_help" title="Help and Contact">
 <i class="fas fa-headset mr-1"></i>
   Help &amp; Contact
-</a> <a href="/sg/about-us" class="group p-3 flex items-center button-link" data-testid="" id="header_about" title="About Us">
+</a> <a href="/aboutus" class="group p-3 flex items-center button-link" data-testid="" id="header_about" title="About Us">
 <i class="fas fa-info-circle mr-1"></i>
       About Us
     </a></div></div></div>
@@ -1691,9 +1696,6 @@ START OF MOBILE SIDEBAR -->
 
 
 
-
-   <!--  START OF CART -->
-  
 
    <!--  START OF CART -->
    <div data-testid="sidebar" id="microcart" tabindex="0" class="transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none right-0 md:w-sidebar-right hidden" style="">
@@ -1986,8 +1988,9 @@ START OF MOBILE SIDEBAR -->
                     </div>
                 </div>
             </div>
+
             <div class="flex justify-between items-center mb-6">
-                <button type="button" data-testid="" class="group button-link text-sm font-bold text-secondary">
+                <button type="button" data-testid="" class="group button-link text-sm font-bold text-secondary" onclick="location.href='/category'">
                     Return to shopping
                 </button>
                 <span class="w-1/2">
@@ -1996,6 +1999,8 @@ START OF MOBILE SIDEBAR -->
                     </a>
                 </span>
             </div>
+
+
         </div>
     </div>
 </div>

@@ -7,9 +7,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  
+
+    <script data-vue-meta="1" src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js" async="" integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA" crossorigin="anonymous"></script>
+    <script src="/js/manifest.js"></script>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="carousel.css">
    <script src="https://kit.fontawesome.com/5d4a91f360.js" crossorigin="anonymous"></script>
 
@@ -832,7 +837,7 @@
                                     </div> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-500 ease-in-out transform -translate-y-5 text-xs text-primary">
     
   </label> <span class="text-accent text-xs"></span></div>
-                            </div> <button type="button" data-testid="" class="group bg-button hover:bg-button-hover font-bold p-2 rounded-r">
+                            </div> <button type="button" data-testid="" class="group bg-button hover:bg-button-hover font-bold p-2 rounded-r" onclick="location.href='/search'">
                             <i class="fas fa-search"></i>
                                  <span class="hidden md:inline">Search</span></button></form>
                     </div>
@@ -1706,7 +1711,7 @@
                 <h6 class="uppercase">
                     Customer Service
                 </h6>
-                <div class="flex flex-col text-secondary"><a href="/shipping-delivery" data-testid="" id="footer_footer_customer_service_shipping_delivery" exact="" class="group p-1 hover:underline">
+                <div class="flex flex-col text-secondary"><a href="/shipping" data-testid="" id="footer_footer_customer_service_shipping_delivery" exact="" class="group p-1 hover:underline">
           Shipping &amp; Delivery
         </a> <a href="/returns-replacement" data-testid="" id="footer_footer_customer_service_returns_replacement" exact="" class="group p-1 hover:underline">
           Returns &amp; Replacement
@@ -2411,8 +2416,9 @@ START OF MOBILE SIDEBAR -->
                     </div>
                 </div>
             </div>
+
             <div class="flex justify-between items-center mb-6">
-                <button type="button" data-testid="" class="group button-link text-sm font-bold text-secondary">
+                <button type="button" data-testid="" class="group button-link text-sm font-bold text-secondary" onclick="location.href='/category'">
                     Return to shopping
                 </button>
                 <span class="w-1/2">
@@ -2421,6 +2427,8 @@ START OF MOBILE SIDEBAR -->
                     </a>
                 </span>
             </div>
+
+
         </div>
     </div>
 </div>

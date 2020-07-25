@@ -7,9 +7,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  
+
+    <script data-vue-meta="1" src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js" async="" integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA" crossorigin="anonymous"></script>
+    <script src="/js/manifest.js"></script>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="carousel.css">
    <script src="https://kit.fontawesome.com/5d4a91f360.js" crossorigin="anonymous"></script>
 
@@ -832,7 +837,7 @@
                                     </div> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-500 ease-in-out transform -translate-y-5 text-xs text-primary">
     
   </label> <span class="text-accent text-xs"></span></div>
-                            </div> <button type="button" data-testid="" class="group bg-button hover:bg-button-hover font-bold p-2 rounded-r">
+                            </div> <button type="button" data-testid="" class="group bg-button hover:bg-button-hover font-bold p-2 rounded-r" onclick="location.href='/search'">
                             <i class="fas fa-search"></i>
                                  <span class="hidden md:inline">Search</span></button></form>
                     </div>
@@ -876,17 +881,16 @@
                 </div>
             </main>
 
-
 <footer class=" hidden lg:block wrapper">
-    <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/about-us" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
+    <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/aboutus" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
         Quality
       </h3> <span class="text-sm text-secondary">
         Bringing you authentic products
-      </span></div></a><a href="/sg/shipping-delivery" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_delivery" exact=""><img alt="Delivery" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" lazy="loaded"> <div class="ml-4"><h3>
+      </span></div></a><a href="/shipping-delivery" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_delivery" exact=""><img alt="Delivery" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" lazy="loaded"> <div class="ml-4"><h3>
         Delivery
       </h3> <span class="text-sm text-secondary">
         Fast international delivery
-      </span></div></a><a href="/sg/returns-replacement" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_refund" exact=""><img alt="Refund" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-refund.png" src="https://assets.wonect.com/assets/img/icon/icon-refund.png" lazy="loaded"> <div class="ml-4"><h3>
+      </span></div></a><a href="/returns-replacement" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_refund" exact=""><img alt="Refund" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-refund.png" src="https://assets.wonect.com/assets/img/icon/icon-refund.png" lazy="loaded"> <div class="ml-4"><h3>
         Refund
       </h3> <span class="text-sm text-secondary">
         7-day return guarantee for defective products
@@ -913,27 +917,27 @@
             <h5 class="mb-2">
                 Skin Care
             </h5>
-            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/skin-care-1559" data-testid="" id="footer_category_menu_1559" class="group hover:underline p-1">
+            <div class="text-sm text-secondary flex flex-col"><a href="/category" data-testid="" id="footer_category_menu_1559" class="group hover:underline p-1">
       All Skin Care
-    </a> <a href="/sg/c/cleansers-1617" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1617">
+    </a> <a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1617">
       Cleansers
-    </a><a href="/sg/c/makeup-remover-1618" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1618">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1618">
       Makeup Remover
-    </a><a href="/sg/c/toner-1619" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1619">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1619">
       Toner
-    </a><a href="/sg/c/moisturizers-and-creams-1620" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1620">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1620">
       Moisturizers &amp; Creams
-    </a><a href="/sg/c/masks-1621" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1621">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1621">
       Masks
-    </a><a href="/sg/c/serum-and-essence-1622" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1622">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1622">
       Serum and Essence
-    </a><a href="/sg/c/eyelash-care-1623" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1623">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1623">
       Eyelash care
-    </a><a href="/sg/c/sunscreen-1624" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1624">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1624">
       Sunscreen
-    </a><a href="/sg/c/mini-size-kit-1625" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1625">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1625">
       Mini Size Kit
-    </a><a href="/sg/c/mens-skin-care-1626" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1626">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1626">
       Men's skin care
     </a></div>
         </div>
@@ -941,29 +945,29 @@
             <h5 class="mb-2">
                 Hair Care
             </h5>
-            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/hair-care-1560" data-testid="" id="footer_category_menu_1560" class="group hover:underline p-1">
+            <div class="text-sm text-secondary flex flex-col"><a href="/category" data-testid="" id="footer_category_menu_1560" class="group hover:underline p-1">
       All Hair Care
-    </a> <a href="/sg/c/shampoo-1627" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1627">
+    </a> <a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1627">
       Shampoo
-    </a><a href="/sg/c/conditioner-and-treatment-1628" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1628">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1628">
       Conditioner &amp; Treatment
-    </a><a href="/sg/c/mask-1629" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1629">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1629">
       Mask
-    </a><a href="/sg/c/styling-1630" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1630">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1630">
       Styling
-    </a><a href="/sg/c/hair-loss-1631" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1631">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1631">
       Hair Loss
-    </a><a href="/sg/c/hair-tools-1632" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1632">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1632">
       Hair Tools
-    </a><a href="/sg/c/hair-colors-1633" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1633">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1633">
       Hair Colors
-    </a><a href="/sg/c/mens-hair-care-1634" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1634">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1634">
       Men's Hair Care
-    </a><a href="/sg/c/shampoo-and-conditioner-2131" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2131">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2131">
       Shampoo &amp; Conditioner
-    </a><a href="/sg/c/special-care-2132" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2132">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2132">
       Special Care
-    </a><a href="/sg/c/others-2133" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2133">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2133">
       Others
     </a></div>
         </div>
@@ -971,27 +975,27 @@
             <h5 class="mb-2">
                 Body Care
             </h5>
-            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/body-care-1561" data-testid="" id="footer_category_menu_1561" class="group hover:underline p-1">
+            <div class="text-sm text-secondary flex flex-col"><a href="/category" data-testid="" id="footer_category_menu_1561" class="group hover:underline p-1">
       All Body Care
-    </a> <a href="/sg/c/soap-1635" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1635">
+    </a> <a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1635">
       Soap
-    </a><a href="/sg/c/lotion-1636" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1636">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1636">
       Lotion
-    </a><a href="/sg/c/cream-1637" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1637">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1637">
       Cream
-    </a><a href="/sg/c/hand-and-foot-care-1638" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1638">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1638">
       Hand and Foot care
-    </a><a href="/sg/c/deodorant-1640" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1640">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1640">
       Deodorant
-    </a><a href="/sg/c/oral-care-1642" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1642">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1642">
       Oral Care
-    </a><a href="/sg/c/bath-1643" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1643">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1643">
       Bath
-    </a><a href="/sg/c/tights-1644" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1644">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1644">
       Tights
-    </a><a href="/sg/c/eye-care-1656" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1656">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1656">
       Eye Care
-    </a><a href="/sg/c/others-2134" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2134">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2134">
       Others
     </a></div>
         </div>
@@ -999,19 +1003,19 @@
             <h5 class="mb-2">
                 Cosmetics
             </h5>
-            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/cosmetics-1558" data-testid="" id="footer_category_menu_1558" class="group hover:underline p-1">
+            <div class="text-sm text-secondary flex flex-col"><a href="/category" data-testid="" id="footer_category_menu_1558" class="group hover:underline p-1">
       All Cosmetics
-    </a> <a href="/sg/c/base-makeup-1645" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1645">
+    </a> <a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1645">
       Base Makeup
-    </a><a href="/sg/c/foundation-1646" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1646">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1646">
       Foundation
-    </a><a href="/sg/c/cheek-1647" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1647">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1647">
       Cheek
-    </a><a href="/sg/c/eye-makeup-1648" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1648">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1648">
       Eye Makeup
-    </a><a href="/sg/c/lip-makeup-1649" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1649">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1649">
       Lip Makeup
-    </a><a href="/sg/c/mens-grooming-and-cosmetics-1652" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1652">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1652">
       Men’s Grooming &amp; Cosmetics
     </a></div>
         </div>
@@ -1019,23 +1023,23 @@
             <h5 class="mb-2">
                 Health Care
             </h5>
-            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/health-care-1562" data-testid="" id="footer_category_menu_1562" class="group hover:underline p-1">
+            <div class="text-sm text-secondary flex flex-col"><a href="/category" data-testid="" id="footer_category_menu_1562" class="group hover:underline p-1">
       All Health Care
-    </a> <a href="/sg/c/vitamins-1653" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1653">
+    </a> <a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1653">
       Vitamins
-    </a><a href="/sg/c/collagen-1654" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1654">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1654">
       Collagen
-    </a><a href="/sg/c/health-supplements-1655" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1655">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1655">
       Health Supplements
-    </a><a href="/sg/c/medicine-1658" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1658">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1658">
       Medicine
-    </a><a href="/sg/c/others-2135" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2135">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2135">
       Others
-    </a><a href="/sg/c/weight-loss-2136" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2136">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2136">
       Weight Loss
-    </a><a href="/sg/c/beauty-supplements-2138" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2138">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2138">
       Beauty Supplements
-    </a><a href="/sg/c/whitening-supplements-2139" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2139">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2139">
       Whitening Supplements
     </a></div>
         </div>
@@ -1043,17 +1047,17 @@
             <h5 class="mb-2">
                 Beauty Tools
             </h5>
-            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/beauty-tools-1563" data-testid="" id="footer_category_menu_1563" class="group hover:underline p-1">
+            <div class="text-sm text-secondary flex flex-col"><a href="/category" data-testid="" id="footer_category_menu_1563" class="group hover:underline p-1">
       All Beauty Tools
-    </a> <a href="/sg/c/iron-1661" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1661">
+    </a> <a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1661">
       Iron
-    </a><a href="/sg/c/hairdryer-1662" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1662">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1662">
       Hairdryer
-    </a><a href="/sg/c/massager-1663" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1663">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1663">
       Massager
-    </a><a href="/sg/c/cotton-1920" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1920">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1920">
       Cotton
-    </a><a href="/sg/c/others-1922" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1922">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1922">
       Others
     </a></div>
         </div>
@@ -1061,29 +1065,29 @@
             <h5 class="mb-2">
                 Home &amp; Life
             </h5>
-            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/home-and-life-1548" data-testid="" id="footer_category_menu_1548" class="group hover:underline p-1">
+            <div class="text-sm text-secondary flex flex-col"><a href="/category" data-testid="" id="footer_category_menu_1548" class="group hover:underline p-1">
       All Home &amp; Life
-    </a> <a href="/sg/c/food-and-drink-1550" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1550">
+    </a> <a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1550">
       Food &amp; Drink
-    </a><a href="/sg/c/sports-1551" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1551">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1551">
       Sports
-    </a><a href="/sg/c/others-1572" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1572">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1572">
       Others
-    </a><a href="/sg/c/stationery-1573" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1573">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1573">
       Stationery
-    </a><a href="/sg/c/baby-1591" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1591">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1591">
       Baby
-    </a><a href="/sg/c/toys-1599" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1599">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1599">
       Toys
-    </a><a href="/sg/c/water-filter-1666" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1666">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1666">
       Water Filter
-    </a><a href="/sg/c/kitchen-1667" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1667">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1667">
       Kitchen
-    </a><a href="/sg/c/bedding-1673" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1673">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1673">
       Bedding
-    </a><a href="/sg/c/laundry-1675" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1675">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1675">
       Laundry
-    </a><a href="/sg/c/adult-2137" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2137">
+    </a><a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_2137">
       Adult
     </a></div>
         </div>
@@ -1094,11 +1098,11 @@
                 <h6 class="uppercase">
                     Company
                 </h6>
-                <div class="flex flex-col text-secondary"><a href="/sg/corporate-profile" data-testid="" id="footer_footer_company_corporate_profile" exact="" class="group p-1 hover:underline">
+                <div class="flex flex-col text-secondary"><a href="/company-profile" data-testid="" id="footer_footer_company_corporate_profile" exact="" class="group p-1 hover:underline">
           Corporate Profile
-        </a> <a href="/sg/privacy-policy" data-testid="" id="footer_footer_company_privary_policy" exact="" class="group p-1 hover:underline">
+        </a> <a href="/privacy" data-testid="" id="footer_footer_company_privary_policy" exact="" class="group p-1 hover:underline">
           Privacy Policy
-        </a> <a href="/sg/about-us" data-testid="" id="footer_footer_company_about_us" exact="" class="group p-1 hover:underline">
+        </a> <a href="/about" data-testid="" id="footer_footer_company_about_us" exact="" class="group p-1 hover:underline">
           About us
         </a></div>
             </div>
@@ -1106,13 +1110,13 @@
                 <h6 class="uppercase">
                     Customer Service
                 </h6>
-                <div class="flex flex-col text-secondary"><a href="/sg/shipping-delivery" data-testid="" id="footer_footer_customer_service_shipping_delivery" exact="" class="group p-1 hover:underline">
+                <div class="flex flex-col text-secondary"><a href="/shipping" data-testid="" id="footer_footer_customer_service_shipping_delivery" exact="" class="group p-1 hover:underline">
           Shipping &amp; Delivery
-        </a> <a href="/sg/returns-replacement" data-testid="" id="footer_footer_customer_service_returns_replacement" exact="" class="group p-1 hover:underline">
+        </a> <a href="/returns-replacement" data-testid="" id="footer_footer_customer_service_returns_replacement" exact="" class="group p-1 hover:underline">
           Returns &amp; Replacement
-        </a> <a href="/sg/user-agreement" data-testid="" id="footer_footer_customer_service_user_agreement" exact="" class="group p-1 hover:underline">
+        </a> <a href="/user-agreement" data-testid="" id="footer_footer_customer_service_user_agreement" exact="" class="group p-1 hover:underline">
           User Agreement
-        </a> <a href="/sg/faq" data-testid="" id="footer_footer_customer_service_faq" exact="" class="group p-1 hover:underline">
+        </a> <a href="/faq" data-testid="" id="footer_footer_customer_service_faq" exact="" class="group p-1 hover:underline">
           FAQ
         </a></div>
             </div>
@@ -1120,7 +1124,7 @@
                 <h6 class="uppercase">
                     Welcome to Wonect
                 </h6>
-                <div class="flex flex-col text-secondary"><a href="/sg/help" data-testid="" id="footer_footer_new_to_wonect_click_here" exact="" class="group p-1 hover:underline">
+                <div class="flex flex-col text-secondary"><a href="help" data-testid="" id="footer_footer_new_to_wonect_click_here" exact="" class="group p-1 hover:underline">
           Help and Contact
         </a></div>
             </div>
@@ -1133,7 +1137,7 @@
         </a></div>
             </div>
         </div>
-        <a href="/sg/faq#purchase" data-testid="" id="footer_payment_secure" exact="" class="group group w-full py-4 border-t border-b md:w-1/2 md:border-0 xl:w-1/3 xl:px-16 xl:py-0">
+        <a href="/faq#purchase" data-testid="" id="footer_payment_secure" exact="" class="group group w-full py-4 border-t border-b md:w-1/2 md:border-0 xl:w-1/3 xl:px-16 xl:py-0">
             <div class="flex items-center">
               <span class="w-16 h-16 group-hover:text-icon-hover">
                <i class="far fa-credit-card fa-3x"></i>
@@ -1491,10 +1495,10 @@ START OF MOBILE SIDEBAR -->
 
 
 
-     <a href="/sg/help" class="group flex items-center p-3 button-link" data-testid="" id="header_help" title="Help and Contact">
+     <a href="/help" class="group flex items-center p-3 button-link" data-testid="" id="header_help" title="Help and Contact">
 <i class="fas fa-headset mr-1"></i>
   Help &amp; Contact
-</a> <a href="/sg/about-us" class="group p-3 flex items-center button-link" data-testid="" id="header_about" title="About Us">
+</a> <a href="/aboutus" class="group p-3 flex items-center button-link" data-testid="" id="header_about" title="About Us">
 <i class="fas fa-info-circle mr-1"></i>
       About Us
     </a></div></div></div>
@@ -1519,9 +1523,6 @@ START OF MOBILE SIDEBAR -->
 
 
 
-
-   <!--  START OF CART -->
-   
 
    <!--  START OF CART -->
    <div data-testid="sidebar" id="microcart" tabindex="0" class="transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none right-0 md:w-sidebar-right hidden" style="">
@@ -1814,8 +1815,9 @@ START OF MOBILE SIDEBAR -->
                     </div>
                 </div>
             </div>
+
             <div class="flex justify-between items-center mb-6">
-                <button type="button" data-testid="" class="group button-link text-sm font-bold text-secondary">
+                <button type="button" data-testid="" class="group button-link text-sm font-bold text-secondary" onclick="location.href='/category'">
                     Return to shopping
                 </button>
                 <span class="w-1/2">
@@ -1824,6 +1826,8 @@ START OF MOBILE SIDEBAR -->
                     </a>
                 </span>
             </div>
+
+
         </div>
     </div>
 </div>

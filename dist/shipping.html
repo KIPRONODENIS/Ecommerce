@@ -7,14 +7,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  
+
+    <script data-vue-meta="1" src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js" async="" integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA" crossorigin="anonymous"></script>
+    <script src="/js/manifest.js"></script>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="carousel.css">
    <script src="https://kit.fontawesome.com/5d4a91f360.js" crossorigin="anonymous"></script>
 
 
 </head>
+
 
 
 
@@ -832,7 +838,7 @@
                                     </div> <label class="absolute ml-2 left-0 top-0 pointer-events-none select-none duration-500 ease-in-out transform -translate-y-5 text-xs text-primary">
     
   </label> <span class="text-accent text-xs"></span></div>
-                            </div> <button type="button" data-testid="" class="group bg-button hover:bg-button-hover font-bold p-2 rounded-r">
+                            </div> <button type="button" data-testid="" class="group bg-button hover:bg-button-hover font-bold p-2 rounded-r" onclick="location.href='/search'">
                             <i class="fas fa-search"></i>
                                  <span class="hidden md:inline">Search</span></button></form>
                     </div>
@@ -840,99 +846,335 @@
 
             </header>
 
-<div id="breadcrumbs" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList" class="wrapper border-t bg-light py-4 text-secondary"><span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/sg/" itemprop="item" class="link router-link-active"><meta itemprop="position" content="1"> <meta itemprop="name" content="Singapore Store Home">
+<div id="breadcrumbs" itemscope="itemscope" itemtype="https://schema.org/BreadcrumbList" class="wrapper border-t bg-light py-4 text-secondary"><span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/" itemprop="item" class="link router-link-active"><meta itemprop="position" content="1"> <meta itemprop="name" content="Singapore Store Home">
       Home
     </a>
     /
-  </span> <span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><meta itemprop="position" content="2"> <meta itemprop="name" content="About Us">
-    About Us
+  </span><span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/help" itemprop="item" class="link"><meta itemprop="position" content="2"> <meta itemprop="name" content="Help">
+      Help
+    </a>
+    /
+  </span> <span itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><meta itemprop="position" content="3"> <meta itemprop="name" content="Shipping &amp; Delivery">
+    Shipping &amp; Delivery
   </span></div>
-  
-<!-- START OF MAIN SECTION -->
+
+<!-- START OF MAIN -->
 <main>
     <div>
-        <header class="flex justify-center"><img src="https://assets.wonect.com/assets/static/cms/about-us/2018-09-26_about-us00.png" alt="A LITTLE HAPPINESS FROM SHOPPING JAPAN" class="mx-auto object-contain min-h-32 xl:h-full w-auto lg:w-full object-cover">
+        <header class="flex justify-center static-container shipping-header-image"><img src="https://assets.wonect.com/assets/static/cms/shipping-delivery/2018-10-29_delivery-pin.jpg" alt="shipping &amp; delivery" class="mx-auto object-contain min-h-32 xl:h-full w-auto lg:w-full object-cover">
             <!---->
         </header>
-        <section class="wrapper py-4 lg:py-10">
-            <h2 class="uppercase w-56">
-                Japan Shopping, at your service!
-            </h2>
-            <p class="text-secondary lg:w-1/2">
-                Wonect.com is a convenient and secure place for you to buy your favourite Japanese products. Whether you're looking for the latest products from Japan, or want to buy your favourite Japanese brands at the best prices, we want you to enjoy a care-free
-                shopping experience, and maybe even get a little joy from it!
-            </p>
-        </section>
-        <section class="wrapper bg-light flex flex-wrap justify-center py-4 lg:py-10"><img src="https://assets.wonect.com/assets/static/cms/about-us/2018-09-26_about-us01.png" alt="Wonect begins" class="mx-auto object-contain lg:pr-24 lg:w-1/2">
-            <div class="lg:w-1/2">
-                <h2 class="capitalize">
-                    Wonect begins
-                </h2>
-                <p class="text-secondary py-1">
-                    Our Wonect Founder, Mr Kota Mizuguchi started with a simple question, “What can I do for everyone in the world?”
-                </p>
-                <p class="text-secondary py-1">
-                    His answer was “CONNECTION”. Connections that allowed everyone in the WORLD to understand one another.
-                </p>
-                <p class="text-secondary py-1">
-                    Wonect started with humble beginnings selling Japanese cameras, connecting camera lovers to expert equipment. As it grew, more and more customers were asking for other Japanese products.
-                </p>
-                <p class="text-secondary py-1">
-                    He knew we needed to be bigger to connect customers to a better service and a more secure deliver and payment structure. Thus Wonect found its legs rooted in Kyoto with a brand new office and a spacious warehouse, delivering Japanese products all over
-                    the world!
-                </p>
+        <div class="wrapper">
+            <h1 class="py-4 text-center">
+                Shipping &amp; Delivery
+            </h1>
+            <div class="flex flex-wrap">
+                <div class="w-full mb-6 xl:w-1/4 relative">
+                    <div class="sticky top-6">
+                        <h3 class="text-secondary mb-4">
+                            Quick navigation
+                        </h3>
+                        <ul class="border-l border-r border-t">
+                            <li class="border-b"><a href="/shipping#delivery" class="flex items-center uppercase p-2 text-sm button-nav xl:py-4 xl:text-base router-link-exact-active router-link-active active"><svg class="flex-0 mr-2"><use xlink:href="/dist/sprite-icons.svg#map-marker"></use></svg> <span class="flex-1 font-bold">
+        Delivery Locations
+      </span> <svg class="flex-0 ml-2 w-4 h-4"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg></a></li>
+                            <li class="border-b"><a href="/shipping#time" class="flex items-center uppercase p-2 text-sm button-nav xl:py-4 xl:text-base"><svg class="flex-0 mr-2"><use xlink:href="/dist/sprite-icons.svg#clock"></use></svg> <span class="flex-1 font-bold">
+        Time taken for delivery 
+      </span> <svg class="flex-0 ml-2 w-4 h-4"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg></a></li>
+                            <li class="border-b"><a href="/shipping#shipping" class="flex items-center uppercase p-2 text-sm button-nav xl:py-4 xl:text-base"><svg class="flex-0 mr-2"><use xlink:href="/dist/sprite-icons.svg#dollar-sign"></use></svg> <span class="flex-1 font-bold">
+        Shipping fee
+      </span> <svg class="flex-0 ml-2 w-4 h-4"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg></a></li>
+                            <li class="border-b"><a href="/sg/shipping#tracking" class="flex items-center uppercase p-2 text-sm button-nav xl:py-4 xl:text-base"><svg class="flex-0 mr-2"><use xlink:href="/dist/sprite-icons.svg#plane"></use></svg> <span class="flex-1 font-bold">
+        Track your order
+      </span> <svg class="flex-0 ml-2 w-4 h-4"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg></a></li>
+                            <li class="border-b"><a href="/shipping#customs" class="flex items-center uppercase p-2 text-sm button-nav xl:py-4 xl:text-base"><svg class="flex-0 mr-2"><use xlink:href="/dist/sprite-icons.svg#clipboard-check"></use></svg> <span class="flex-1 font-bold">
+        Customs, duty &amp; taxes
+      </span> <svg class="flex-0 ml-2 w-4 h-4"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg></a></li>
+                            <li class="border-b"><a href="/shipping#related" class="flex items-center uppercase p-2 text-sm button-nav xl:py-4 xl:text-base"><svg class="flex-0 mr-2"><use xlink:href="/dist/sprite-icons.svg#link"></use></svg> <span class="flex-1 font-bold">
+        Related Links
+      </span> <svg class="flex-0 ml-2 w-4 h-4"><use xlink:href="/dist/sprite-icons.svg#angle-right"></use></svg></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <div class="w-full xl:w-3/4 xl:pl-16 tab-content" id="delivery">
+                    <h3  class="mb-4">
+                        Delivery loactions
+                    </h3>
+                    <p class="mb-4">
+                        Wonect delivers to more than 140 countries worldwide, with many of our customer coming from and not limited to:
+                    </p> <img src="https://assets.wonect.com/assets/static/cms/shipping-delivery/all-flag.png" alt="shipping destinations" class="mx-auto object-contain">
+                    <h3 id="time" class="mt-8 mb-4">
+                        Time taken for delivery
+                    </h3>
+                    <p class="mb-4">
+                        Wonect delivers products straight from Kyoto, Japan, so time taken for delivery changes accordingly.
+                    </p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Asia</th>
+                                <td>About 6-10 days</td>
+                            </tr>
+                            <tr>
+                                <th>Oceania</th>
+                                <td>About 6-10 days</td>
+                            </tr>
+                            <tr>
+                                <th>North America</th>
+                                <td>About 7-14 days</td>
+                            </tr>
+                            <tr>
+                                <th>South America</th>
+                                <td>About 7-14 days</td>
+                            </tr>
+                            <tr>
+                                <th>Europe</th>
+                                <td>About 7-14 days</td>
+                            </tr>
+                            <tr>
+                                <th>Middle East</th>
+                                <td>About 8-16 days</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3 id="shipping" class="mt-8 mb-4">
+                        Shipping Fee
+                    </h3>
+                    <div class="mb-4">
+                        Different destination countries will have different shipping fees. To find the correct shipping fee, you will need to
+                        <ol class="list-decimal ml-6">
+                            <li>
+                                Pick the destination country
+                            </li>
+                            <li>
+                                Choose the currency you want to pay in
+                            </li>
+                        </ol>
+                    </div>
+                    <table class="mb-4">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Destination Country
+                                </th>
+                                <th>
+                                    Shipping Fee
+                                </th>
+                                <th>
+                                    Free Shipping Over
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Singapore</td>
+                                <td>S$3</td>
+                                <td>S$90 or more</td>
+                            </tr>
+                            <tr>
+                                <td>Malaysia</td>
+                                <td>RM12</td>
+                                <td>RM300 or more</td>
+                            </tr>
+                            <tr>
+                                <td>Indonesia</td>
+                                <td>Rp40,000</td>
+                                <td>Rp900,000 or more</td>
+                            </tr>
+                            <tr>
+                                <td>Australia</td>
+                                <td>A$3</td>
+                                <td>A$100 or more</td>
+                            </tr>
+                            <tr>
+                                <td>New Zealand</td>
+                                <td>NZ$3</td>
+                                <td>NZ$110 or more</td>
+                            </tr>
+                            <tr>
+                                <td>Hong Kong</td>
+                                <td>HK$3</td>
+                                <td>HK$600 or more</td>
+                            </tr>
+                            <tr>
+                                <td>USA</td>
+                                <td>US$3</td>
+                                <td>US$90 or more</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="mb-2">
+                        You can select these from the Country/Currency selection menu at the top left corner of the browser for desktop, or for mobile devices the top selection menu.
+                    </p>
+                    <p class="mb-2">
+                        Free delivery is available for purchases above a certain amount, so look out for that too!
+                    </p>
+                    <p class="mb-2">
+                        Information for other countries available for individual stores, or contact us for more details.
+                    </p>
+                    <p class="mb-4 highlight">
+                        Free shipping on the 16th and last day of every month.
+                    </p>
+                    <h3 id="tracking" class="mt-8 mb-4">
+                        Tracking your order package
+                    </h3>
+                    <div class="mb-2">
+                        With your tracking code, you can use it to track your package with:
+                        <ul class="ml-6">
+                            <li><a href="http://www.qxpress.asia/eng/html/customer_tracking.html" class="link">Qxpress Tracking </a></li>
+                            <li><a href="https://www.post.japanpost.jp/int/ems/delivery/index_en.html" class="link">EMS Tracking </a></li>
+                        </ul>
+                    </div>
+                    <p class="mb-4">
+                        You can find your tracking code and more by
+                        <button type="button" data-testid="" class="group link">
+            logging into your account page
+          </button>.
+                    </p>
+                    <h3 id="customs" class="mt-8 mb-4">
+                        About Customs, Duties &amp; Taxes
+                    </h3>
+                    <p class="mb-2">
+                        When ordering from WONECT.com, you are responsible for assuring the product can be lawfully imported to the destination country.
+                    </p>
+                    <p class="mb-2">
+                        The recipient is the importer of record and must comply with all laws and regulations of the destination country. Orders shipped outside of may be subject to import taxes, customs duties and fees levied by the destination country. The recipient of an
+                        international shipment may be subject to such import taxes, customs duties and fees, which are levied once a shipment reaches the recipient's country. Additional charges for customs clearance must be borne by the recipient; we
+                        have no control over these charges and can't predict what they may be. Customs policies vary widely from country to country, so please contact your local customs office for more information. When customs clearance procedures are
+                        required, it can lead to delays beyond our original delivery estimates.
+                    </p>
+                    <p>
+                        Note: Customs offices in some countries require the importer of record to provide a particular form of identification before releasing a shipment. As the importer of record, you or the party to whom you are shipping may be required to provide an identification
+                        number such as a Unique Identification Number, CPF, or Tax ID.
+                    </p>
+                    <h3 id="related" class="mt-8 mb-4">
+                        Related links
+                    </h3>
+                    <ul class="list-disc ml-6">
+                        <li>
+                            If you are looking for information about return policy, you can find it here at
+                            <a href="/sg/returns-replacement" data-testid="" class="group link">
+              Returns &amp; Replacement
+            </a></li>
+                        <li>
+                            You may find more information about
+                            <a href="/sg/faq#delivery" data-testid="" class="group link">
+              Shipping &amp; Delivery in FAQs
+            </a></li>
+                        <li>
+                            Learn more about
+                            <a href="/sg/about-us" data-testid="" class="group link">
+              Wonect.com and the staff
+            </a> here.
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
+
             </div>
-            <h2 class="uppercase mt-6 w-100 text-center">
-                Wonect = "World + connect"
-            </h2>
-            <p class="text-center w-100 text-secondary text-xs lg:text-base lg:px-64">
-                Wonect is a combination of the words <span class="uppercase">"world"</span> and <span class="uppercase">"connect"</span>. We want to connect you to Japan by allowing everyone to enjoy the goodness in Japanese products, and to understand
-                the Japanese lifestyle better.
-                <span class="block italic">
-        - Kota Mizuguchi -
-      </span></p>
-        </section>
-        <section class="wrapper flex flex-wrap py-4 lg:py-10">
-            <div class="lg:w-1/3 lg:pr-24"><img src="https://assets.wonect.com/assets/static/cms/about-us/2018-09-26_about-us02.png" alt="Buy new Japanese products, or classic favourites" class="mx-auto object-contain">
-                <h3 class="my-4">
-                    Buy new Japanese products, or classic favourites
-                </h3>
-                <p class="text-secondary mb-4">
-                    You'll be spoiled for choice as we add new products to the catalog!
-                </p>
-            </div>
-            <div class="lg:w-1/3 lg:px-12"><img src="https://assets.wonect.com/assets/static/cms/about-us/2018-09-26_about-us03.png" alt="Worldwide delivery and secure payment" class="mx-auto object-contain">
-                <h3 class="my-4">
-                    Worldwide delivery and secure payment
-                </h3>
-                <p class="text-secondary mb-4">
-                    The love for Japanese products comes from all over the world, and we want to ensure that you get the products you want, at the lowest price. Wonect currently delivers to over 140 countries!
-                </p>
-            </div>
-            <div class="lg:w-1/3 lg:pl-24"><img src="https://assets.wonect.com/assets/static/cms/about-us/2018-09-26_about-us04.png" alt="Japanese Customer Service in English" class="mx-auto object-contain">
-                <h3 class="my-4">
-                    Customer Service in English
-                </h3>
-                <p class="text-secondary">
-                    Our staff are <a href="https://app.chatplus.jp/chat/visitor/b3f0387a_1?t=btn" target="_blank" class="link">here for you</a> when you have a question about any of the products or about purchase and deliveries.
-                </p>
-            </div>
-        </section>
+            <div class="w-full flex flex-col items-center my-10"><a href="/sg/help" data-testid="" class="group button-light w-full xl:w-1/2">
+        Return to Help page
+      </a></div>
+        </div>
     </div>
 </main>
-<!-- END OF MAIN SECTION -->
 
- 
+<!-- END OF MAIN -->
+
+  Add to Cart
+</button> <button type="button" data-testid="" class="group flex items-center justify-center button-light w-full mb-6" id="wish_page_wish_list_button">
+
+ <i class="fas fa-heart"></i>
+
+     <span class="">
+    Remove from Wish List
+  </span></button></div>
+                </div>
+                <div class="flex flex-wrap border-b mt-6">
+                    <div class="relative group flex flex-col h-full w-1/3 lg:w-1/4">
+                        <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
+                            <div class="m-auto h-32 lg:h-40 xl:h-56">
+                                <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="UTENA Puresa Vitamin C Sheet Mask 15ml x 5 sheets" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/o/t/oth01748_1.jpg"
+                                        alt="UTENA Puresa Vitamin C Sheet Mask 15ml x 5 sheets" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/o/t/oth01748_1.jpg" alt="UTENA Puresa Vitamin C Sheet Mask 15ml x 5 sheets"
+                                        itemprop="image" class="object-contain w-auto h-full m-auto" style=""></div>
+                            </div>
+                            <!---->
+                            <!---->
+                        </a>
+                        <!---->
+                    </div>
+                    <div class="w-2/3 md:w-1/3 md:px-2 lg:w-1/2 lg:px-6">
+                        <a href="/product" class="" data-testid="productLink">
+                            <h4>
+                                UTENA Puresa Vitamin C Sheet Mask 15ml x 5 sheets
+                            </h4>
+                        </a>
+                        <div class="text-faint">
+                            sku: 4901234296732
+                        </div>
+                        <div>
+                            <!---->
+                        </div>
+                    </div>
+                    <div class="w-full pt-2 md:w-1/3 md:p-0 lg:w-1/4"><button type="button" data-testid="addToCart" class="group w-full mb-4 button" id="wish_page_add_to_cart_button"><i class="fas fa-cart-plus"></i>
+  Add to Cart
+</button> <button type="button" data-testid="" class="group flex items-center justify-center button-light w-full mb-6" id="wish_page_wish_list_button">
+<i class="fas fa-heart"></i> <span class="">
+    Remove from Wish List
+  </span></button></div>
+                </div>
+                <div class="flex flex-wrap border-b mt-6">
+                    <div class="relative group flex flex-col h-full w-1/3 lg:w-1/4">
+                        <a href="/product" class="flex flex-col flex-auto" data-testid="productLink">
+                            <div class="m-auto h-32 lg:h-40 xl:h-56">
+                                <div class="w-full h-full" data-testid="productImage"><img src="https://assets.wonect.com/assets/placeholder.png" alt="SYNAPSE Tansan Kakumei Carbonated Bubble Mask" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/100/100/resize/s/y/synaps_sparkling_gorgeous_mask_pack.png"
+                                        alt="SYNAPSE Tansan Kakumei Carbonated Bubble Mask" itemprop="image" class="object-contain w-auto h-full m-auto" style="display: none;"> <img src="https://api.wonect.com/img/310/300/resize/s/y/synaps_sparkling_gorgeous_mask_pack.png"
+                                        alt="SYNAPSE Tansan Kakumei Carbonated Bubble Mask" itemprop="image" class="object-contain w-auto h-full m-auto" style=""></div>
+                            </div>
+                            <!---->
+                            <!---->
+                        </a>
+                        <!---->
+                    </div>
+                    <div class="w-2/3 md:w-1/3 md:px-2 lg:w-1/2 lg:px-6">
+                        <a href="/product" class="" data-testid="productLink">
+                            <h4>
+                                SYNAPSE Tansan Kakumei Carbonated Bubble Mask
+                            </h4>
+                        </a>
+                        <div class="text-faint">
+                            sku: 4562373140029
+                        </div>
+                        <div>
+                            <!---->
+                        </div>
+                    </div>
+                    <div class="w-full pt-2 md:w-1/3 md:p-0 lg:w-1/4"><button type="button" data-testid="addToCart" class="group w-full mb-4 button" id="wish_page_add_to_cart_button"><i class="fas fa-cart-plus"></i>
+  Add to Cart
+</button> <button type="button" data-testid="" class="group flex items-center justify-center button-light w-full mb-6" id="wish_page_wish_list_button">
+  <i class="fas fa-heart"></i>
+   <span class="">
+    Remove from Wish List
+  </span></button></div>
+                </div>
+            </main>
+
 <footer class=" hidden lg:block wrapper">
-    <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/help" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
+    <div class="grid gap-4 md:grid-cols-3 border-t py-6 xl:mx-16"><a href="/aboutus" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_quality" exact=""><img alt="Quality" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-quality.png" src="https://assets.wonect.com/assets/img/icon/icon-quality.png" lazy="loaded"> <div class="ml-4"><h3>
         Quality
       </h3> <span class="text-sm text-secondary">
         Bringing you authentic products
-      </span></div></a><a href="/order-confirmation" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_delivery" exact=""><img alt="Delivery" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" lazy="loaded"> <div class="ml-4"><h3>
+      </span></div></a><a href="/shipping-delivery" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_delivery" exact=""><img alt="Delivery" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" src="https://assets.wonect.com/assets/img/icon/icon-delivery.png" lazy="loaded"> <div class="ml-4"><h3>
         Delivery
       </h3> <span class="text-sm text-secondary">
         Fast international delivery
-      </span></div></a><a href="/order-confirmation" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_refund" exact=""><img alt="Refund" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-refund.png" src="https://assets.wonect.com/assets/img/icon/icon-refund.png" lazy="loaded"> <div class="ml-4"><h3>
+      </span></div></a><a href="/returns-replacement" class="group flex items-center h-24 p-2 rounded button-nav" data-testid="" id="toppage_info_image_refund" exact=""><img alt="Refund" class="w-16" data-src="https://assets.wonect.com/assets/img/icon/icon-refund.png" src="https://assets.wonect.com/assets/img/icon/icon-refund.png" lazy="loaded"> <div class="ml-4"><h3>
         Refund
       </h3> <span class="text-sm text-secondary">
         7-day return guarantee for defective products
@@ -1107,7 +1349,7 @@
             <h5 class="mb-2">
                 Home &amp; Life
             </h5>
-            <div class="text-sm text-secondary flex flex-col"><a href="/sg/c/home-and-life-1548" data-testid="" id="footer_category_menu_1548" class="group hover:underline p-1">
+            <div class="text-sm text-secondary flex flex-col"><a href="/category" data-testid="" id="footer_category_menu_1548" class="group hover:underline p-1">
       All Home &amp; Life
     </a> <a href="/category" class="group hover:underline p-1" data-testid="" id="footer_category_menu_1550">
       Food &amp; Drink
@@ -1142,9 +1384,9 @@
                 </h6>
                 <div class="flex flex-col text-secondary"><a href="/company-profile" data-testid="" id="footer_footer_company_corporate_profile" exact="" class="group p-1 hover:underline">
           Corporate Profile
-        </a> <a href="/sg/privacy-policy" data-testid="" id="footer_footer_company_privary_policy" exact="" class="group p-1 hover:underline">
+        </a> <a href="/privacy" data-testid="" id="footer_footer_company_privary_policy" exact="" class="group p-1 hover:underline">
           Privacy Policy
-        </a> <a href="/sg/about-us" data-testid="" id="footer_footer_company_about_us" exact="" class="group p-1 hover:underline">
+        </a> <a href="/about" data-testid="" id="footer_footer_company_about_us" exact="" class="group p-1 hover:underline">
           About us
         </a></div>
             </div>
@@ -1152,13 +1394,13 @@
                 <h6 class="uppercase">
                     Customer Service
                 </h6>
-                <div class="flex flex-col text-secondary"><a href="/sg/shipping-delivery" data-testid="" id="footer_footer_customer_service_shipping_delivery" exact="" class="group p-1 hover:underline">
+                <div class="flex flex-col text-secondary"><a href="/shipping" data-testid="" id="footer_footer_customer_service_shipping_delivery" exact="" class="group p-1 hover:underline">
           Shipping &amp; Delivery
-        </a> <a href="/sg/returns-replacement" data-testid="" id="footer_footer_customer_service_returns_replacement" exact="" class="group p-1 hover:underline">
+        </a> <a href="/returns-replacement" data-testid="" id="footer_footer_customer_service_returns_replacement" exact="" class="group p-1 hover:underline">
           Returns &amp; Replacement
-        </a> <a href="/sg/user-agreement" data-testid="" id="footer_footer_customer_service_user_agreement" exact="" class="group p-1 hover:underline">
+        </a> <a href="/user-agreement" data-testid="" id="footer_footer_customer_service_user_agreement" exact="" class="group p-1 hover:underline">
           User Agreement
-        </a> <a href="/sg/faq" data-testid="" id="footer_footer_customer_service_faq" exact="" class="group p-1 hover:underline">
+        </a> <a href="/faq" data-testid="" id="footer_footer_customer_service_faq" exact="" class="group p-1 hover:underline">
           FAQ
         </a></div>
             </div>
@@ -1166,7 +1408,7 @@
                 <h6 class="uppercase">
                     Welcome to Wonect
                 </h6>
-                <div class="flex flex-col text-secondary"><a href="/sg/help" data-testid="" id="footer_footer_new_to_wonect_click_here" exact="" class="group p-1 hover:underline">
+                <div class="flex flex-col text-secondary"><a href="help" data-testid="" id="footer_footer_new_to_wonect_click_here" exact="" class="group p-1 hover:underline">
           Help and Contact
         </a></div>
             </div>
@@ -1179,7 +1421,7 @@
         </a></div>
             </div>
         </div>
-        <a href="/sg/faq#purchase" data-testid="" id="footer_payment_secure" exact="" class="group group w-full py-4 border-t border-b md:w-1/2 md:border-0 xl:w-1/3 xl:px-16 xl:py-0">
+        <a href="/faq#purchase" data-testid="" id="footer_payment_secure" exact="" class="group group w-full py-4 border-t border-b md:w-1/2 md:border-0 xl:w-1/3 xl:px-16 xl:py-0">
             <div class="flex items-center">
               <span class="w-16 h-16 group-hover:text-icon-hover">
                <i class="far fa-credit-card fa-3x"></i>
@@ -1537,10 +1779,10 @@ START OF MOBILE SIDEBAR -->
 
 
 
-     <a href="/sg/help" class="group flex items-center p-3 button-link" data-testid="" id="header_help" title="Help and Contact">
+     <a href="/help" class="group flex items-center p-3 button-link" data-testid="" id="header_help" title="Help and Contact">
 <i class="fas fa-headset mr-1"></i>
   Help &amp; Contact
-</a> <a href="/sg/about-us" class="group p-3 flex items-center button-link" data-testid="" id="header_about" title="About Us">
+</a> <a href="/aboutus" class="group p-3 flex items-center button-link" data-testid="" id="header_about" title="About Us">
 <i class="fas fa-info-circle mr-1"></i>
       About Us
     </a></div></div></div>
@@ -1565,9 +1807,6 @@ START OF MOBILE SIDEBAR -->
 
 
 
-
-   <!--  START OF CART -->
-  
 
    <!--  START OF CART -->
    <div data-testid="sidebar" id="microcart" tabindex="0" class="transform duration-300 z-sidebar fixed top-0 overflow-x-hidden overflow-y-auto bg-white h-full w-full outline-none right-0 md:w-sidebar-right hidden" style="">
@@ -1860,8 +2099,9 @@ START OF MOBILE SIDEBAR -->
                     </div>
                 </div>
             </div>
+
             <div class="flex justify-between items-center mb-6">
-                <button type="button" data-testid="" class="group button-link text-sm font-bold text-secondary">
+                <button type="button" data-testid="" class="group button-link text-sm font-bold text-secondary" onclick="location.href='/category'">
                     Return to shopping
                 </button>
                 <span class="w-1/2">
@@ -1870,6 +2110,8 @@ START OF MOBILE SIDEBAR -->
                     </a>
                 </span>
             </div>
+
+
         </div>
     </div>
 </div>
